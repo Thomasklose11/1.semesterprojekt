@@ -80,62 +80,63 @@ public class Game
         f2_C4 = new Room("Enemy room (WIP)");
         f2_D4 = new Room("You spot a gas mask on the corpse of a dead Nazi soldier.");
         
-        f2_A5 = new Room("The only way forward Is down through the hole in the floor, you see a branch sturdy enough to hold your weight.");
+        f2_A5 = new Room("The only way forward is down through the hole in the floor, you see a branch sturdy enough to hold your weight.");
         f2_B5 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.");
         f2_C5 = new Room("You smell gas coming from the door to the east");
         f2_D5 = new Room("The room is full of gas. Fortunately you have your gas mask on, and you find a valuable treasure on the ground");
         
         //Third floor rooms
-        f3_A1 = new Room("");
-        f3_B1 = new Room("");
-        f3_C1 = new Room("");
-        f3_D1 = new Room("");
-        f3_E1 = new Room("");
-        f3_F1 = new Room("");
+        f3_A1 = new Room("You stand in a dark room");
+        f3_B1 = new Room("You have reached a checkpoint and have ventured deeper in the temple");
+        f3_C1 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.");
+        f3_D1 = new Room("You are presented with a riddle, answer it to move on.");
+        f3_E1 = new Room("You have reached a checkpoint. \n" +
+                         "In the same room you spot an inscription on the wall which you translate to: “A choice must be made, head west to help yourself down the line, or east if you are up for a rewarding challenge”.");
+        f3_F1 = new Room("A room with an enemy (WIP)");
         
-        f3_A2 = new Room("");
-        f3_B2 = new Room("");
-        f3_C2 = new Room("");
-        f3_D2 = new Room("");
-        f3_E2 = new Room("");
-        f3_F2 = new Room("");
+        f3_A2 = new Room("On the floor you spot a treasure and pick it up");
+        f3_B2 = new Room("You stand in an empty room");
+        f3_C2 = new Room("You’re stuck in a room, and have to answer this riddle to move on.");
+        f3_D2 = new Room("You spot a green key, hanging on a tiny hook on the wall.");
+        f3_E2 = new Room("Trapped room (WIP)");
+        f3_F2 = new Room("On the floor you spot a valuable treasure and pick it up.");
         
-        f3_A3 = new Room("");
-        f3_B3 = new Room("");
-        f3_C3 = new Room("");
-        f3_D3 = new Room("");
-        f3_E3 = new Room("");
-        f3_F3 = new Room("");
+        f3_A3 = new Room("You stand in a dark room");
+        f3_B3 = new Room("Trapped room (WIP)");
+        f3_C3 = new Room("Enemy room (WIP)");
+        f3_D3 = new Room("You see a pair of guns lying on the floor, you’re also forced to solve a riddle to continue.");
+        f3_E3 = new Room("On the floor you spot a treasure and pick it up");
+        f3_F3 = new Room("A large lever is in the room, pulling it may open the shut door to the west");
         
-        f3_A4 = new Room("");
-        f3_B4 = new Room("");
-        f3_C4 = new Room("");
-        f3_D4 = new Room("");
-        f3_E4 = new Room("");
-        f3_F4 = new Room("");
+        f3_A4 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.");
+        f3_B4 = new Room("Hint (WIP)");
+        f3_C4 = new Room("On the floor you spot a treasure and pick it up");
+        f3_D4 = new Room("Health+ (WIP)");
+        f3_E4 = new Room("Health+ (WIP)");
+        f3_F4 = new Room("Indy's hat  (WIP)");
         
-        f3_A5 = new Room("");
-        f3_B5 = new Room("");
-        f3_C5 = new Room("");
-        f3_D5 = new Room("");
-        f3_E5 = new Room("");
-        f3_F5 = new Room("");
+        f3_A5 = new Room("You find a blue key(WIP)");
+        f3_B5 = new Room("Health+ (WIP)");
+        f3_C5 = new Room("You stand in an empty room ");
+        f3_D5 = new Room("Enemy (WIP)");
+        f3_E5 = new Room("You stand in an empty room ");
+        f3_F5 = new Room("You’re stuck in a room, and have to answer this riddle to move on.");
         
-        f3_A6 = new Room("");
-        f3_B6 = new Room("");
-        f3_C6 = new Room("");
-        f3_D6 = new Room("");
-        f3_E6 = new Room("");
-        f3_F6 = new Room("");
+        f3_A6 = new Room("On the floor you spot a treasure and pick it up");
+        f3_B6 = new Room("Enemy(WIP)");
+        f3_C6 = new Room("Trap (WIP)");
+        f3_D6 = new Room("El pisko(WIP)");
+        f3_E6 = new Room("Bonus+ Health+  (WIP)");
+        f3_F6 = new Room("You stand in an empty room ");
 
-        f3_A7 = new Room("");
-        f3_B7 = new Room("");
-        f3_C7 = new Room("");
-        f3_D7 = new Room("");
-        f3_E7 = new Room("");
-        f3_F7 = new Room("");
+        f3_A7 = new Room("Giant bonus treasure super room+++ (WIP)");
+        f3_B7 = new Room("You stand in an empty room ");
+        f3_C7 = new Room("On the floor you spot a treasure and pick it up");
+        f3_D7 = new Room("You stand in front of a huge door. You need a password to open the door");
+        f3_E7 = new Room("Trap room (WIP)");
+        f3_F7 = new Room("You find a green key");
         
-        endRoom = new Room ("");
+        endRoom = new Room ("Last room + Jade statue");
         
         //First floor exits
         startRoom.setExit("north", f1_B1);
