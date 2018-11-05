@@ -9,6 +9,8 @@ public class Game {
     private Room currentRoom;
 
     private int highscore = 0;
+    boolean passable;
+
     //First floor
     Room startRoom, f1_A1, f1_B1, f1_C1, f1_A2, f1_B2, f1_C2, f1_A3, f1_B3, f1_C3;
 
@@ -385,7 +387,7 @@ public class Game {
         endRoom.setExit("south", f3_D7);
 
         currentRoom = f2_D2;
-
+        
         // Anbringer et item i et rum
         f1_C1.setItem(new Item("Whip"));
         f2_D4.setItem(new Item("GasMask"));
@@ -405,13 +407,13 @@ public class Game {
         f3_C4.setBonus1();
         f3_A6.setBonus1();
         f3_C7.setBonus1();
-        f3_E3.setBonus1();        
+        f3_E3.setBonus1();
         //Anbringer store bonusser i rum
         f1_A3.setBonus2();
         f2_D5.setBonus2();
         f3_F2.setBonus2();
         f3_E6.setBonus2();
-        
+
     }
 
     public void play() {
@@ -466,7 +468,7 @@ public class Game {
             return;
         }
         String temp;
-        temp=command.getSecondWord();
+        temp = command.getSecondWord();
         if (temp.equals("treasure")) {
             if (currentRoom.getBonus() == 1) {
                 highscore += 1000;
@@ -523,6 +525,17 @@ public class Game {
         if (nextRoom == null) {
             System.out.println("There is no door!");
         } else {
+            for (String string : currentRoom.lockedDoors) {
+                if (string.equals(direction)) {
+                    System.out.println("The door you attempt to walk out of is locked");
+                    passable = false;
+                    break;
+                } else {
+                    passable = true;
+                }
+            }
+        }
+        if (passable == true) {
             currentRoom = nextRoom;
             System.out.println(currentRoom.getLongDescription());
         }
