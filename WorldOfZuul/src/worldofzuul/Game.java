@@ -453,7 +453,6 @@ public class Game {
             goRoom(command);
         } else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
-
         } else if (commandWord == CommandWord.INVENTORY) {
             printInventory();
         } else if (commandWord == CommandWord.GETITEM) {
@@ -462,7 +461,6 @@ public class Game {
             System.out.println("Your score is: " + score);
         }
         return wantToQuit;
-
     }
 
     private void getItem(Command command) {
