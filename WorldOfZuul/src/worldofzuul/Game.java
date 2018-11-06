@@ -8,7 +8,7 @@ public class Game {
     private Parser parser;
     private Room currentRoom;
 
-    boolean passable = false;
+    boolean passable = true;
     private int score = 0;
     //First floor
     Room startRoom, f1_A1, f1_B1, f1_C1, f1_A2, f1_B2, f1_C2, f1_A3, f1_B3, f1_C3;
@@ -385,7 +385,7 @@ public class Game {
 
         endRoom.setExit("south", f3_D7);
 
-        currentRoom = f2_D2;
+        currentRoom = startRoom;
 
         f2_D2.lockNorth();
 
@@ -453,6 +453,7 @@ public class Game {
             goRoom(command);
         } else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
+
         } else if (commandWord == CommandWord.INVENTORY) {
             printInventory();
         } else if (commandWord == CommandWord.GETITEM) {
@@ -461,6 +462,7 @@ public class Game {
             System.out.println("Your score is: " + score);
         }
         return wantToQuit;
+
     }
 
     private void getItem(Command command) {
@@ -470,6 +472,8 @@ public class Game {
         }
         String temp;
         temp = command.getSecondWord();
+        
+        
         if (temp.equals("treasure")) {
             if (currentRoom.getBonus() == 1) {
                 score += 1000;
@@ -531,6 +535,7 @@ public class Game {
                         System.out.println("The door you attempt to walk out of is locked");
                         passable = false;
                         break;
+                        
                     } else {
                         passable = true;
                     }
@@ -540,6 +545,7 @@ public class Game {
                 currentRoom = nextRoom;
                 System.out.println(currentRoom.getLongDescription());
             }
+   
         } else {
             System.out.println("Please enter a valid direction.");
         }
