@@ -8,7 +8,7 @@ public class Game {
     private Parser parser;
     private Room currentRoom;
 
-    private int highscore = 0;
+    private int score = 0;
     boolean passable;
 
     //First floor
@@ -452,11 +452,12 @@ public class Game {
             goRoom(command);
         } else if (commandWord == CommandWord.QUIT) {
             wantToQuit = quit(command);
-
         } else if (commandWord == CommandWord.INVENTORY) {
             printInventory();
         } else if (commandWord == CommandWord.GETITEM) {
             getItem(command);
+        } else if (commandWord == CommandWord.GETSCORE) {
+            System.out.println(score);
         }
         return wantToQuit;
 
@@ -471,13 +472,13 @@ public class Game {
         temp = command.getSecondWord();
         if (temp.equals("treasure")) {
             if (currentRoom.getBonus() == 1) {
-                highscore += 1000;
+                score += 1000;
                 currentRoom.setBonus0();
-                System.out.println("Your score is: " + highscore);
+                System.out.println("Your score is: " + score);
             } else if (currentRoom.getBonus() == 2) {
-                highscore += 2000;
+                score += 2000;
                 currentRoom.setBonus0();
-                System.out.println("Your score is: " + highscore);
+                System.out.println("Your score is: " + score);
             }
         } else {
             String item = command.getSecondWord();
