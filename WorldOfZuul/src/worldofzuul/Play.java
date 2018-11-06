@@ -14,6 +14,6 @@ public class Play {
         
         Game game = new Game();
         
-        game.play();
+        game.play();      
     }
 }

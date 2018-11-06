@@ -382,7 +382,7 @@ public class Game {
 
         endRoom.setExit("south", f3_D7);
 
-        currentRoom = f2_D4;
+        currentRoom = startRoom;
 
         // Anbringer et item i et rum
         f1_C1.setItem(new Item("Whip"));
@@ -392,9 +392,9 @@ public class Game {
         f3_D2.setItem(new Item("RedKey"));
         f3_F4.setItem(new Item("IndianerJonesHat"));
         f3_A5.setItem(new Item("BlueKey"));
-        f3_F7.setItem(new Item("GreenKey"));
+        f3_F7.setItem(new Item("GreenKey"));        
         // forsøg
-        inventory.add(new Item("Dagger"));
+        //inventory.add(new Item("Dagger"));
     }
 
     public void play() {
@@ -410,8 +410,8 @@ public class Game {
 
     private void printWelcome() {
         System.out.println();
-        System.out.println("Welcome to the World of Zuul!");
-        System.out.println("World of Zuul is a new, incredibly boring adventure game.");
+        System.out.println("Welcome to TempleRaider!");
+        System.out.println("Get ready for your adventure!");
         System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
@@ -473,9 +473,7 @@ public class Game {
     }
 
     private void printHelp() {
-        System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
-        System.out.println();
+        System.out.println("You are lost and alone.");          
         System.out.println("Your command words are:");
         parser.showCommands();
     }

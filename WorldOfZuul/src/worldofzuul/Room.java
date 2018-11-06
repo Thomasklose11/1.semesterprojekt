@@ -33,9 +33,10 @@ public class Room {
         Set<String> keys = exits.keySet();
         for (String exit : keys) {
             returnString += " " + exit;
-            returnString += "\nItems in the room: \n";
-            returnString += getRoomItems();
+            
         }
+        returnString += "\nItems in the room: ";
+        returnString += getRoomItems();
         return returnString;
     }
 
@@ -83,7 +84,7 @@ public class Room {
         items.add(newItem);
     }
     /*
-     Get a description of the ithem in a room
+     Get a description of the item in a room
      */
 
     public String getRoomItems() {
