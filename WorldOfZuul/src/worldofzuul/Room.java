@@ -9,8 +9,10 @@ public class Room {
 
     private String description;
     private HashMap<String, Room> exits;
-    ArrayList<Item> items = new ArrayList<Item>();
-
+    ArrayList<Item> items = new ArrayList<>();
+    
+    ArrayList<String> lockedDoors = new ArrayList<>();
+    
     private int bonus = 0;
 
     public Room(String description) {
@@ -116,5 +118,39 @@ public class Room {
 
     public void setBonus2() {
         bonus = 2;
+    }
+    
+     //Add locked rooms
+    public void lockNorth () {
+        lockedDoors.add ("north");
+    }
+            
+    public void lockSouth (){
+        lockedDoors.add ("south");
+    }
+            
+    public void lockEast () {
+        lockedDoors.add ("east");
+    }
+            
+    public void lockWest () {
+        lockedDoors.add ("west");
+    }
+    
+    //Remove locked rooms    
+    public void unlockNorth () {
+        lockedDoors.remove ("north");
+    }
+            
+    public void unlockSouth (){
+        lockedDoors.remove ("south");
+    }
+            
+    public void unlockEast () {
+        lockedDoors.remove ("east");
+    }
+            
+    public void unlockWest () {
+        lockedDoors.remove ("west");
     }
 }

@@ -8,7 +8,8 @@ public class Game {
     private Parser parser;
     private Room currentRoom;
 
-    private int highscore = 0;
+    boolean passable = false;
+    private int score = 0;
     //First floor
     Room startRoom, f1_A1, f1_B1, f1_C1, f1_A2, f1_B2, f1_C2, f1_A3, f1_B3, f1_C3;
 
@@ -386,6 +387,8 @@ public class Game {
 
         currentRoom = f2_D2;
 
+        f2_D2.lockNorth();
+
         // Anbringer et item i et rum
         f1_C1.setItem(new Item("Whip"));
         f2_D4.setItem(new Item("GasMask"));
@@ -405,13 +408,13 @@ public class Game {
         f3_C4.setBonus1();
         f3_A6.setBonus1();
         f3_C7.setBonus1();
-        f3_E3.setBonus1();        
+        f3_E3.setBonus1();
         //Anbringer store bonusser i rum
         f1_A3.setBonus2();
         f2_D5.setBonus2();
         f3_F2.setBonus2();
         f3_E6.setBonus2();
-        
+
     }
 
     public void play() {
@@ -455,6 +458,8 @@ public class Game {
             printInventory();
         } else if (commandWord == CommandWord.GETITEM) {
             getItem(command);
+        } else if (commandWord == CommandWord.GETSCORE) {
+            System.out.println("Your score is: " + score);
         }
         return wantToQuit;
 
@@ -466,16 +471,16 @@ public class Game {
             return;
         }
         String temp;
-        temp=command.getSecondWord();
+        temp = command.getSecondWord();
         if (temp.equals("treasure")) {
             if (currentRoom.getBonus() == 1) {
-                highscore += 1000;
+                score += 1000;
                 currentRoom.setBonus0();
-                System.out.println("Your score is: " + highscore);
+                System.out.println("1000 points were added to your score. Your score is: " + score);
             } else if (currentRoom.getBonus() == 2) {
-                highscore += 2000;
+                score += 2000;
                 currentRoom.setBonus0();
-                System.out.println("Your score is: " + highscore);
+                System.out.println("2000 points were added to your score. Your score is: " + score);
             }
         } else {
             String item = command.getSecondWord();
@@ -517,14 +522,28 @@ public class Game {
         }
 
         String direction = command.getSecondWord();
+        if (direction.equals("north") || direction.equals("south") || direction.equals("west") || direction.equals("east")) {
+            Room nextRoom = currentRoom.getExit(direction);
 
-        Room nextRoom = currentRoom.getExit(direction);
-
-        if (nextRoom == null) {
-            System.out.println("There is no door!");
+            if (nextRoom == null) {
+                System.out.println("There is no door!");
+            } else {
+                for (String string : currentRoom.lockedDoors) {
+                    if (string.equals(direction)) {
+                        System.out.println("The door you attempt to walk out of is locked");
+                        passable = false;
+                        break;
+                    } else {
+                        passable = true;
+                    }
+                }
+            }
+            if (passable == true) {
+                currentRoom = nextRoom;
+                System.out.println(currentRoom.getLongDescription());
+            }
         } else {
-            currentRoom = nextRoom;
-            System.out.println(currentRoom.getLongDescription());
+            System.out.println("Please enter a valid direction.");
         }
     }
 
