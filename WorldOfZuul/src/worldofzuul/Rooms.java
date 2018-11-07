@@ -388,9 +388,7 @@ public class Rooms {
         f3_F4.setItem(new Item("IndianerJonesHat"));
         f3_A5.setItem(new Item("BlueKey"));
         f3_F7.setItem(new Item("GreenKey"));
-        
-        
-
+    
         // Anbringer bonusser i rum
         f1_A2.setBonus1();
         f2_D2.setBonus1();

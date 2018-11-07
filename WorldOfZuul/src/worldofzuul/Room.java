@@ -10,9 +10,9 @@ public class Room {
     private String description;
     private HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
-    
+    boolean hasItems;
     ArrayList<String> lockedDoors = new ArrayList<>();
-    
+
     private int bonus = 0;
 
     public Room(String description) {
@@ -38,8 +38,11 @@ public class Room {
         for (String exit : keys) {
             returnString += " " + exit;
         }
-        returnString += "\nItems in the room: \n";
-        returnString += getRoomItems();
+        if (hasItems) {
+            returnString += "\nItems in the room: ";
+            returnString += getRoomItems();
+        }
+
         if (bonus == 1) {
             returnString += "\nThere is Treasure here!";
         } else if (bonus == 2) {
@@ -82,7 +85,9 @@ public class Room {
 
             }
         }
-
+        if (items.isEmpty()) {
+            hasItems = false;
+        }
     }
 
     /*
@@ -90,10 +95,11 @@ public class Room {
      */
     public void setItem(Item newItem) {
         items.add(newItem);
+        hasItems = true;
     }
 
     /*
-    * Get a description of the ithem in a room
+     * Get a description of the ithem in a room
      */
     public String getRoomItems() {
 
@@ -109,9 +115,11 @@ public class Room {
     public int getBonus() {
         return bonus;
     }
+
     public void setBonus0() {
         bonus = 0;
     }
+
     public void setBonus1() {
         bonus = 1;
     }
@@ -119,38 +127,38 @@ public class Room {
     public void setBonus2() {
         bonus = 2;
     }
-    
-     //Add locked rooms
-    public void lockNorth () {
-        lockedDoors.add ("north");
+
+    //Add locked rooms
+    public void lockNorth() {
+        lockedDoors.add("north");
     }
-            
-    public void lockSouth (){
-        lockedDoors.add ("south");
+
+    public void lockSouth() {
+        lockedDoors.add("south");
     }
-            
-    public void lockEast () {
-        lockedDoors.add ("east");
+
+    public void lockEast() {
+        lockedDoors.add("east");
     }
-            
-    public void lockWest () {
-        lockedDoors.add ("west");
+
+    public void lockWest() {
+        lockedDoors.add("west");
     }
-    
+
     //Remove locked rooms    
-    public void unlockNorth () {
-        lockedDoors.remove ("north");
+    public void unlockNorth() {
+        lockedDoors.remove("north");
     }
-            
-    public void unlockSouth (){
-        lockedDoors.remove ("south");
+
+    public void unlockSouth() {
+        lockedDoors.remove("south");
     }
-            
-    public void unlockEast () {
-        lockedDoors.remove ("east");
+
+    public void unlockEast() {
+        lockedDoors.remove("east");
     }
-            
-    public void unlockWest () {
-        lockedDoors.remove ("west");
+
+    public void unlockWest() {
+        lockedDoors.remove("west");
     }
 }
