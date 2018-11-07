@@ -5,16 +5,15 @@ import java.util.StringTokenizer;
 
 public class Parser 
 {
-    private CommandWords commands;
-    private Scanner reader;
+    private static CommandWords commands;
+    private static Scanner reader;
 
-    public Parser() 
-    {
+    public static void init() {
         commands = new CommandWords();
         reader = new Scanner(System.in);
     }
 
-    public Command getCommand() 
+    public static Command getCommand() 
     {
         String inputLine;
         String word1 = null;
@@ -35,7 +34,7 @@ public class Parser
         return new Command(commands.getCommandWord(word1), word2);
     }
 
-    public void showCommands()
+    public static void showCommands()
     {
         commands.showAll();
     }
