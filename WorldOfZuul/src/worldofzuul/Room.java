@@ -11,9 +11,10 @@ public class Room {
     private HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
     boolean hasItems;
-    ArrayList<String> lockedDoors = new ArrayList<>();
 
     private int bonus = 0;
+
+    ArrayList<Door> doors = new ArrayList<>();
 
     public Room(String description) {
         this.description = description;
@@ -22,6 +23,8 @@ public class Room {
 
     public void setExit(String direction, Room neighbor) {
         exits.put(direction, neighbor);
+        doors.add(new Door(direction));
+
     }
 
     public String getShortDescription() {
@@ -102,13 +105,11 @@ public class Room {
      * Get a description of the ithem in a room
      */
     public String getRoomItems() {
-
         String output = "";
         for (int i = 0; i < items.size(); i++) {
             output += items.get(i).getDescription() + " ";
         }
         return output;
-
     }
 
     // Get the type of bonus from this room ( 0 = no bonus, 1 = bonus, 2 = bonus+)
@@ -128,37 +129,13 @@ public class Room {
         bonus = 2;
     }
 
-    //Add locked rooms
-    public void lockNorth() {
-        lockedDoors.add("north");
-    }
-
-    public void lockSouth() {
-        lockedDoors.add("south");
-    }
-
-    public void lockEast() {
-        lockedDoors.add("east");
-    }
-
-    public void lockWest() {
-        lockedDoors.add("west");
-    }
-
-    //Remove locked rooms    
-    public void unlockNorth() {
-        lockedDoors.remove("north");
-    }
-
-    public void unlockSouth() {
-        lockedDoors.remove("south");
-    }
-
-    public void unlockEast() {
-        lockedDoors.remove("east");
-    }
-
-    public void unlockWest() {
-        lockedDoors.remove("west");
+    public Door findDoor(String direction) {
+        for (int i = 0; i < doors.size(); i++) {
+            if (doors.get(i).getDirection().equals(direction)) {
+                return doors.get(i);
+            }
+        }
+        
+        return null;
     }
 }

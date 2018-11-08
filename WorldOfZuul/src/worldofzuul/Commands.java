@@ -76,30 +76,33 @@ public class Commands {
 
         String direction = command.getSecondWord();
         if (direction.equals("north") || direction.equals("south") || direction.equals("west") || direction.equals("east")) {
-            Room nextRoom = Rooms.getCurrentRoom().getExit(direction);
 
-            if (nextRoom == null) {
-                System.out.println("There is no door!");
-            } else {
-                for (String string : Rooms.getCurrentRoom().lockedDoors) {
-                    if (string.equals(direction)) {
-                        System.out.println("The door you attempt to walk out of is locked");
-                        passable = false;
+            for (int i = 0; i < Rooms.getCurrentRoom().doors.size(); i++) {
+                if (Rooms.getCurrentRoom().doors.get(i).getDirection().equals(direction)) {
+                    if (Rooms.getCurrentRoom().doors.get(i).getLocked() == true) {
+                        System.out.println("The door is locked");
                         break;
-
                     } else {
-                        passable = true;
+                        move(direction);
+                        break;
                     }
                 }
-            }
-            if (nextRoom != null && passable == true) {
-                Rooms.setCurrentRoom(nextRoom);
-                System.out.println(Rooms.getCurrentRoom().getLongDescription());
             }
 
         } else {
             System.out.println("Please enter a valid direction.");
         }
+    }
+
+//Moves player from currentRoom to nextRoom
+    private static void move(String direction) {
+        Room nextRoom = Rooms.getCurrentRoom().getExit(direction);
+
+        if (nextRoom == null) {
+            System.out.println("There is no door!");
+        }
+        Rooms.setCurrentRoom(nextRoom);
+        System.out.println(Rooms.getCurrentRoom().getLongDescription());
     }
 
     private static boolean quit(Command command) {

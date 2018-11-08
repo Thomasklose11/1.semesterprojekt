@@ -376,9 +376,10 @@ public class Rooms {
         endRoom.setExit("south", f3_D7);
 
         currentRoom = startRoom;
-
-        f2_D2.lockNorth();
-
+    
+        f1_B1.findDoor("east").lock();
+        f1_B1.findDoor("west").lock();
+        
         // Anbringer et item i et rum
         f1_C1.setItem(new Item("Whip"));
         f2_D4.setItem(new Item("GasMask"));
