@@ -44,9 +44,9 @@ public class Room {
         }
 
         if (bonus == 1) {
-            returnString += "\nThere is Treasure here!";
+            returnString += "\nThere is a treasure here!";
         } else if (bonus == 2) {
-            returnString += "\nThere is Grand Treasure here!";
+            returnString += "\nThere is a grand treasure here!";
         }
         return returnString;
     }
