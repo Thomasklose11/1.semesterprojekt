@@ -10,36 +10,36 @@ package worldofzuul;
  * @author morte
  */
 public class Door {
+
     private boolean locked = false;
     private boolean blocked = false;
-    
     private String direction;
-    
-    public Door (String direction){
+
+    public Door(String direction) {
         this.direction = direction;
     }
-    
-    public void unlock () {
+
+    public void unlock() {
         locked = false;
     }
-    
-    public void lock (){
+
+    public void lock() {
         locked = true;
     }
-    
-    public void switchLock (){
-        if (locked==true){
+
+    public void switchLock() {
+        if (locked == true) {
             locked = false;
         } else {
-            locked =true;
+            locked = true;
         }
     }
-    
-    public boolean getLocked () {
+
+    public boolean getLocked() {
         return locked;
     }
-    
-    public String getDirection (){
+
+    public String getDirection() {
         return direction;
     }
 }
