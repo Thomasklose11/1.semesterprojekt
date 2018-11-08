@@ -11,12 +11,14 @@ public class Game {
     public static void main(String[] args) {
         init();
         play();
+        
     }
 
     public static void init() {
         Rooms.createRooms();
         Parser.init();
         Show.welcome();
+        
     }
 
     public static void play() {
@@ -25,8 +27,16 @@ public class Game {
         while (!finished) {
             Command command = Parser.getCommand();
             finished = Commands.processCommand(command);
+            End.end();
         }
-        System.out.println("Thank you for playing.  Good bye.");
+        System.out.println("Thank you for playing.  Goodbye.");
+    }
+    
+    public static void endGame(){
+        System.out.println("Your score is: " + Score.getScore());
+        System.out.println("Thanks for playing!");
+        System.exit(0);
+        
     }
 
 }
