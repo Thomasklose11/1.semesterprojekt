@@ -405,7 +405,13 @@ public class Rooms {
         f3_E6.setBonus2();
         
         //Anbringer spørgsmål i rum og låser døre
-        f1_B2.setQuestion(1);
+        f1_B2.setQuestion(0);
+        while(f1_B2.getQuestion()!=null){
+            System.out.println("1111");
+        }
+        while (f1_B2.getQuestion()==null){
+            System.out.println("0000");
+        }
         f1_B2.findDoor("east").lock();
     }
 

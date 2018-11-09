@@ -10,6 +10,7 @@ import static java.util.Arrays.asList;
 
 public class Puzzles {
         
+        public static Question[] questions = new Question [8];
     private static String p1 = "Young I am tall, old I am short. I love to glow. Breath is my foe?\n"//ask the question
             + "(a)Human,\n(b)Candle,\n(c)Tree,\n(d)The sun";//multiple choice
 
@@ -35,16 +36,24 @@ public class Puzzles {
             + "(a)Your house\n(b)Your Helmet\n(c)Your dog\n(d)Your name";//multiple choice
 
     public static void initQuestions() {
-        ArrayList<Question> questions = new ArrayList<Question>(){{
-        add(new Question(p1, "b"));
-        add(new Question(p2, "c"));
-        add(new Question(p3, "c"));
-        add(new Question(p4, "b"));
-        add(new Question(p5, "b"));
-        add(new Question(p6, "a"));
-        add(new Question(p7, "d"));
-        add(new Question(p8, "d"));
-        }};
+//        Question question1 = new Question(p1,"b");
+//        Question question2 = new Question(p2,"c");
+//        Question question3 = new Question(p3,"c");
+//        Question question4 = new Question(p4,"b");
+//        Question question5 = new Question(p5,"b");
+//        Question question6 = new Question(p6,"a");
+//        Question question7 = new Question(p7,"d");
+//        Question question8 = new Question(p8,"d");
+        
+        
+        questions [0] = new Question(p1, "b");
+        questions [1] = new Question(p2, "c");
+        questions [2] = new Question(p3, "c");
+        questions [3] = new Question(p4, "b");
+        questions [4] = new Question(p5, "b");
+        questions [5] = new Question(p6, "a");
+        questions [6] = new Question(p7, "d");
+        questions [7] = new Question(p8, "d");
     }
 
        

@@ -10,12 +10,12 @@ public class Room {
     private String description;
     private HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
-    
+
     boolean hasItems;
-    
-    private static boolean question = false;
-    private static Question roomQuestion;
-    
+
+    private boolean question = false;
+    private Question roomQuestion;
+
     ArrayList<Door> doors = new ArrayList<>();
 
     private int bonus = 0;
@@ -54,9 +54,10 @@ public class Room {
         } else if (bonus == 2) {
             returnString += "\nThere is a grand treasure here!";
         }
-        
-        if (hasQuestion()==true){
-            returnString += "/n"+roomQuestion.getPrompt();
+
+        if (hasQuestion() == true) {
+            returnString += "/n";
+            returnString += roomQuestion.getPrompt();
         }
         return returnString;
     }
@@ -144,30 +145,30 @@ public class Room {
                 return doors.get(i);
             }
         }
-        
+
         return null;
     }
-    
-    public void setQuestion (int i){
-        roomQuestion = Puzzles.questions.get(i);
-        question = true;
+
+    public void setQuestion(int i) {
+        roomQuestion = Puzzles.questions[i];
+        this.question = true;
     }
-    
-    public void setQuestionFalse (){
+
+    public void setQuestionFalse() {
         question = false;
     }
-    
-    public boolean hasQuestion (){
+
+    public boolean hasQuestion() {
         return question;
     }
-    
-    public Question getQuestion (){
+
+    public Question getQuestion() {
         return roomQuestion;
     }
-    
-    public void unlock(){
+
+    public void unlock() {
         for (int i = 0; i < doors.size(); i++) {
-            if (doors.get(i).getLocked()==true) {
+            if (doors.get(i).getLocked() == true) {
                 doors.get(i).unlock();
             }
         }

@@ -6,8 +6,8 @@ package worldofzuul;
  */
 public class Question {
 
-    private static String prompt;
-    private static String answer;
+    public String prompt;
+    private String answer;
 
     public Question(String prompt, String answer) {
         this.prompt = prompt;
