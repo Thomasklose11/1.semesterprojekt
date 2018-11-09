@@ -377,7 +377,6 @@ public class Rooms {
 
         currentRoom = endRoom;
 
-        f2_D2.lockNorth();
 
         // Anbringer et item i et rum
         f1_C1.setItem(new Item("Whip"));
