@@ -54,6 +54,10 @@ public class Room {
         } else if (bonus == 2) {
             returnString += "\nThere is a grand treasure here!";
         }
+        
+        if (hasQuestion()==true){
+            returnString += "/n"+roomQuestion.getPrompt();
+        }
         return returnString;
     }
 
@@ -144,20 +148,28 @@ public class Room {
         return null;
     }
     
-    public static void setQuestion (int i){
+    public void setQuestion (int i){
         roomQuestion = Puzzles.questions.get(i);
         question = true;
     }
     
-    public static boolean hasQuestion (){
+    public void setQuestionFalse (){
+        question = false;
+    }
+    
+    public boolean hasQuestion (){
         return question;
     }
     
-    public static Question getQuestion (){
+    public Question getQuestion (){
         return roomQuestion;
     }
     
-    public static void unlockEvent(){
-        
+    public void unlock(){
+        for (int i = 0; i < doors.size(); i++) {
+            if (doors.get(i).getLocked()==true) {
+                doors.get(i).unlock();
+            }
+        }
     }
 }

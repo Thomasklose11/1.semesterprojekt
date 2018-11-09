@@ -6,11 +6,10 @@ package worldofzuul;
  */
 import java.util.ArrayList;
 import java.util.Scanner;
+import static java.util.Arrays.asList;
 
 public class Puzzles {
-
-    public static ArrayList<Question> questions = new ArrayList<>();
-
+        
     private static String p1 = "Young I am tall, old I am short. I love to glow. Breath is my foe?\n"//ask the question
             + "(a)Human,\n(b)Candle,\n(c)Tree,\n(d)The sun";//multiple choice
 
@@ -36,15 +35,19 @@ public class Puzzles {
             + "(a)Your house\n(b)Your Helmet\n(c)Your dog\n(d)Your name";//multiple choice
 
     public static void initQuestions() {
-        questions.add(new Question(p1, "b"));
-        questions.add(new Question(p2, "c"));
-        questions.add(new Question(p3, "c"));
-        questions.add(new Question(p4, "b"));
-        questions.add(new Question(p5, "b"));
-        questions.add(new Question(p6, "a"));
-        questions.add(new Question(p7, "d"));
-        questions.add(new Question(p8, "d"));
+        ArrayList<Question> questions = new ArrayList<Question>(){{
+        add(new Question(p1, "b"));
+        add(new Question(p2, "c"));
+        add(new Question(p3, "c"));
+        add(new Question(p4, "b"));
+        add(new Question(p5, "b"));
+        add(new Question(p6, "a"));
+        add(new Question(p7, "d"));
+        add(new Question(p8, "d"));
+        }};
     }
+
+       
 
     public static void answer(Command command, Question question) {
         if (Rooms.getCurrentRoom().hasQuestion() == true) {
@@ -56,8 +59,11 @@ public class Puzzles {
 
             if (answer.equals(question.getAnswer())) {
                 System.out.println("The answer is correct");
+                Rooms.getCurrentRoom().unlock();
+                Rooms.getCurrentRoom().setQuestionFalse();
             } else {
-                System.out.println("The answer is incorrect");
+                System.out.println("The answer is incorrect. Try again!");
+                System.out.println(Rooms.getCurrentRoom().getQuestion().getPrompt());
             }
         }
     }

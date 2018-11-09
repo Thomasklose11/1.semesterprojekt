@@ -14,11 +14,11 @@ public class Question {
         this.answer = answer;
     }
     
-    public static String getAnswer(){
+    public String getAnswer(){
         return answer;
     }
     
-    public static String getPrompt(){
+    public String getPrompt(){
         return prompt;
     }
 
