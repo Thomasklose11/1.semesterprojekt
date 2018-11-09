@@ -25,7 +25,7 @@ public class Game {
         }
         System.out.println("Thank you for playing. Goodbye.");
     }
-    
+    // end game
     public static void endGame(){
         System.out.println("Your score is: " + Score.getScore());
         System.out.println("Thanks for playing!");
