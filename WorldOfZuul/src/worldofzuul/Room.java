@@ -3,12 +3,11 @@ package worldofzuul;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
-import java.util.Iterator;
 
 public class Room {
 
-    private String description;
-    private HashMap<String, Room> exits;
+    private final String description;
+    private final HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
     boolean hasItems;
     

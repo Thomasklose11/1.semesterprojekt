@@ -4,7 +4,7 @@ public enum CommandWord
 {
     GO("go"), QUIT("quit"), HELP("help"), UNKNOWN("?"), INVENTORY("inventory"), GETITEM("get"), GETSCORE("score");
     
-    private String commandString;
+    private final String commandString;
     
     CommandWord(String commandString)
     {

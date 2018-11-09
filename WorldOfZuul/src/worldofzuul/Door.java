@@ -12,8 +12,8 @@ package worldofzuul;
 public class Door {
 
     private boolean locked = false;
-    private boolean blocked = false;
-    private String direction;
+    private final boolean blocked = false;
+    private final String direction;
 
     public Door(String direction) {
         this.direction = direction;

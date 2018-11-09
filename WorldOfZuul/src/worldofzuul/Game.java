@@ -1,11 +1,5 @@
 package worldofzuul;
 
-import java.util.ArrayList;
-
-/**
- * 
- * @author mathi
- */
 public class Game {
 
     public static void main(String[] args) {

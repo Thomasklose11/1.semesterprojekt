@@ -6,7 +6,7 @@ package worldofzuul;
  */
 public class Commands {
 
-    private static boolean passable = true;
+    private final static boolean passable = true;
 
     public static boolean processCommand(Command command) {
         boolean wantToQuit = false;

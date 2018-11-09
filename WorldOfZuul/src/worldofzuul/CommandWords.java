@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class CommandWords
 {
-    private HashMap<String, CommandWord> validCommands;
+    private final HashMap<String, CommandWord> validCommands;
 
     public CommandWords()
     {
