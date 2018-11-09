@@ -375,19 +375,19 @@ public class Rooms {
 
         endRoom.setExit("south", f3_D7);
 
-        currentRoom = endRoom;
+        currentRoom = startRoom;
 
 
         // Anbringer et item i et rum
-        f1_C1.setItem(new Item("Whip"));
-        f2_D4.setItem(new Item("GasMask"));
-        f2_A4.setItem(new Item("Torch"));
-        f3_D3.setItem(new Item("LugerPistol"));
-        f3_D2.setItem(new Item("RedKey"));
-        f3_F4.setItem(new Item("IndianerJonesHat"));
-        f3_A5.setItem(new Item("BlueKey"));
-        f3_F7.setItem(new Item("GreenKey"));
-        endRoom.setItem(new Item("Statue"));
+        f1_C1.setItem(new Item("whip"));
+        f2_D4.setItem(new Item("gasmask"));
+        f2_A4.setItem(new Item("torch"));
+        f3_D3.setItem(new Item("pistol"));
+        f3_D2.setItem(new Item("redkey"));
+        f3_F4.setItem(new Item("hat"));
+        f3_A5.setItem(new Item("bluekey"));
+        f3_F7.setItem(new Item("greenkey"));
+        endRoom.setItem(new Item("statue"));
     
         // Anbringer bonusser i rum
         f1_A2.setBonus1();

@@ -23,7 +23,7 @@ public class Game {
             finished = Commands.processCommand(command);
             End.end();
         }
-        System.out.println("Thank you for playing.  Goodbye.");
+        System.out.println("Thank you for playing. Goodbye.");
     }
     
     public static void endGame(){
