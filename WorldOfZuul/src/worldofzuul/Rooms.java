@@ -377,8 +377,6 @@ public class Rooms {
 
         currentRoom = startRoom;
     
-        f1_B1.findDoor("east").lock();
-        f1_B1.findDoor("west").lock();
         
         // Anbringer et item i et rum
         f1_C1.setItem(new Item("Whip"));
