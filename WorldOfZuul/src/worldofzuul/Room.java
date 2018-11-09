@@ -10,7 +10,11 @@ public class Room {
     private String description;
     private HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
+    
     boolean hasItems;
+    
+    private static boolean question = false;
+    private static Question roomQuestion;
     
     ArrayList<Door> doors = new ArrayList<>();
 
@@ -138,5 +142,22 @@ public class Room {
         }
         
         return null;
+    }
+    
+    public static void setQuestion (int i){
+        roomQuestion = Puzzles.questions.get(i);
+        question = true;
+    }
+    
+    public static boolean hasQuestion (){
+        return question;
+    }
+    
+    public static Question getQuestion (){
+        return roomQuestion;
+    }
+    
+    public static void unlockEvent(){
+        
     }
 }

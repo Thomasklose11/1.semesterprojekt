@@ -6,12 +6,20 @@ package worldofzuul;
  */
 public class Question {
 
-    String prompt;
-    String answer;
+    private static String prompt;
+    private static String answer;
 
     public Question(String prompt, String answer) {
         this.prompt = prompt;
         this.answer = answer;
+    }
+    
+    public static String getAnswer(){
+        return answer;
+    }
+    
+    public static String getPrompt(){
+        return prompt;
     }
 
 }
