@@ -17,7 +17,6 @@ public class Game {
 
     public static void init() {
         Rooms.createRooms();
-        Puzzles.initQuestions();
         Parser.init();
         Show.welcome();
 
