@@ -32,7 +32,6 @@ public class Commands {
             Puzzles.answer(command, Rooms.getCurrentRoom().getQuestion());
         }
         return wantToQuit;
-
     }
 
     private static void getItem(Command command) {

@@ -56,8 +56,7 @@ public class Room {
         }
 
         if (hasQuestion() == true) {
-            returnString += "/n";
-            returnString += roomQuestion.getPrompt();
+            returnString += "\n" + roomQuestion.getPrompt();
         }
         return returnString;
     }
