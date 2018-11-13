@@ -397,12 +397,16 @@ public class Rooms {
         f3_A6.setBonus1();
         f3_C7.setBonus1();
         f3_E3.setBonus1();
+        
         //Anbringer store bonusser i rum
         f1_A3.setBonus2();
         f2_D5.setBonus2();
         f3_F2.setBonus2();
         f3_E6.setBonus2();
-
+        
+        //Anbringer spørgsmål i rum og låser døre
+        f1_B2.setQuestion(0);
+        f1_B2.findDoor("east").lock();
     }
 
     public static Room getCurrentRoom() {

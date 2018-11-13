@@ -9,8 +9,12 @@ public class Room {
     private final String description;
     private final HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
+
     boolean hasItems;
-    
+
+    private boolean question = false;
+    private Question roomQuestion;
+
     ArrayList<Door> doors = new ArrayList<>();
 
     private int bonus = 0;
@@ -48,6 +52,10 @@ public class Room {
             returnString += "\nThere is a treasure here!";
         } else if (bonus == 2) {
             returnString += "\nThere is a grand treasure here!";
+        }
+
+        if (hasQuestion() == true) {
+            returnString += "\n" + roomQuestion.getPrompt();
         }
         return returnString;
     }
@@ -135,7 +143,32 @@ public class Room {
                 return doors.get(i);
             }
         }
-        
+
         return null;
+    }
+
+    public void setQuestion(int i) {
+        roomQuestion = Puzzles.questions[i];
+        this.question = true;
+    }
+
+    public void setQuestionFalse() {
+        question = false;
+    }
+
+    public boolean hasQuestion() {
+        return question;
+    }
+
+    public Question getQuestion() {
+        return roomQuestion;
+    }
+
+    public void unlock() {
+        for (int i = 0; i < doors.size(); i++) {
+            if (doors.get(i).getLocked() == true) {
+                doors.get(i).unlock();
+            }
+        }
     }
 }

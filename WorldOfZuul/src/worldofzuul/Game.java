@@ -5,14 +5,14 @@ public class Game {
     public static void main(String[] args) {
         init();
         play();
-        
+
     }
 
     public static void init() {
         Rooms.createRooms();
         Parser.init();
         Show.welcome();
-        
+
     }
 
     public static void play() {
@@ -30,7 +30,7 @@ public class Game {
         System.out.println("Your score is: " + Score.getScore());
         System.out.println("Thanks for playing!");
         System.exit(0);
-        
+
     }
 
 }

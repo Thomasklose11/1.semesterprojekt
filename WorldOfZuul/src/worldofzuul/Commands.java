@@ -6,8 +6,6 @@ package worldofzuul;
  */
 public class Commands {
 
-    private final static boolean passable = true;
-
     public static boolean processCommand(Command command) {
         boolean wantToQuit = false;
 
@@ -30,9 +28,10 @@ public class Commands {
             Commands.getItem(command);
         } else if (commandWord == CommandWord.GETSCORE) {
             System.out.println("Your score is: " + Score.getScore());
+        } else if (commandWord == CommandWord.ANSWER) {
+            Puzzles.answer(command, Rooms.getCurrentRoom().getQuestion());
         }
         return wantToQuit;
-
     }
 
     private static void getItem(Command command) {
@@ -113,4 +112,5 @@ public class Commands {
             return true;
         }
     }
+
 }
