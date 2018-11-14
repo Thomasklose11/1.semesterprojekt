@@ -43,7 +43,7 @@ public class Rooms {
                 + "obtaining the legendary jade statue”");
         f1_C1 = new Room("You spot on the floor, a whip lying in the dust.");
 
-        f1_A2 = new Room("On the floor you spot a treasure and pick it up");
+        f1_A2 = new Room("On the floor you spot a treasure.");
         f1_B2 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.");
         f1_C2 = new Room("You enter the room and spot a large shadow out of the corner of your eye, before you can get a good look\n"
                 + "at it, it disappears.");
