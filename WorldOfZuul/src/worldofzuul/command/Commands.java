@@ -1,4 +1,12 @@
-package worldofzuul;
+package worldofzuul.command;
+
+import worldofzull.domain.Item;
+import worldofzull.domain.Inventory;
+import worldofzull.domain.Room;
+import worldofzull.domain.Score;
+import worldofzull.domain.Rooms;
+import worldofzull.domain.Puzzles;
+import worldofzull.presentation.Show;
 
 /**
  *
