@@ -24,9 +24,15 @@ public class Room {
         exits = new HashMap<String, Room>();
     }
 
+    //Setter exit for et rum
     public void setExit(String direction, Room neighbor) {
         exits.put(direction, neighbor);
         doors.add(new Door(direction));
+    }
+
+    public void setExitWithColor(String direction, Room neighbor, String color) {
+        exits.put(direction, neighbor);
+        doors.add(new Door(direction,color));
     }
 
     public String getShortDescription() {

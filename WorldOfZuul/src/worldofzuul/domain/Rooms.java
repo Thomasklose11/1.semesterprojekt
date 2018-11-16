@@ -291,7 +291,7 @@ public class Rooms {
         f3_F3.setExit("south", f3_F2);
 
         // Lag 4
-        f3_A4.setExit("north", f3_A5);
+        f3_A4.setExitWithColor("north", f3_A5,"green");
         f3_A4.setExit("south", f3_A3);
         f3_A4.setExit("east", f3_B4);
 
@@ -325,7 +325,7 @@ public class Rooms {
         f3_D5.setExit("north", f3_D6);
         f3_D5.setExit("east", f3_E5);
 
-        f3_E5.setExit("north", f3_E6);
+        f3_E5.setExitWithColor("north", f3_E6,"red");
         f3_E5.setExit("south", f3_E4);
         f3_E5.setExit("west", f3_D5);
         f3_E5.setExit("east", f3_F5);
@@ -335,7 +335,7 @@ public class Rooms {
         f3_F5.setExit("south", f3_F4);
 
         // Lag 6
-        f3_A6.setExit("north", f3_A7);
+        f3_A6.setExitWithColor("north", f3_A7,"blue");
         f3_A6.setExit("east", f3_B6);
 
         f3_B6.setExit("west", f3_A6);
