@@ -1,10 +1,10 @@
-package worldofzuul;
+package worldofzull.domain;
 
 /**
  *
  * @author Rene_
  */
-class Item {
+public class Item {
 
     String description;
 

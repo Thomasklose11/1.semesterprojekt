@@ -1,4 +1,4 @@
-package worldofzuul;
+package worldofzull.domain;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -15,7 +15,7 @@ public class Room {
     private boolean question = false;
     private Question roomQuestion;
 
-    ArrayList<Door> doors = new ArrayList<>();
+    public ArrayList<Door> doors = new ArrayList<>();
 
     private int bonus = 0;
 

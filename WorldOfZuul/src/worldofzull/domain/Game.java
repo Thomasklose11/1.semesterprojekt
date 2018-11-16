@@ -1,4 +1,9 @@
-package worldofzuul;
+package worldofzull.domain;
+
+import worldofzull.presentation.Show;
+import worldofzuul.command.Command;
+import worldofzuul.command.Commands;
+import worldofzuul.command.Parser;
 
 public class Game {
 

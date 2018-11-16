@@ -1,5 +1,5 @@
 
-package worldofzuul;
+package worldofzull.domain;
 
 public class End {
     

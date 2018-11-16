@@ -1,4 +1,4 @@
-package worldofzuul;
+package worldofzull.domain;
 
 /**
  *
@@ -6,6 +6,7 @@ package worldofzuul;
  */
 import java.util.ArrayList;
 import java.util.Scanner;
+import worldofzuul.command.Command;
 import static java.util.Arrays.asList;
 
 public class Puzzles {
