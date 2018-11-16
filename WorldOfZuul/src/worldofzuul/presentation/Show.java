@@ -1,9 +1,9 @@
-package worldofzull.presentation;
+package worldofzuul.presentation;
 
 import worldofzuul.command.CommandWord;
-import worldofzull.domain.Inventory;
+import worldofzuul.domain.Inventory;
 import worldofzuul.command.Parser;
-import worldofzull.domain.Rooms;
+import worldofzuul.domain.Rooms;
 
 /**
  *

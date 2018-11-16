@@ -1,4 +1,4 @@
-package worldofzull.domain;
+package worldofzuul.domain;
 
 /**
  *

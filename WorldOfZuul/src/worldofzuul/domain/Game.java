@@ -1,6 +1,6 @@
-package worldofzull.domain;
+package worldofzuul.domain;
 
-import worldofzull.presentation.Show;
+import worldofzuul.presentation.Show;
 import worldofzuul.command.Command;
 import worldofzuul.command.Commands;
 import worldofzuul.command.Parser;
