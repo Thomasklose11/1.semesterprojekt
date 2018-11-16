@@ -58,7 +58,7 @@ public class Puzzles {
 
             if (answer.equals(question.getAnswer())) {
                 System.out.println("The answer is correct. The doors are unlocked.");
-                Rooms.getCurrentRoom().unlock();
+                Rooms.getCurrentRoom().unlockAll();
                 Rooms.getCurrentRoom().setQuestionFalse();
             } else {
                 System.out.println("The answer is incorrect. Try again!");

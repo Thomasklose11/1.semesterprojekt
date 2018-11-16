@@ -38,6 +38,8 @@ public class Commands {
             System.out.println("Your score is: " + Score.getScore());
         } else if (commandWord == CommandWord.ANSWER) {
             Puzzles.answer(command, Rooms.getCurrentRoom().getQuestion());
+        } else if (commandWord == CommandWord.UNLOCK){
+            Commands.unlock(command);
         }
         return wantToQuit;
     }
@@ -111,6 +113,8 @@ public class Commands {
         Rooms.setCurrentRoom(nextRoom);
         System.out.println(Rooms.getCurrentRoom().getLongDescription());
     }
+    
+    
 
     private static boolean quit(Command command) {
         if (command.hasSecondWord()) {
@@ -120,5 +124,18 @@ public class Commands {
             return true;
         }
     }
+    
+    
+    private static void unlock(Command command){
+        if (!command.hasSecondWord()) {
+            System.out.println("Unlock what door?");
+            return;
+        }
+        
+        String direction = command.getSecondWord();
+        Rooms.getCurrentRoom().unlockDoor(direction);
+    }
+    
+    
 
 }

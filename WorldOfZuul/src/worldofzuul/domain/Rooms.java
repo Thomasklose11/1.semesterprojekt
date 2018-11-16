@@ -149,7 +149,7 @@ public class Rooms {
         f1_B2.setExit("east", f1_C2);
         f1_B2.setExit("west", f1_A2);
 
-        f1_C2.setExit("north", f1_C3);
+        f1_C2.setExitWithColor("north", f1_C3,"black");
         f1_C2.setExit("west", f1_B2);
 
         f1_A3.setExit("east", f1_B3);
@@ -383,12 +383,15 @@ public class Rooms {
         f2_D4.setItem(new Item("gasmask"));
         f2_A4.setItem(new Item("torch"));
         f3_D3.setItem(new Item("pistol"));
-        f3_D2.setItem(new Item("redkey"));
         f3_F4.setItem(new Item("hat"));
-        f3_A5.setItem(new Item("bluekey"));
-        f3_F7.setItem(new Item("greenkey"));
         endRoom.setItem(new Item("statue"));
-    
+        
+        // Anbringer en key i et rum
+        f3_D2.setKey(new Key("red_key","red"));
+        f3_A5.setKey(new Key("blue_key","blue"));
+        f3_F7.setKey(new Key("green_key","green"));
+        f1_C2.setKey(new Key("test_key","black"));
+        
         // Anbringer bonusser i rum
         f1_A2.setBonus1();
         f2_D2.setBonus1();
@@ -407,6 +410,8 @@ public class Rooms {
         //Anbringer spørgsmål i rum og låser døre
         f1_B2.setQuestion(0);
         f1_B2.findDoor("east").lock();
+        
+        //
     }
 
     public static Room getCurrentRoom() {

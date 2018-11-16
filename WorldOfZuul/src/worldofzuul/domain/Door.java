@@ -44,4 +44,8 @@ public class Door {
     public String getDirection() {
         return direction;
     }
+    
+    public String getColor (){
+        return color;
+    }
 }
