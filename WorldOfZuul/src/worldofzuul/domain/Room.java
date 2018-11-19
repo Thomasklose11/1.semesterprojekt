@@ -188,7 +188,8 @@ public class Room {
         if (findDoor(direction) != null) {
             if (findDoor(direction).getColor() != null) {
                 String checkColor = findDoor(direction).getColor();
-                if (Inventory.checkInventoryForItem(checkColor) != null) {
+                System.out.println(checkColor);
+                if (Inventory.checkInventoryForKey(checkColor) != null) {
                     findDoor(direction).unlock();
                 } else {
                     System.out.println("You don't have a key for this door");
