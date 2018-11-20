@@ -4,7 +4,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import worldofzuul.domain.Game;
 
 
@@ -24,10 +27,12 @@ public class FXMLController implements Initializable {
     }
     
     @FXML
-    private void handlePauseButtonAction(ActionEvent event) {
-        System.out.println("Pause");
-
-  
+    private void handlePauseButtonAction(ActionEvent event) throws Exception{
+        System.out.println("dssd");
+         Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
+           Scene scenePause = new Scene(rootPause);
+        FXMLBoot.primaryStage.setScene(scenePause);
+        
     }
     
     @Override

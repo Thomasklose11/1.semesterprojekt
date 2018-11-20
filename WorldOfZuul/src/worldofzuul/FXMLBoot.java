@@ -16,18 +16,21 @@ import javafx.stage.Stage;
  * @author mathi
  */
 public class FXMLBoot extends Application {
-    
+    public static Stage primaryStage;
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         
-        Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
+       
         
         Scene scene = new Scene(root);
-        Scene scenePause = new Scene(rootPause);
+      
         
-        stage.setScene(scene);
-        stage.show();
+        primaryStage = stage;
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        
     
     }
 
