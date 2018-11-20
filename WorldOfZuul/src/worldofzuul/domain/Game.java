@@ -7,11 +7,6 @@ import worldofzuul.command.Parser;
 
 public class Game {
 
-//    public static void main(String[] args) {
-//        init();
-//        play();
-//    }
-
     public static void init() {
         Rooms.createRooms();
         Parser.init();

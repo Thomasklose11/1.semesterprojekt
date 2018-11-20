@@ -12,21 +12,21 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import worldofzuul.domain.Game;
 
-/**
- *
- * @author mathi
- */
+
 public class FXMLDocumentController implements Initializable {
-    
-    //@FXML
-    //private Label label;
-    
+
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        //System.out.println("You clicked me!");
-        //label.setText("Hello World!");
+    private void handlestartButtonAction(ActionEvent event) {
+ 
         Game.init();
         Game.play();
+    }
+    
+    @FXML
+    private void handlequitButtonAction(ActionEvent event) {
+        
+        System.exit(0);
+  
     }
     
     @Override
