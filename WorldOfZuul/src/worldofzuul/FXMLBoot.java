@@ -20,18 +20,13 @@ public class FXMLBoot extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
-        
-       
-        
+
         Scene scene = new Scene(root);
-      
-        
+
         primaryStage = stage;
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        
-    
     }
 
     
