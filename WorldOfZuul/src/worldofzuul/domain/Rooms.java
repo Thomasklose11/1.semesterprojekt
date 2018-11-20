@@ -1,4 +1,4 @@
-package worldofzull.domain;
+package worldofzuul.domain;
 
 /**
  *
@@ -149,7 +149,7 @@ public class Rooms {
         f1_B2.setExit("east", f1_C2);
         f1_B2.setExit("west", f1_A2);
 
-        f1_C2.setExit("north", f1_C3);
+        f1_C2.setExitWithColor("north", f1_C3,"black");
         f1_C2.setExit("west", f1_B2);
 
         f1_A3.setExit("east", f1_B3);
@@ -291,7 +291,7 @@ public class Rooms {
         f3_F3.setExit("south", f3_F2);
 
         // Lag 4
-        f3_A4.setExit("north", f3_A5);
+        f3_A4.setExitWithColor("north", f3_A5,"green");
         f3_A4.setExit("south", f3_A3);
         f3_A4.setExit("east", f3_B4);
 
@@ -325,7 +325,7 @@ public class Rooms {
         f3_D5.setExit("north", f3_D6);
         f3_D5.setExit("east", f3_E5);
 
-        f3_E5.setExit("north", f3_E6);
+        f3_E5.setExitWithColor("north", f3_E6,"red");
         f3_E5.setExit("south", f3_E4);
         f3_E5.setExit("west", f3_D5);
         f3_E5.setExit("east", f3_F5);
@@ -335,7 +335,7 @@ public class Rooms {
         f3_F5.setExit("south", f3_F4);
 
         // Lag 6
-        f3_A6.setExit("north", f3_A7);
+        f3_A6.setExitWithColor("north", f3_A7,"blue");
         f3_A6.setExit("east", f3_B6);
 
         f3_B6.setExit("west", f3_A6);
@@ -375,7 +375,7 @@ public class Rooms {
 
         endRoom.setExit("south", f3_D7);
 
-        currentRoom = startRoom;
+        currentRoom = f1_C2;
 
 
         // Anbringer et item i et rum
@@ -383,12 +383,15 @@ public class Rooms {
         f2_D4.setItem(new Item("gasmask"));
         f2_A4.setItem(new Item("torch"));
         f3_D3.setItem(new Item("pistol"));
-        f3_D2.setItem(new Item("redkey"));
         f3_F4.setItem(new Item("hat"));
-        f3_A5.setItem(new Item("bluekey"));
-        f3_F7.setItem(new Item("greenkey"));
         endRoom.setItem(new Item("statue"));
-    
+        
+        // Anbringer en key i et rum
+        f3_D2.setKey(new Key("red_key","red"));
+        f3_A5.setKey(new Key("blue_key","blue"));
+        f3_F7.setKey(new Key("green_key","green"));
+        f1_C2.setKey(new Key("test_key","black"));
+        
         // Anbringer bonusser i rum
         f1_A2.setBonus1();
         f2_D2.setBonus1();
@@ -407,6 +410,8 @@ public class Rooms {
         //Anbringer spørgsmål i rum og låser døre
         f1_B2.setQuestion(0);
         f1_B2.findDoor("east").lock();
+        
+        //
     }
 
     public static Room getCurrentRoom() {

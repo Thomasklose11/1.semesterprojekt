@@ -1,4 +1,4 @@
-package worldofzull.domain;
+package worldofzuul.domain;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -24,9 +24,16 @@ public class Room {
         exits = new HashMap<String, Room>();
     }
 
+    //Setter exit for et rum
     public void setExit(String direction, Room neighbor) {
         exits.put(direction, neighbor);
         doors.add(new Door(direction));
+    }
+
+    //Setter exit for et rum, og giver døren en tilsvarende farve
+    public void setExitWithColor(String direction, Room neighbor, String color) {
+        exits.put(direction, neighbor);
+        doors.add(new Door(direction, color));
     }
 
     public String getShortDescription() {
@@ -106,6 +113,11 @@ public class Room {
         items.add(newItem);
         hasItems = true;
     }
+    
+    public void setKey(Key newKey){
+        items.add(newKey);
+        hasItems = true;
+    }
 
     /*
      * Get a description of the ithem in a room
@@ -163,11 +175,29 @@ public class Room {
         return roomQuestion;
     }
 
-    public void unlock() {
+    public void unlockAll() {
         for (int i = 0; i < doors.size(); i++) {
             if (doors.get(i).getLocked() == true) {
                 doors.get(i).unlock();
             }
+        }
+    }
+
+    //checker om en nøgle i spillerens inventory passer til en dør i det nuværende rum
+    public void unlockDoor(String direction) {
+        if (findDoor(direction) != null) {
+            if (findDoor(direction).getColor() != null) {
+                String checkColor = findDoor(direction).getColor();
+                if (Inventory.checkInventoryForKey(checkColor) != null) {
+                    findDoor(direction).unlock();
+                } else {
+                    System.out.println("You don't have a key for this door");
+                }
+            } else {
+                System.out.println("There is no door that needs a key there");
+            }
+        } else {
+            System.out.println("There is no door there");
         }
     }
 }
