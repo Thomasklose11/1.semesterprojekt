@@ -375,7 +375,7 @@ public class Rooms {
 
         endRoom.setExit("south", f3_D7);
 
-        currentRoom = f1_C2;
+        currentRoom = startRoom;
 
 
         // Anbringer et item i et rum
