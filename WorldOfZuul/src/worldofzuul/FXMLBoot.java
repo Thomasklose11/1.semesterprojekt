@@ -15,21 +15,23 @@ import javafx.stage.Stage;
  *
  * @author mathi
  */
-public class JavaFXApplication6 extends Application {
+public class FXMLBoot extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         
+        Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
+        
         Scene scene = new Scene(root);
+        Scene scenePause = new Scene(rootPause);
         
         stage.setScene(scene);
         stage.show();
+    
     }
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         launch(args);
     }

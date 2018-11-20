@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package worldofzuul;
 
 import java.net.URL;
@@ -13,19 +8,25 @@ import javafx.fxml.Initializable;
 import worldofzuul.domain.Game;
 
 
-public class FXMLDocumentController implements Initializable {
+public class FXMLController implements Initializable {
 
     @FXML
-    private void handlestartButtonAction(ActionEvent event) {
+    private void handleStartButtonAction(ActionEvent event) {
  
         Game.init();
         Game.play();
     }
     
     @FXML
-    private void handlequitButtonAction(ActionEvent event) {
+    private void handleQuitButtonAction(ActionEvent event) {
         
         System.exit(0);
+    }
+    
+    @FXML
+    private void handlePauseButtonAction(ActionEvent event) {
+        System.out.println("Pause");
+
   
     }
     

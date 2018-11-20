@@ -7,19 +7,19 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #663c06;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.FXMLDocumentController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #663c06;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.FXMLController">
    <children>
-      <Button layoutX="814.0" layoutY="59.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #ba8118;" text="Start" onAction= "#handlestartButtonAction" textFill="#4d682a" fx:id="startButton">
+      <Button layoutX="814.0" layoutY="59.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #ba8118;" text="Start" onAction= "#handleStartButtonAction" textFill="#4d682a" fx:id="startButton">
          <font>
             <Font name="Adventure" size="70.0" />
          </font>
       </Button>
-      <Button layoutX="814.0" layoutY="275.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #ba8118;" text="Highscores" textFill="#532104">
+      <Button layoutX="814.0" layoutY="275.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #ba8118;" text="Highscores" onAction= "#handlePauseButtonAction" textFill="#532104" fx:id="pauseButton">
          <font>
             <Font name="Adventure" size="66.0" />
          </font>
       </Button>
-      <Button layoutX="814.0" layoutY="487.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #ba8118;" text="Quit" onAction= "#handlequitButtonAction" textFill="#532104" fx:id="quitButton">
+      <Button layoutX="814.0" layoutY="487.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #ba8118;" text="Quit" onAction= "#handleQuitButtonAction" textFill="#532104" fx:id="quitButton">
          <font>
             <Font name="Adventure" size="70.0" />
          </font></Button>
