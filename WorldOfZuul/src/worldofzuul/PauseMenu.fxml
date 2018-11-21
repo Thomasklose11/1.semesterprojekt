@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" focusTraversable="true" pickOnBounds="false" prefHeight="348.0" prefWidth="464.0" style="-fx-background-color: #663c06;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.FXMLController">
+<AnchorPane id="AnchorPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="350.0" prefWidth="460.0" style="-fx-background-color: #663c06;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.FXMLController">
     <children>
-        <Label fx:id="label" layoutX="170.0" layoutY="151.0" minHeight="16" minWidth="69" prefHeight="69.0" prefWidth="123.0" />
-      <Button fx:id="buttonQuit" layoutX="144.0" layoutY="245.0" onAction="#handlePauseButtonAction" prefHeight="62.0" prefWidth="175.0" text="QUIT" textFill="#e1ff00">
+      <ImageView fitHeight="350.0" fitWidth="460.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D height="350.0" width="460.0" />
+         </viewport>
+         <image>
+            <Image url="@../Pause%20MenuUpscaled.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonResume" layoutX="130.0" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: false; -fx-background-image: url(/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="RESUME" textFill="#431606">
          <font>
             <Font name="Adventure" size="28.0" />
          </font></Button>
-      <Button fx:id="buttonResume" layoutX="144.0" layoutY="100.0" prefHeight="62.0" prefWidth="175.0" text="RESUME" textFill="#ddff00">
+      <Button fx:id="buttonHelp" layoutX="130.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: false; -fx-background-image: url(/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="HELP" textFill="#431606">
          <font>
             <Font name="Adventure" size="28.0" />
          </font></Button>
-      <Button fx:id="buttonHelp" layoutX="144.0" layoutY="174.0" prefHeight="62.0" prefWidth="175.0" text="HELP" textFill="#f2ff00" >
+      <Button fx:id="buttonQuit" layoutX="132.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handlePauseButtonAction" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: false; -fx-background-image: url(/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="QUIT" textFill="#431606">
          <font>
             <Font name="Adventure" size="28.0" />
-         </font></Button>
-      <Label layoutX="177.0" layoutY="23.0" prefHeight="62.0" prefWidth="109.0" text="Pause" textAlignment="CENTER" textFill="#eeff00">
+         </font>
+      </Button>
+      <Label fx:id="pause" alignment="CENTER" layoutX="82.0" layoutY="14.0" prefHeight="90.0" prefWidth="300.0" style="-fx-background-image: url(PauseMenuButtonUpscaled.png); -fx-background-size: 300px 90px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Pause" textAlignment="CENTER" textFill="#431606">
          <font>
             <Font name="Adventure" size="44.0" />
          </font>
