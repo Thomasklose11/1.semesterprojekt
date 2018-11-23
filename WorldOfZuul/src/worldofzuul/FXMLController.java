@@ -14,11 +14,11 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void handleStartButtonAction(ActionEvent event) throws Exception {
-        Game.init();
-        Game.play();
         Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
         Scene sceneGame = new Scene (rootGame);
         FXMLBoot.primaryStage.setScene(sceneGame);
+        Game.init();
+        Game.play();
     }
 
     @FXML
@@ -31,7 +31,6 @@ public class FXMLController implements Initializable {
         Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
         Scene scenePause = new Scene(rootPause);
         FXMLBoot.primaryStage.setScene(scenePause);
-
     }
 
     @Override

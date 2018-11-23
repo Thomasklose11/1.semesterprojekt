@@ -23,7 +23,7 @@ import worldofzuul.domain.Rooms;
  *
  * @author morte
  */
-public class FXMLDocumentController implements Initializable {
+public class GameUIController implements Initializable {
 
     @FXML
     private GridPane InventoryGrit;
@@ -31,7 +31,7 @@ public class FXMLDocumentController implements Initializable {
     private Button NorthButton;
     @FXML
     private Button SouthButton;
-    @FXML
+    @FXML 
     private Button WestButton;
     @FXML
     private Button EastButton;
@@ -41,6 +41,7 @@ public class FXMLDocumentController implements Initializable {
     private ImageView RoomDisplayImage;
     @FXML
     private Label HighscoreLabel;
+    
 
     /**
      * Initializes the controller class.
@@ -66,6 +67,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleGoWest(ActionEvent event) {
         String direction = "west";
+        moveUI(direction);
     }
 
     @FXML
