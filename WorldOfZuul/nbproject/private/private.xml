@@ -10,5 +10,21 @@
             <file>file:/C:/Users/morte/Desktop/1.%20Semester%20Git%20Kraken/1.semesterprojekt/WorldOfZuul/src/worldofzuul/command/Commands.java</file>
             <file>file:/C:/Users/morte/Desktop/1.%20Semester%20Git%20Kraken/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Room.java</file>
         </group>
+        <group name="Projekt group for training">
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/command/CommandWords.java</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/ButtonShapeSheet.css</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Game.java</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Inventory.java</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/command/CommandWord.java</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/MainMenu.fxml</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/FXMLController.java</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/GameUI.fxml</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/FXMLBoot.java</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/command/Command.java</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/command/Parser.java</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Rooms.java</file>
+            <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/command/Commands.java</file>
+        </group>
     </open-files>
 </project-private>

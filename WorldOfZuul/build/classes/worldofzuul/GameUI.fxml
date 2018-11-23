@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@ButtonShapeSheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.FXMLDocumentController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@ButtonShapeSheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.GameUIController">
    <children>
       <GridPane fx:id="InventoryGrit" layoutY="500.0" prefHeight="190.0" prefWidth="278.0">
         <columnConstraints>
@@ -24,11 +24,11 @@
       </GridPane>
       <Button fx:id="NorthButton" layoutX="659.0" layoutY="499.0" mnemonicParsing="false" onAction="#handleGoNorth" prefHeight="75.0" prefWidth="47.0" styleClass="north_button" />
       <Button fx:id="SouthButton" layoutX="659.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleGoSouth" prefHeight="75.0" prefWidth="47.0" styleClass="south_button" />
-      <Button fx:id="WestButton" layoutX="583.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleGoWest" prefHeight="47.0" prefWidth="75.0" styleClass="west_button"/>
+      <Button fx:id="WestButton" layoutX="583.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleGoWest" prefHeight="47.0" prefWidth="75.0" styleClass="west_button" />
       <Button fx:id="EastButton" layoutX="706.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleGoEast" prefHeight="47.0" prefWidth="75.0" styleClass="east_button" />
       <TextField fx:id="UiTekstField" layoutX="982.0" layoutY="500.0" prefHeight="200.0" prefWidth="386.0" />
       <ImageView fx:id="RoomDisplayImage" fitHeight="500.0" fitWidth="1366.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="HighscoreLabel" layoutX="1163.0" layoutY="-1.0" prefHeight="39.0" prefWidth="138.0" text="Label" />
-      <Button layoutX="331.0" layoutY="640.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="100.0" text="Menu" />
+      <Button fx:id="MenuWindowButton" layoutX="331.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleMenuWindowButton" prefHeight="33.0" prefWidth="100.0" text="Menu" />
    </children>
 </AnchorPane>

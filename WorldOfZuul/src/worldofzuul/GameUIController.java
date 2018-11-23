@@ -9,7 +9,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -41,7 +44,8 @@ public class GameUIController implements Initializable {
     private ImageView RoomDisplayImage;
     @FXML
     private Label HighscoreLabel;
-    
+    @FXML
+    private Button MenuWindowButton;
 
     /**
      * Initializes the controller class.
@@ -75,7 +79,13 @@ public class GameUIController implements Initializable {
         String direction = "east";
         moveUI(direction);
     }
-
+    @FXML
+    private void handleMenuWindowButton(ActionEvent event) throws Exception {
+        Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
+        Scene scenePause = new Scene(rootPause);
+        FXMLBoot.primaryStage.setScene(scenePause);
+    }
+    
     private void moveUI (String direction){
         for (int i = 0; i < Rooms.getCurrentRoom().doors.size(); i++) {
             if (Rooms.getCurrentRoom().doors.get(i).getDirection().equals(direction)) {
