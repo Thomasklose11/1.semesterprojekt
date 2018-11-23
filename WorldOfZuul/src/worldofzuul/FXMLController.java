@@ -10,34 +10,33 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import worldofzuul.domain.Game;
 
-
 public class FXMLController implements Initializable {
 
     @FXML
-    private void handleStartButtonAction(ActionEvent event) {
- 
+    private void handleStartButtonAction(ActionEvent event) throws Exception {
         Game.init();
         Game.play();
+        Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
+        Scene sceneGame = new Scene (rootGame);
+        FXMLBoot.primaryStage.setScene(sceneGame);
     }
-    
+
     @FXML
     private void handleQuitButtonAction(ActionEvent event) {
-        
         System.exit(0);
     }
-    
+
     @FXML
-    private void handlePauseButtonAction(ActionEvent event) throws Exception{
-        System.out.println("dssd");
-         Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
-           Scene scenePause = new Scene(rootPause);
+    private void handlePauseButtonAction(ActionEvent event) throws Exception {
+        Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
+        Scene scenePause = new Scene(rootPause);
         FXMLBoot.primaryStage.setScene(scenePause);
-        
+
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }
