@@ -379,7 +379,7 @@ public class Rooms {
 
 
         // Anbringer et item i et rum
-        f1_C1.setItem(new Item("whip"));
+        f1_C1.setItem(new Item("whip", "worldofzuul/Inventory/whip.png"));
         f2_D4.setItem(new Item("gasmask"));
         f2_A4.setItem(new Item("torch"));
         f3_D3.setItem(new Item("pistol"));

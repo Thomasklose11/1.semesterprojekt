@@ -3,6 +3,7 @@ package worldofzuul.domain;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
+import worldofzuul.GameUIController;
 
 public class Room {
 
@@ -84,8 +85,8 @@ public class Room {
     public Item getItem(String itemName) {
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).getDescription().equals(itemName)) {
+                new GameUIController().setItem(items.get(i));
                 return items.get(i);
-
             }
         }
         return null;
@@ -120,7 +121,7 @@ public class Room {
     }
 
     /*
-     * Get a description of the ithem in a room
+     * Get a description of the item in a room
      */
     public String getRoomItems() {
 

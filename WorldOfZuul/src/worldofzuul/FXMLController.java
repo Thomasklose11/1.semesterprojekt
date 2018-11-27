@@ -18,7 +18,7 @@ public class FXMLController implements Initializable {
         Scene sceneGame = new Scene (rootGame);
         FXMLBoot.primaryStage.setScene(sceneGame);
         Game.init();
-        Game.play();
+        //Game.play();
     }
 
     @FXML

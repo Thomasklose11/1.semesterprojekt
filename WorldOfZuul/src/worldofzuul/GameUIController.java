@@ -18,6 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import worldofzuul.domain.Item;
 import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
 
@@ -28,8 +29,6 @@ import worldofzuul.domain.Rooms;
  */
 public class GameUIController implements Initializable {
 
-    @FXML
-    private GridPane InventoryGrit;
     @FXML
     private Button NorthButton;
     @FXML
@@ -46,13 +45,23 @@ public class GameUIController implements Initializable {
     private Label HighscoreLabel;
     @FXML
     private Button MenuWindowButton;
-
+    @FXML
+    private GridPane Inventory;
+    
+    private static int counter = 0;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+    }
+    
+    public void setItem(Item item) {
+        ImageView tile = (ImageView)Inventory.getChildren().get(counter);
+        tile.setImage(item.getIcon());
+        counter++;
     }
 
     @FXML
@@ -104,5 +113,13 @@ public class GameUIController implements Initializable {
                 }
             }
         }
+    }
+
+    @FXML
+    private void handlePIckUp(ActionEvent event) {
+    setItem(new Item("Whip", "Inventory/WhipUpscaled.png"));
+    setItem(new Item("Gas Mask", "Inventory/GasMaskUpscaled.png"));
+    setItem(new Item("Green key", "Inventory/GreenKeyUpscaled.png"));
+    
     }
 }
