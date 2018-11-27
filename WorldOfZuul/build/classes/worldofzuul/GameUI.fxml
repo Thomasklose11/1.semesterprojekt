@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1370.0" stylesheets="@ButtonShapeSheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.GameUIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1370.0" stylesheets="@ButtonShapeSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.GameUIController">
    <children>
      <GridPane fx:id="Inventory" layoutX="56.0" layoutY="499.0" prefHeight="219.0" prefWidth="244.0">
         <columnConstraints>
@@ -45,13 +45,14 @@
       <Button fx:id="WestButton" layoutX="628.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleGoWest" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasW.png); -fx-background-size: 45px 75px; " styleClass="west_button" />
       <Button fx:id="EastButton" layoutX="748.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleGoEast" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasE.png); -fx-background-size: 45px 75px; " styleClass="east_button" />
       <TextField fx:id="UiTekstField" layoutX="982.0" layoutY="500.0" prefHeight="200.0" prefWidth="386.0" />
-      <ImageView fx:id="RoomDisplayImage" fitHeight="500.0" fitWidth="1370.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" >
+      <ImageView fx:id="RoomDisplayImage" fitHeight="500.0" fitWidth="1370.0" layoutX="-11.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
         <image>
-              <Image url ="Rooms/StartRoom.png"/>
+              <Image url="Rooms/StartRoom.png" />
         </image> 
       </ImageView>
       <Label fx:id="HighscoreLabel" layoutX="1163.0" layoutY="-1.0" prefHeight="39.0" prefWidth="138.0" text="Label" />
       <Button fx:id="MenuWindowButton" layoutX="331.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleMenuWindowButton" prefHeight="33.0" prefWidth="100.0" text="Menu" />
-      <Button layoutX="331.0" layoutY="559.0" mnemonicParsing="false" onAction="#handlePIckUp" text="Button" />
+      <ImageView id="itemView" fx:id="itemImage" fitHeight="80.0" fitWidth="80.0" layoutX="453.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="453.0" layoutY="114.0" mnemonicParsing="false" onAction="#handlePickUp" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: false;" />
    </children>
 </AnchorPane>

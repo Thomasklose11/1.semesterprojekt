@@ -379,17 +379,18 @@ public class Rooms {
 
 
         // Anbringer et item i et rum
-        f1_C1.setItem(new Item("whip", "worldofzuul/Inventory/whip.png"));
-        f2_D4.setItem(new Item("gasmask"));
-        f2_A4.setItem(new Item("torch"));
-        f3_D3.setItem(new Item("pistol"));
-        f3_F4.setItem(new Item("hat"));
-        endRoom.setItem(new Item("statue"));
+        f1_C1.setItem(new Item("whip", "Inventory/WhipUpscaled.png"));
+        f2_D4.setItem(new Item("gasmask", "Inventory/GasMaskUpscaled.png"));
+//        f2_A4.setItem(new Item("torch"));
+//        f3_D3.setItem(new Item("pistol"));
+//        f3_F4.setItem(new Item("hat"));
+//        endRoom.setItem(new Item("statue"));
         
         // Anbringer en key i et rum
-        f3_D2.setKey(new Key("red_key","red"));
-        f3_A5.setKey(new Key("blue_key","blue"));
-        f3_F7.setKey(new Key("green_key","green"));
+        f3_D2.setKey(new Key("red_key", "Inventory/RedKeyUpscaled.png"));
+        f3_A5.setKey(new Key("blue_key", "Inventory/BlueKeyUpscaled.png"));
+        f3_F7.setKey(new Key("green_key","Inventory/GreenKeyUpscaled.png"));
+        f1_C2.setKey(new Key("test_key","black"));
         
         // Anbringer bonusser i rum
         f1_A2.setBonus1();
