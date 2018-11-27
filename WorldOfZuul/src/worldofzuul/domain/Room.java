@@ -3,6 +3,8 @@ package worldofzuul.domain;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
+import javafx.scene.image.Image;
+import worldofzuul.GameUIController;
 
 public class Room {
 
@@ -10,7 +12,7 @@ public class Room {
     private final HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
 
-    boolean hasItems;
+    public boolean hasItems;
 
     private boolean question = false;
     private Question roomQuestion;
@@ -19,9 +21,17 @@ public class Room {
 
     private int bonus = 0;
 
+    private Image roomImage;
+
     public Room(String description) {
         this.description = description;
         exits = new HashMap<String, Room>();
+    }
+
+    public Room(String description, String imageURL) {
+        this.description = description;
+        exits = new HashMap<String, Room>();
+        roomImage = new Image(imageURL, true);
     }
 
     //Setter exit for et rum
@@ -84,8 +94,8 @@ public class Room {
     public Item getItem(String itemName) {
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).getDescription().equals(itemName)) {
+                new GameUIController().setItem(items.get(i));
                 return items.get(i);
-
             }
         }
         return null;
@@ -106,6 +116,16 @@ public class Room {
         }
     }
 
+    public void removeItem(int index) {
+
+        items.remove(index);
+
+        if (items.isEmpty()) {
+            hasItems = false;
+        }
+    }
+
+
     /*
      *Set a particular item in the room
      */
@@ -113,14 +133,14 @@ public class Room {
         items.add(newItem);
         hasItems = true;
     }
-    
-    public void setKey(Key newKey){
+
+    public void setKey(Key newKey) {
         items.add(newKey);
         hasItems = true;
     }
 
     /*
-     * Get a description of the ithem in a room
+     * Get a description of the item in a room
      */
     public String getRoomItems() {
 
@@ -199,5 +219,9 @@ public class Room {
         } else {
             System.out.println("There is no door there");
         }
+    }
+
+    public Image getImage() {
+        return roomImage;
     }
 }
