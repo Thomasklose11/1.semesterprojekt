@@ -55,7 +55,7 @@ public class GameUIController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+      
     }
     
     public void setItem(Item item) {
@@ -108,6 +108,7 @@ public class GameUIController implements Initializable {
                         System.out.println("There is no door!");
                     }
                     Rooms.setCurrentRoom(nextRoom);
+                    RoomDisplayImage.setImage(nextRoom.getImage());
                     System.out.println(Rooms.getCurrentRoom().getLongDescription());
                     break;
                 }

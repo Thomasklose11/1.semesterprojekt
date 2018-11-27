@@ -3,6 +3,7 @@ package worldofzuul.domain;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
+import javafx.scene.image.Image;
 import worldofzuul.GameUIController;
 
 public class Room {
@@ -19,10 +20,18 @@ public class Room {
     public ArrayList<Door> doors = new ArrayList<>();
 
     private int bonus = 0;
+    
+    private Image roomImage;
 
     public Room(String description) {
         this.description = description;
         exits = new HashMap<String, Room>();
+    }
+    
+    public Room(String description, String imageURL) {
+        this.description = description;
+        exits = new HashMap<String, Room>();
+        roomImage = new Image (imageURL, true);
     }
 
     //Setter exit for et rum
@@ -200,5 +209,10 @@ public class Room {
         } else {
             System.out.println("There is no door there");
         }
+    }
+    
+    
+    public Image getImage (){
+        return roomImage;
     }
 }

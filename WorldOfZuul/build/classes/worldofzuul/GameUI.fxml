@@ -3,13 +3,14 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@ButtonShapeSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.GameUIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1370.0" stylesheets="@ButtonShapeSheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.GameUIController">
    <children>
      <GridPane fx:id="Inventory" layoutX="56.0" layoutY="499.0" prefHeight="219.0" prefWidth="244.0">
         <columnConstraints>
@@ -34,12 +35,21 @@
             <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <Button fx:id="NorthButton" layoutX="659.0" layoutY="499.0" mnemonicParsing="false" onAction="#handleGoNorth" prefHeight="75.0" prefWidth="47.0" styleClass="north_button" />
-      <Button fx:id="SouthButton" layoutX="659.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleGoSouth" prefHeight="75.0" prefWidth="47.0" styleClass="south_button" />
-      <Button fx:id="WestButton" layoutX="583.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleGoWest" prefHeight="47.0" prefWidth="75.0" styleClass="west_button" />
-      <Button fx:id="EastButton" layoutX="706.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleGoEast" prefHeight="47.0" prefWidth="75.0" styleClass="east_button" />
+      <ImageView fitHeight="195.0" fitWidth="195.0" layoutX="628.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="UI/CompasBG.png" />
+         </image></ImageView>
+         
+      <Button fx:id="NorthButton" layoutX="703.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleGoNorth" prefHeight="75.0" prefWidth="45.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasN.png); -fx-background-size: 75px 45px; " styleClass="north_button" />
+      <Button fx:id="SouthButton" layoutX="703.0" layoutY="664.0" mnemonicParsing="false" onAction="#handleGoSouth" prefHeight="75.0" prefWidth="45.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasS.png); -fx-background-size: 75px 45px; " styleClass="south_button" />
+      <Button fx:id="WestButton" layoutX="628.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleGoWest" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasW.png); -fx-background-size: 45px 75px; " styleClass="west_button" />
+      <Button fx:id="EastButton" layoutX="748.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleGoEast" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasE.png); -fx-background-size: 45px 75px; " styleClass="east_button" />
       <TextField fx:id="UiTekstField" layoutX="982.0" layoutY="500.0" prefHeight="200.0" prefWidth="386.0" />
-      <ImageView fx:id="RoomDisplayImage" fitHeight="500.0" fitWidth="1366.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="RoomDisplayImage" fitHeight="500.0" fitWidth="1370.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" >
+        <image>
+              <Image url ="Rooms/StartRoom.png"/>
+        </image> 
+      </ImageView>
       <Label fx:id="HighscoreLabel" layoutX="1163.0" layoutY="-1.0" prefHeight="39.0" prefWidth="138.0" text="Label" />
       <Button fx:id="MenuWindowButton" layoutX="331.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleMenuWindowButton" prefHeight="33.0" prefWidth="100.0" text="Menu" />
       <Button layoutX="331.0" layoutY="559.0" mnemonicParsing="false" onAction="#handlePIckUp" text="Button" />

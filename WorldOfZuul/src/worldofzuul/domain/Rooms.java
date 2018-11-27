@@ -34,24 +34,24 @@ public class Rooms {
         startRoom = new Room("You’re in the jungle in Belize.\n"
                 + "You, the Archeologist “El Whipper”, has through 16 years of devoted research, looked for ancient Mayan\n"
                 + "treasures. You now stand before the possibly greatest treasure to ever see the light of day. Will you\n"
-                + "succeed in finding the treasure or will you succumb to the dangers of the temple. It is up to you!");
+                + "succeed in finding the treasure or will you succumb to the dangers of the temple. It is up to you!","Rooms/StartRoom.png");
 
-        f1_A1 = new Room("You’re standing in a dark room.");
+        f1_A1 = new Room("You’re standing in a dark room.","Rooms/F1_A1.png");
         f1_B1 = new Room("The door to the outside is sealed shut.\n"
                 + "A statue is standing in the middle of the room, it’s eyes starts to glow and it utters: “This ancient temple\n"
                 + "contains many secret treasures, but dangers lurk within, many have tried, but none have succeeded in\n"
-                + "obtaining the legendary jade statue”");
-        f1_C1 = new Room("You spot on the floor, a whip lying in the dust.");
+                + "obtaining the legendary jade statue”","Rooms/F1_B1.png");
+        f1_C1 = new Room("You spot on the floor, a whip lying in the dust.","Rooms/F1_C1.png");
 
-        f1_A2 = new Room("On the floor you spot a treasure.");
-        f1_B2 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.");
+        f1_A2 = new Room("On the floor you spot a treasure.","Rooms/F1_A2.png");
+        f1_B2 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.","Rooms/F1_B2.png");
         f1_C2 = new Room("You enter the room and spot a large shadow out of the corner of your eye, before you can get a good look\n"
-                + "at it, it disappears.");
+                + "at it, it disappears.","Rooms/F1_C2.png");
 
-        f1_A3 = new Room("On the floor you spot a valuable treasure and pick it up");
+        f1_A3 = new Room("On the floor you spot a valuable treasure and pick it up","Rooms/F1_A3.png");
         f1_B3 = new Room("You stand in front of a pit and see a large branch above it, it is out of your reach, but it looks stable and\n"
-                + "solid.");
-        f1_C3 = new Room("You stand in an empty room.");
+                + "solid.","Rooms/F1_B3.png");
+        f1_C3 = new Room("You stand in an empty room.","Rooms/F1_C3.png");
 
         //Second floor rooms
         f2_A1 = new Room("You stand in an empty room.");
@@ -149,7 +149,7 @@ public class Rooms {
         f1_B2.setExit("east", f1_C2);
         f1_B2.setExit("west", f1_A2);
 
-        f1_C2.setExitWithColor("north", f1_C3,"black");
+        f1_C2.setExit("north", f1_C3);
         f1_C2.setExit("west", f1_B2);
 
         f1_A3.setExit("east", f1_B3);
@@ -390,7 +390,6 @@ public class Rooms {
         f3_D2.setKey(new Key("red_key","red"));
         f3_A5.setKey(new Key("blue_key","blue"));
         f3_F7.setKey(new Key("green_key","green"));
-        f1_C2.setKey(new Key("test_key","black"));
         
         // Anbringer bonusser i rum
         f1_A2.setBonus1();
