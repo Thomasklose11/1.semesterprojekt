@@ -77,7 +77,7 @@ public class Commands {
         }
     }
 
-    private static void go(Command command) {
+    public static void go(Command command) {
         if (!command.hasSecondWord()) {
             System.out.println("Go where?");
             return;

@@ -9,27 +9,27 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
  *
  * @author mathi
  */
-public class JavaFXApplication6 extends Application {
-    
+public class FXMLBoot extends Application {
+    public static Stage primaryStage;
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
-        
+
         Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
-        stage.show();
+
+        primaryStage = stage;
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
         launch(args);
     }

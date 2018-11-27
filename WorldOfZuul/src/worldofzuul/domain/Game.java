@@ -9,7 +9,7 @@ public class Game {
 
     public static void init() {
         Rooms.createRooms();
-        Parser.init();
+        //Parser.init();
         Show.welcome();
     }
 

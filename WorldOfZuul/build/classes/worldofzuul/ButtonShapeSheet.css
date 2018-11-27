@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-11-2018, 11:00:56
+    Author     : s_b_k
+*/
+
+.button{
+    -fx-font-size: 16pt;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(three-pass-box, black, 10, 0 , 0, 0);
+}
+
+.north_button{
+    -fx-shape: "M 300 450 L 400 150 L 500 450 L 300 450 ";
+    
+}
+.east_button{
+    -fx-shape: "M 250 250 L 600 300 L 250 350 L 250 250" ;
+}
+.south_button{
+    -fx-shape: "M 550 150 L 450 450 L 350 150 L 550 150 ";
+}
+.west_button{
+    -fx-shape: "M 600 200 L 250 300 L 600 400 L 600 200 ";
+
+}

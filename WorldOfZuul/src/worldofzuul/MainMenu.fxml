@@ -2,24 +2,27 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #663c06;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.FXMLDocumentController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #663c06;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.FXMLController">
    <children>
-      <Button layoutX="814.0" layoutY="59.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #ba8118;" text="Start" onAction= "#handlestartButtonAction" textFill="#4d682a" fx:id="startButton">
+      <ImageView fx:id="mainMenuArt" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="startButton" layoutX="814.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleStartButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: false; -fx-background-image: url(/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Start" textFill="#4d682a">
          <font>
             <Font name="Adventure" size="70.0" />
          </font>
       </Button>
-      <Button layoutX="814.0" layoutY="275.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #ba8118;" text="Highscores" textFill="#532104">
+      <Button fx:id="pauseButton" layoutX="814.0" layoutY="275.0" mnemonicParsing="false" onAction="#handlePauseButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: false; -fx-background-image: url(/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Highscores" textFill="#532104">
          <font>
             <Font name="Adventure" size="66.0" />
          </font>
       </Button>
-      <Button layoutX="814.0" layoutY="487.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #ba8118;" text="Quit" onAction= "#handlequitButtonAction" textFill="#532104" fx:id="quitButton">
+      <Button fx:id="quitButton" layoutX="814.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleQuitButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: false; -fx-background-image: url(/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Quit" textFill="#532104">
          <font>
             <Font name="Adventure" size="70.0" />
          </font></Button>
