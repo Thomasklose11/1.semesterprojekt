@@ -18,6 +18,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import worldofzuul.domain.Inventory;
+import worldofzuul.domain.Item;
 import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
 import worldofzuul.domain.Score;
@@ -32,12 +34,10 @@ public class GameUIController implements Initializable {
     
 
     @FXML
-    private GridPane InventoryGrit;
-    @FXML
     private Button NorthButton;
     @FXML
     private Button SouthButton;
-    @FXML 
+    @FXML
     private Button WestButton;
     @FXML
     private Button EastButton;
@@ -49,20 +49,32 @@ public class GameUIController implements Initializable {
     public static Label HighscoreLabel;
     @FXML
     private Button MenuWindowButton;
+    @FXML
+    private GridPane Inventory;
+
+    private static int counter = 0;
+    @FXML
+    private ImageView itemImage;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
+    }
+
+    public void setItem(Item item) {
+        ImageView tile = (ImageView) Inventory.getChildren().get(counter);
+        tile.setImage(item.getIcon());
+        counter++;
     }
 
     @FXML
     private void handleGoNorth(ActionEvent event) {
         String direction = "north";
         moveUI(direction);
-        
+
     }
 
     @FXML
@@ -82,14 +94,15 @@ public class GameUIController implements Initializable {
         String direction = "east";
         moveUI(direction);
     }
+
     @FXML
     private void handleMenuWindowButton(ActionEvent event) throws Exception {
         Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
         Scene scenePause = new Scene(rootPause);
         FXMLBoot.primaryStage.setScene(scenePause);
     }
-    
-    private void moveUI (String direction){
+
+    private void moveUI(String direction) {
         for (int i = 0; i < Rooms.getCurrentRoom().doors.size(); i++) {
             if (Rooms.getCurrentRoom().doors.get(i).getDirection().equals(direction)) {
                 if (Rooms.getCurrentRoom().doors.get(i).getLocked() == true) {
@@ -102,15 +115,27 @@ public class GameUIController implements Initializable {
                         System.out.println("There is no door!");
                     }
                     Rooms.setCurrentRoom(nextRoom);
+                    RoomDisplayImage.setImage(nextRoom.getImage());
+                    if (Rooms.getCurrentRoom().hasItems == true) {
+                        itemImage.setImage(Rooms.getCurrentRoom().getItem(0).getIcon());
+
+                    } else {
+                        itemImage.setImage(null);
+                    }
                     System.out.println(Rooms.getCurrentRoom().getLongDescription());
                     break;
                 }
             }
         }
     }
-    
-   @FXML
-    private void handleTest(ActionEvent event) throws Exception {
-                HighscoreLabel.setText(String.valueOf(Score.getScore()));
+
+    @FXML
+    private void handlePickUp(ActionEvent event) {
+        Item newItem = Rooms.getCurrentRoom().getItem(0);
+
+        worldofzuul.domain.Inventory.addToInventory(newItem);
+        Rooms.getCurrentRoom().removeItem(0);
+         itemImage.setImage(null);
+
     }
 }
