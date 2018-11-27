@@ -20,13 +20,16 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
+import worldofzuul.domain.Score;
 
 /**
  * FXML Controller class
  *
  * @author morte
  */
+
 public class GameUIController implements Initializable {
+    
 
     @FXML
     private GridPane InventoryGrit;
@@ -43,7 +46,7 @@ public class GameUIController implements Initializable {
     @FXML
     private ImageView RoomDisplayImage;
     @FXML
-    private Label HighscoreLabel;
+    public static Label HighscoreLabel;
     @FXML
     private Button MenuWindowButton;
 
@@ -104,5 +107,10 @@ public class GameUIController implements Initializable {
                 }
             }
         }
+    }
+    
+   @FXML
+    private void handleTest(ActionEvent event) throws Exception {
+                HighscoreLabel.setText(String.valueOf(Score.getScore()));
     }
 }
