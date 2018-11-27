@@ -27,7 +27,7 @@
          <font>
             <Font name="Adventure" size="28.0" />
          </font></Button>
-      <Button fx:id="buttonQuit" layoutX="132.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handlePauseButtonAction" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: false; -fx-background-image: url(/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="QUIT" textFill="#431606">
+      <Button fx:id="buttonQuit" layoutX="132.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleQuitBtPauseMenuAction"  prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: false; -fx-background-image: url(/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="QUIT" textFill="#431606">
          <font>
             <Font name="Adventure" size="28.0" />
          </font>

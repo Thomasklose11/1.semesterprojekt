@@ -33,6 +33,16 @@ public class FXMLController implements Initializable {
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
+
+    @FXML
+    private void handleQuitBtPauseMenuAction(ActionEvent event) throws Exception {
+
+        Parent rootMain = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Scene sceneMain = new Scene(rootMain);
+        FXMLBoot.primaryStage.setScene(sceneMain);
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
