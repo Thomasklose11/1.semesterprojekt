@@ -27,6 +27,7 @@ public class FXMLBoot extends Application {
         primaryStage = stage;
         primaryStage.setScene(scene);
         primaryStage.show();
+        
     }
 
 
