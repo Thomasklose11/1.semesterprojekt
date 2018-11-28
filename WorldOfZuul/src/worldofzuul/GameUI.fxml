@@ -51,7 +51,7 @@
               <Image url="Rooms/StartRoom.png" />
         </image> 
       </ImageView>
-      <Label fx:id="HighscoreLabel" layoutX="1213.0" layoutY="14.0" prefHeight="39.0" prefWidth="138.0" text="0"  textFill="WHITE">
+      <Label fx:id="HighscoreLabel" layoutX="1213.0" layoutY="14.0" prefHeight="39.0" prefWidth="138.0" text="0" textFill="WHITE">
          <font>
             <Font name="Press Start 2P" size="25.0" />
          </font></Label>

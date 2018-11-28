@@ -19,8 +19,6 @@ public class Room {
 
     public ArrayList<Door> doors = new ArrayList<>();
 
-    private int bonus = 0;
-
     private Image roomImage;
 
     public Room(String description) {
@@ -63,12 +61,6 @@ public class Room {
         if (hasItems) {
             returnString += "\nItems in the room: ";
             returnString += getRoomItems();
-        }
-
-        if (bonus == 1) {
-            returnString += "\nThere is a treasure here!";
-        } else if (bonus == 2) {
-            returnString += "\nThere is a grand treasure here!";
         }
 
         if (hasQuestion() == true) {
@@ -150,23 +142,6 @@ public class Room {
         }
         return output;
 
-    }
-
-    // Get the type of bonus from this room ( 0 = no bonus, 1 = bonus, 2 = bonus+)
-    public int getBonus() {
-        return bonus;
-    }
-
-    public void setBonus0() {
-        bonus = 0;
-    }
-
-    public void setBonus1() {
-        bonus = 1;
-    }
-
-    public void setBonus2() {
-        bonus = 2;
     }
 
     public Door findDoor(String direction) {

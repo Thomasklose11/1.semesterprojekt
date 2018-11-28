@@ -390,22 +390,30 @@ public class Rooms {
         f3_D2.setKey(new Key("red_key", "Inventory/RedKeyUpscaled.png"));
         f3_A5.setKey(new Key("blue_key", "Inventory/BlueKeyUpscaled.png"));
         f3_F7.setKey(new Key("green_key","Inventory/GreenKeyUpscaled.png"));
-        f1_C2.setKey(new Key("test_key","black"));
+        
+        //Anbringer bonusser i rum
+        f1_A2.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
+        f2_D2.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
+        f3_A2.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
+        f3_C4.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
+        f3_A6.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
+        f3_C7.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
+        f3_E3.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
         
         // Anbringer bonusser i rum
-        f1_A2.setBonus1();
-        f2_D2.setBonus1();
-        f3_A2.setBonus1();
-        f3_C4.setBonus1();
-        f3_A6.setBonus1();
-        f3_C7.setBonus1();
-        f3_E3.setBonus1();
+       // f1_A2.setBonus1();
+//        f2_D2.setBonus1();
+//        f3_A2.setBonus1();
+//        f3_C4.setBonus1();
+//        f3_A6.setBonus1();
+//        f3_C7.setBonus1();
+//        f3_E3.setBonus1();
         
         //Anbringer store bonusser i rum
-        f1_A3.setBonus2();
-        f2_D5.setBonus2();
-        f3_F2.setBonus2();
-        f3_E6.setBonus2();
+//        f1_A3.setBonus2();
+//        f2_D5.setBonus2();
+//        f3_F2.setBonus2();
+//        f3_E6.setBonus2();
         
         //Anbringer spørgsmål i rum og låser døre
         f1_B2.setQuestion(0);

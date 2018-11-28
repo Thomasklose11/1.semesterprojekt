@@ -21,6 +21,7 @@ import javafx.scene.layout.GridPane;
 import worldofzuul.domain.Item;
 import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
+import worldofzuul.domain.Bonus;
 import worldofzuul.domain.Score;
 
 /**
@@ -28,9 +29,7 @@ import worldofzuul.domain.Score;
  *
  * @author morte
  */
-
 public class GameUIController implements Initializable {
-    
 
     @FXML
     private Button NorthButton;
@@ -45,7 +44,7 @@ public class GameUIController implements Initializable {
     @FXML
     private ImageView RoomDisplayImage;
     @FXML
-    public static Label HighscoreLabel;
+    public Label HighscoreLabel;
     @FXML
     private Button MenuWindowButton;
     @FXML
@@ -72,6 +71,8 @@ public class GameUIController implements Initializable {
     private ImageView Inventory6;
     @FXML
     private ImageView Inventory9;
+    @FXML
+    private ImageView bonusImage1;
 
     /**
      * Initializes the controller class.
@@ -148,13 +149,33 @@ public class GameUIController implements Initializable {
 
     @FXML
     private void handlePickUp(ActionEvent event) {
-        Item newItem = Rooms.getCurrentRoom().getItem(0);
+        if (Rooms.getCurrentRoom().getItem(0) != null) {
+            if (Rooms.getCurrentRoom().getItem(0) instanceof Bonus) {
+                Bonus currentBonus = (Bonus) Rooms.getCurrentRoom().getItem(0);
+                if (currentBonus.getBonus() == 1) {
+                    Rooms.getCurrentRoom().removeItem(0);
+                    itemImage.setImage(null);
+                    Score.incrementScore(1000);
+                    setScore();
+                } else if (currentBonus.getBonus() == 2) {
+                    Rooms.getCurrentRoom().removeItem(0);
+                    itemImage.setImage(null);
+                    Score.incrementScore(1000);
+                    setScore();
+                }
 
-        worldofzuul.domain.Inventory.addToInventory(newItem);
-        Rooms.getCurrentRoom().removeItem(0);
+            } else {
+                Item newItem = Rooms.getCurrentRoom().getItem(0);
 
-        itemImage.setImage(null);
-        displayInventory();
+                worldofzuul.domain.Inventory.addToInventory(newItem);
+                Rooms.getCurrentRoom().removeItem(0);
+
+                itemImage.setImage(null);
+                displayInventory();
+            }
+        } else {
+            System.out.println("There is no item in this room");
+        }
 
     }
 
@@ -169,5 +190,9 @@ public class GameUIController implements Initializable {
         Inventory8.setImage(worldofzuul.domain.Inventory.getItem(7).getIcon());
         Inventory9.setImage(worldofzuul.domain.Inventory.getItem(8).getIcon());
 
+    }
+
+    public void setScore() {
+        HighscoreLabel.setText(String.valueOf(Score.getScore()));
     }
 }

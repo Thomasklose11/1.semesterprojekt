@@ -11,7 +11,7 @@ public class Score {
     
     public static void incrementScore(int score1) {
         score += score1;
-        GameUIController.HighscoreLabel.setText(String.valueOf(Score.getScore()));
+        
     }   
 
     public static int getScore() {
