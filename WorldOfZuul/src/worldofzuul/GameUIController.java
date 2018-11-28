@@ -28,9 +28,7 @@ import worldofzuul.domain.Score;
  *
  * @author morte
  */
-
 public class GameUIController implements Initializable {
-    
 
     @FXML
     private Button NorthButton;
@@ -76,9 +74,14 @@ public class GameUIController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    public static boolean revisit = false;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        if (revisit != false) {
+            RoomDisplayImage.setImage(Rooms.getCurrentRoom().getImage());
+        }
+        revisit = true;
     }
 
     public void setItem(Item item) {
@@ -155,7 +158,13 @@ public class GameUIController implements Initializable {
 
         itemImage.setImage(null);
         displayInventory();
+    }
 
+    @FXML
+    private void handleGoToQuestion(ActionEvent event) throws Exception {
+        Parent rootPause = FXMLLoader.load(getClass().getResource("QuestionUI.fxml"));
+        Scene scenePause = new Scene(rootPause);
+        FXMLBoot.primaryStage.setScene(scenePause);
     }
 
     private void displayInventory() {
@@ -168,6 +177,6 @@ public class GameUIController implements Initializable {
         Inventory7.setImage(worldofzuul.domain.Inventory.getItem(6).getIcon());
         Inventory8.setImage(worldofzuul.domain.Inventory.getItem(7).getIcon());
         Inventory9.setImage(worldofzuul.domain.Inventory.getItem(8).getIcon());
-
     }
+
 }

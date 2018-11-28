@@ -7,16 +7,42 @@ package worldofzuul.domain;
 public class Question {
 
     public String prompt;
-    private String answer;
+    public String answerA;
+    public String answerB;
+    public String answerC;
+    public String answerD;
+    
+    private String answerCorrect;
 
-    public Question(String prompt, String answer) {
+    public Question(String prompt,String answerA ,String answerB,String answerC,String answerD, String answerCorrect) {
         this.prompt = prompt;
-        this.answer = answer;
+        this.answerA = answerA;
+        this.answerB = answerB;
+        this.answerC = answerC;
+        this.answerD = answerD;
+        this.answerCorrect = answerCorrect;
     }
     
-    public String getAnswer(){
-        return answer;
+    public String getCorrectAnswer(){
+        return answerCorrect;
     }
+
+    public String getAnswerA() {
+        return answerA;
+    }
+
+    public String getAnswerB() {
+        return answerB;
+    }
+
+    public String getAnswerC() {
+        return answerC;
+    }
+
+    public String getAnswerD() {
+        return answerD;
+    }
+    
     
     public String getPrompt(){
         return prompt;
