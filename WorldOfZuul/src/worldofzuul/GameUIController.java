@@ -18,7 +18,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
-import worldofzuul.domain.Inventory;
 import worldofzuul.domain.Item;
 import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
@@ -55,6 +54,24 @@ public class GameUIController implements Initializable {
     private static int counter = 0;
     @FXML
     private ImageView itemImage;
+    @FXML
+    private ImageView Inventory1;
+    @FXML
+    private ImageView Inventory4;
+    @FXML
+    private ImageView Inventory7;
+    @FXML
+    private ImageView Inventory2;
+    @FXML
+    private ImageView Inventory5;
+    @FXML
+    private ImageView Inventory8;
+    @FXML
+    private ImageView Inventory3;
+    @FXML
+    private ImageView Inventory6;
+    @FXML
+    private ImageView Inventory9;
 
     /**
      * Initializes the controller class.
@@ -135,7 +152,22 @@ public class GameUIController implements Initializable {
 
         worldofzuul.domain.Inventory.addToInventory(newItem);
         Rooms.getCurrentRoom().removeItem(0);
-         itemImage.setImage(null);
+
+        itemImage.setImage(null);
+        displayInventory();
+
+    }
+
+    private void displayInventory() {
+        Inventory1.setImage(worldofzuul.domain.Inventory.getItem(0).getIcon());
+        Inventory2.setImage(worldofzuul.domain.Inventory.getItem(1).getIcon());
+        Inventory3.setImage(worldofzuul.domain.Inventory.getItem(2).getIcon());
+        Inventory4.setImage(worldofzuul.domain.Inventory.getItem(3).getIcon());
+        Inventory5.setImage(worldofzuul.domain.Inventory.getItem(4).getIcon());
+        Inventory6.setImage(worldofzuul.domain.Inventory.getItem(5).getIcon());
+        Inventory7.setImage(worldofzuul.domain.Inventory.getItem(6).getIcon());
+        Inventory8.setImage(worldofzuul.domain.Inventory.getItem(7).getIcon());
+        Inventory9.setImage(worldofzuul.domain.Inventory.getItem(8).getIcon());
 
     }
 }

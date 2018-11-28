@@ -14,7 +14,7 @@
             <Font name="Press Start 2P" size="17.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" layoutX="145.0" layoutY="183.0" mnemonicParsing="false" onAction="#handlePlayButtonAction" text="Play" />
+      <Button alignment="CENTER" defaultButton="true" layoutX="145.0" layoutY="183.0" mnemonicParsing="false" onAction="#handlePlayButtonAction" text="Play" />
       <Label fx:id="LabelName" alignment="CENTER" layoutX="62.0" layoutY="106.0" textFill="RED">
          <font>
             <Font name="Press Start 2P" size="12.0" />
