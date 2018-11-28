@@ -18,7 +18,7 @@ public class Show {
         System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
         System.out.println();
         System.out.println(Rooms.getCurrentRoom().getLongDescription());
-    }
+      }
 
     public static void help() {
         System.out.println("You are lost. You are alone.");

@@ -21,7 +21,6 @@ import javafx.scene.layout.GridPane;
 import worldofzuul.domain.Item;
 import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
-import worldofzuul.domain.Score;
 
 /**
  * FXML Controller class
@@ -30,6 +29,8 @@ import worldofzuul.domain.Score;
  */
 
 public class GameUIController implements Initializable {
+    
+
     
 
     @FXML
@@ -73,9 +74,9 @@ public class GameUIController implements Initializable {
     @FXML
     private ImageView Inventory9;
 
-    /**
-     * Initializes the controller class.
-     */
+    
+
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -139,7 +140,8 @@ public class GameUIController implements Initializable {
                     } else {
                         itemImage.setImage(null);
                     }
-                    System.out.println(Rooms.getCurrentRoom().getLongDescription());
+                    UiTekstField.setText(Rooms.getCurrentRoom().getLongDescription());
+                    //System.out.println(Rooms.getCurrentRoom().getLongDescription());
                     break;
                 }
             }
@@ -170,4 +172,6 @@ public class GameUIController implements Initializable {
         Inventory9.setImage(worldofzuul.domain.Inventory.getItem(8).getIcon());
 
     }
+
+
 }
