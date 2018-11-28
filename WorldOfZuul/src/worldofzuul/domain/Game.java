@@ -10,7 +10,7 @@ public class Game {
     public static void init() {
         Rooms.createRooms();
         //Parser.init();
-        Show.welcome();
+        //Show.welcome();
     }
 
     public static void play() {

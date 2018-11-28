@@ -1,5 +1,7 @@
 package worldofzuul.domain;
 
+import worldofzuul.command.CommandWord;
+
 /**
  *
  * @author Rene_
@@ -31,7 +33,8 @@ public class Rooms {
     public static void createRooms() {
 
         //First floor rooms
-        startRoom = new Room("You’re in the jungle in Belize.\n"
+        startRoom = new Room("Welcome to Temple Raider! /n  This is an adventure game. /n Type '" + CommandWord.HELP + "' if you need help. /n"
+                + "You’re in the jungle in Belize.\n"
                 + "You, the Archeologist “El Whipper”, has through 16 years of devoted research, looked for ancient Mayan\n"
                 + "treasures. You now stand before the possibly greatest treasure to ever see the light of day. Will you\n"
                 + "succeed in finding the treasure or will you succumb to the dangers of the temple. It is up to you!","Rooms/StartRoom.png");
