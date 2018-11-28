@@ -22,6 +22,8 @@ public class Room {
     private int bonus = 0;
 
     private Image roomImage;
+    
+    private String secondRoomImage;
 
     public Room(String description) {
         this.description = description;
@@ -32,6 +34,13 @@ public class Room {
         this.description = description;
         exits = new HashMap<String, Room>();
         roomImage = new Image(imageURL, true);
+    }
+    
+    public Room(String description, String imageURL, String secondImageURL) {
+        this.description = description;
+        exits = new HashMap<String, Room>();
+        roomImage = new Image(imageURL, true);
+        secondRoomImage = secondImageURL;
     }
 
     //Setter exit for et rum
@@ -201,6 +210,8 @@ public class Room {
                 doors.get(i).unlock();
             }
         }
+        roomImage= new Image(secondRoomImage,true);
+        
     }
 
     //checker om en nøgle i spillerens inventory passer til en dør i det nuværende rum
