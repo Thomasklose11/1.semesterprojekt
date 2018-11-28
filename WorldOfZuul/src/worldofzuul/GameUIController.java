@@ -160,7 +160,7 @@ public class GameUIController implements Initializable {
                 } else if (currentBonus.getBonus() == 2) {
                     Rooms.getCurrentRoom().removeItem(0);
                     itemImage.setImage(null);
-                    Score.incrementScore(1000);
+                    Score.incrementScore(2000);
                     setScore();
                 }
 

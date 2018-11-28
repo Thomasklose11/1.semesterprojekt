@@ -34,24 +34,24 @@ public class Rooms {
         startRoom = new Room("You’re in the jungle in Belize.\n"
                 + "You, the Archeologist “El Whipper”, has through 16 years of devoted research, looked for ancient Mayan\n"
                 + "treasures. You now stand before the possibly greatest treasure to ever see the light of day. Will you\n"
-                + "succeed in finding the treasure or will you succumb to the dangers of the temple. It is up to you!","Rooms/StartRoom.png");
+                + "succeed in finding the treasure or will you succumb to the dangers of the temple. It is up to you!", "Rooms/StartRoom.png");
 
-        f1_A1 = new Room("You’re standing in a dark room.","Rooms/F1_A1.png");
+        f1_A1 = new Room("You’re standing in a dark room.", "Rooms/F1_A1.png");
         f1_B1 = new Room("The door to the outside is sealed shut.\n"
                 + "A statue is standing in the middle of the room, it’s eyes starts to glow and it utters: “This ancient temple\n"
                 + "contains many secret treasures, but dangers lurk within, many have tried, but none have succeeded in\n"
-                + "obtaining the legendary jade statue”","Rooms/F1_B1.png");
-        f1_C1 = new Room("You spot on the floor, a whip lying in the dust.","Rooms/F1_C1.png");
+                + "obtaining the legendary jade statue”", "Rooms/F1_B1.png");
+        f1_C1 = new Room("You spot on the floor, a whip lying in the dust.", "Rooms/F1_C1.png");
 
-        f1_A2 = new Room("On the floor you spot a treasure.","Rooms/F1_A2.png");
-        f1_B2 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.","Rooms/F1_B2.png");
+        f1_A2 = new Room("On the floor you spot a treasure.", "Rooms/F1_A2.png");
+        f1_B2 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.", "Rooms/F1_B2.png");
         f1_C2 = new Room("You enter the room and spot a large shadow out of the corner of your eye, before you can get a good look\n"
-                + "at it, it disappears.","Rooms/F1_C2.png");
+                + "at it, it disappears.", "Rooms/F1_C2.png");
 
-        f1_A3 = new Room("On the floor you spot a valuable treasure and pick it up","Rooms/F1_A3.png");
+        f1_A3 = new Room("On the floor you spot a valuable treasure and pick it up", "Rooms/F1_A3.png");
         f1_B3 = new Room("You stand in front of a pit and see a large branch above it, it is out of your reach, but it looks stable and\n"
-                + "solid.","Rooms/F1_B3.png");
-        f1_C3 = new Room("You stand in an empty room.","Rooms/F1_C3.png");
+                + "solid.", "Rooms/F1_B3.png");
+        f1_C3 = new Room("You stand in an empty room.", "Rooms/F1_C3.png");
 
         //Second floor rooms
         f2_A1 = new Room("You stand in an empty room.");
@@ -291,7 +291,7 @@ public class Rooms {
         f3_F3.setExit("south", f3_F2);
 
         // Lag 4
-        f3_A4.setExitWithColor("north", f3_A5,"green");
+        f3_A4.setExitWithColor("north", f3_A5, "green");
         f3_A4.setExit("south", f3_A3);
         f3_A4.setExit("east", f3_B4);
 
@@ -325,7 +325,7 @@ public class Rooms {
         f3_D5.setExit("north", f3_D6);
         f3_D5.setExit("east", f3_E5);
 
-        f3_E5.setExitWithColor("north", f3_E6,"red");
+        f3_E5.setExitWithColor("north", f3_E6, "red");
         f3_E5.setExit("south", f3_E4);
         f3_E5.setExit("west", f3_D5);
         f3_E5.setExit("east", f3_F5);
@@ -335,7 +335,7 @@ public class Rooms {
         f3_F5.setExit("south", f3_F4);
 
         // Lag 6
-        f3_A6.setExitWithColor("north", f3_A7,"blue");
+        f3_A6.setExitWithColor("north", f3_A7, "blue");
         f3_A6.setExit("east", f3_B6);
 
         f3_B6.setExit("west", f3_A6);
@@ -377,48 +377,39 @@ public class Rooms {
 
         currentRoom = startRoom;
 
-
         // Anbringer et item i et rum
         f1_C1.setItem(new Item("whip", "Inventory/WhipUpscaled.png"));
         f2_D4.setItem(new Item("gasmask", "Inventory/GasMaskUpscaled.png"));
-//        f2_A4.setItem(new Item("torch"));
-//        f3_D3.setItem(new Item("pistol"));
-//        f3_F4.setItem(new Item("hat"));
-//        endRoom.setItem(new Item("statue"));
-        
+        f2_A4.setItem(new Item("torch", "Inventory/TorchUpscaled.png"));
+        f3_D3.setItem(new Item("pistol", "Inventory/GunUpscaled.png"));
+        f3_F4.setItem(new Item("hat", "Inventory/HatUpscaled.png"));
+        endRoom.setItem(new Item("statue", "Inventory/statueUpscaled.png"));
+
         // Anbringer en key i et rum
         f3_D2.setKey(new Key("red_key", "Inventory/RedKeyUpscaled.png"));
         f3_A5.setKey(new Key("blue_key", "Inventory/BlueKeyUpscaled.png"));
-        f3_F7.setKey(new Key("green_key","Inventory/GreenKeyUpscaled.png"));
-        
-        //Anbringer bonusser i rum
-        f1_A2.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
-        f2_D2.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
-        f3_A2.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
-        f3_C4.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
-        f3_A6.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
-        f3_C7.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
-        f3_E3.setItem(new Bonus("bonus1", "Bonus/coins.png", 1));
-        
-        // Anbringer bonusser i rum
-       // f1_A2.setBonus1();
-//        f2_D2.setBonus1();
-//        f3_A2.setBonus1();
-//        f3_C4.setBonus1();
-//        f3_A6.setBonus1();
-//        f3_C7.setBonus1();
-//        f3_E3.setBonus1();
-        
+        f3_F7.setKey(new Key("green_key", "Inventory/GreenKeyUpscaled.png"));
+
+        // Anbringer alm bonusser i rum
+        f1_A2.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
+        f2_D2.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
+        f3_A2.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
+        f3_C4.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
+        f3_A6.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
+        f3_C7.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
+        f3_E3.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
+
         //Anbringer store bonusser i rum
-//        f1_A3.setBonus2();
-//        f2_D5.setBonus2();
-//        f3_F2.setBonus2();
-//        f3_E6.setBonus2();
-        
+        f1_A3.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
+        f2_D5.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
+        f3_F2.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
+        f3_E6.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
+        f1_A1.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2)); //TEST
+
         //Anbringer spørgsmål i rum og låser døre
         f1_B2.setQuestion(0);
         f1_B2.findDoor("east").lock();
-        
+
         //
     }
 
@@ -429,8 +420,8 @@ public class Rooms {
     public static void setCurrentRoom(Room currentRoom) {
         Rooms.currentRoom = currentRoom;
     }
-    
-    public static Room getEndRoom(){
+
+    public static Room getEndRoom() {
         return endRoom;
     }
 
