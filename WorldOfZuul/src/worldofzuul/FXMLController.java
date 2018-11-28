@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import worldofzuul.domain.Game;
 import worldofzuul.domain.Highscore;
@@ -27,6 +28,8 @@ public class FXMLController implements Initializable {
     private TextField TextField;
     @FXML
     private Label LabelName;
+    @FXML 
+    private TextArea Highscoretable;
 
     @FXML
     private void handlePlayButtonAction(ActionEvent event) throws Exception {
@@ -37,7 +40,7 @@ public class FXMLController implements Initializable {
             Game.init();
             //Game.play();
             playerName = TextField.getText();
-            Highscore.writeHighscore();
+            Highscore.scorenm();
         } else {
             LabelName.setText("Please enter a name");
         }
@@ -68,6 +71,15 @@ public class FXMLController implements Initializable {
         Parent rootMain = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene sceneMain = new Scene(rootMain);
         FXMLBoot.primaryStage.setScene(sceneMain);
+
+    }
+    
+    @FXML
+    private void handleHighscoreButtonAction(ActionEvent event) throws Exception {
+
+        Parent rootHigh = FXMLLoader.load(getClass().getResource("Highscore.fxml"));
+        Scene sceneHigh = new Scene(rootHigh);
+        FXMLBoot.primaryStage.setScene(sceneHigh);
 
     }
 

@@ -4,31 +4,38 @@
  * and open the template in the editor.
  */
 package worldofzuul.domain;
-
+import java.io.*;
 import worldofzuul.FXMLController;
 
-/**
- *
- * @author mathi
- */
 public class Highscore {
 
-    public static void writeHighscore() throws java.io.IOException {
- 
-        java.io.File file = new java.io.File("Highscore.txt");
-        //if (file.exists()) {
-          //  System.out.println("File already exists");
-          //  System.exit(1);
-        //}
-        //create file
-        java.io.PrintWriter output = new java.io.PrintWriter(file);
-        
-        //create file
-        output.print(FXMLController.playerName + "     ");
-        output.println(Score.getScore());
-        
-        //close file
-        output.close();
-        
-    }
-}
+   public static void scorenm () {
+
+      Highscore a = new Highscore();
+      a.appendToHighscore();
+
+   } // end main
+
+   public void appendToHighscore () {
+
+      BufferedWriter bw = null;
+
+      try {
+         // APPEND MODE SET HERE
+         bw = new BufferedWriter(new FileWriter("Highscore.txt", true));
+	 bw.write(FXMLController.playerName + "     " + Score.getScore());
+	 bw.newLine();
+	 bw.flush();
+      } catch (IOException ioe) {
+	 ioe.printStackTrace();
+      } finally {                       // always close the file
+	 if (bw != null) try {
+	    bw.close();
+	 } catch (IOException ioe2) {
+	    // just ignore it
+	 }
+      } // end try/catch/finally
+
+   } // end test()
+
+} // end class
