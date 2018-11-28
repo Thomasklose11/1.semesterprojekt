@@ -11,13 +11,13 @@
    <children>
       <ImageView fx:id="StatueImage" fitHeight="768.0" fitWidth="1370.0" pickOnBounds="true" preserveRatio="true" >
           <image>
-             <Image url = "UI/Statue.png"/> 
+             <Image url = "UI/QuestionScreenUpscaled.png"/> 
           </image>
       </ImageView>
-      <Button fx:id="AnswerA" layoutX="165.0" layoutY="430.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="500.0" onAction = "#handleAnswerA"/>
-      <Button fx:id="AnswerC" layoutX="165.0" layoutY="595.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="500.0" onAction = "#handleAnswerB"/>
-      <Button fx:id="AnswerB" layoutX="705.0" layoutY="430.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="500.0" onAction = "#handleAnswerC"/>
-      <Button fx:id="AnswerD" layoutX="705.0" layoutY="595.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="500.0" onAction = "#handleAnswerD"/>
+      <Button fx:id="AnswerA" layoutX="339.0" layoutY="430.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="266.0" onAction = "#handleAnswerA" style = "-fx-background-image: url(UI/ButtonUpscaled.png); -fx-background-size: 266px 100px;"/>
+      <Button fx:id="AnswerC" layoutX="339.0" layoutY="595.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="266.0" onAction = "#handleAnswerC" style = "-fx-background-image: url(UI/ButtonUpscaled.png); -fx-background-size: 266px 100px;"/>
+      <Button fx:id="AnswerB" layoutX="765.0" layoutY="430.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="266.0" onAction = "#handleAnswerB" style = "-fx-background-image: url(UI/ButtonUpscaled.png); -fx-background-size: 266px 100px;"/>
+      <Button fx:id="AnswerD" layoutX="765.0" layoutY="595.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="266.0" onAction = "#handleAnswerD" style = "-fx-background-image: url(UI/ButtonUpscaled.png); -fx-background-size: 266px 100px;"/>
       <Label fx:id="Question" alignment="CENTER" layoutX="671.0" layoutY="376.0" text="Label" textAlignment="CENTER" />
    </children>
 </AnchorPane>

@@ -58,6 +58,6 @@
       <Button fx:id="MenuWindowButton" layoutX="331.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleMenuWindowButton" prefHeight="33.0" prefWidth="100.0" text="Menu" />
       <ImageView id="itemView" fx:id="itemImage" fitHeight="80.0" fitWidth="80.0" layoutX="453.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true" />
       <Button layoutX="453.0" layoutY="114.0" mnemonicParsing="false" onAction="#handlePickUp" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: false;" />
-      <Button layoutX="670.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleGoToQuestion" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: false;"/>
+      <Button layoutX="645.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleGoToQuestion" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: false;"/>
    </children>
 </AnchorPane>
