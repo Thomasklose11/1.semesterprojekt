@@ -114,7 +114,6 @@ public class GameUIController implements Initializable {
     private void handleGoWest(ActionEvent event) {
         String direction = "west";
         moveUI(direction);
-        SendMail.mail();
     }
 
     @FXML

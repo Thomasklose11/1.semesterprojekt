@@ -12,3 +12,4 @@ sdsd     0
 ljnjn     0
 rgegr     0
 lmø     0
+test     0
