@@ -37,7 +37,7 @@ public class Commands {
         } else if (commandWord == CommandWord.GETSCORE) {
             System.out.println("Your score is: " + Score.getScore());
         } else if (commandWord == CommandWord.ANSWER) {
-            Puzzles.answer(command, Rooms.getCurrentRoom().getQuestion());
+            //Puzzles.answer(command, Rooms.getCurrentRoom().getQuestion());
         } else if (commandWord == CommandWord.UNLOCK){
             Commands.unlock(command);
         }

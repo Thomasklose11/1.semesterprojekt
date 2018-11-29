@@ -44,7 +44,7 @@ public class Rooms {
         f1_C1 = new Room("You spot on the floor, a whip lying in the dust.","Rooms/F1_C1.png");
 
         f1_A2 = new Room("On the floor you spot a treasure.","Rooms/F1_A2.png");
-        f1_B2 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.","Rooms/F1_B2.png");
+        f1_B2 = new Room("The door in front of you is locked, answer the statues puzzle to continue through.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
         f1_C2 = new Room("You enter the room and spot a large shadow out of the corner of your eye, before you can get a good look\n"
                 + "at it, it disappears.","Rooms/F1_C2.png");
 
