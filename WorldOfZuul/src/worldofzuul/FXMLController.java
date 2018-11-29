@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -29,6 +30,9 @@ public class FXMLController implements Initializable {
     private TextField TextField;
     @FXML
     private Label LabelName;
+    @FXML 
+    private TextArea Highscoretable;
+
     @FXML
     private void handlePlayButtonAction(ActionEvent event) throws Exception {
         if (TextField.getLength() > 0) {
@@ -38,7 +42,7 @@ public class FXMLController implements Initializable {
             Game.init();
             //Game.play();
             playerName = TextField.getText();
-            Highscore.writeHighscore();          
+            Highscore.scorenm();
         } else {
             LabelName.setText("Please enter a name");
         }
@@ -71,6 +75,23 @@ public class FXMLController implements Initializable {
         FXMLBoot.primaryStage.setScene(sceneMain);
 
     }
+    
+    @FXML
+    private void handleHighscoreButtonAction(ActionEvent event) throws Exception {
+
+        Parent rootHigh = FXMLLoader.load(getClass().getResource("HighscoreMenu.fxml"));
+        Scene sceneHigh = new Scene(rootHigh);
+        FXMLBoot.primaryStage.setScene(sceneHigh);
+
+    }
+    @FXML
+    private void handleBackToMenuButtonAction(ActionEvent event) throws Exception {
+        Parent rootMain = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Scene sceneMain = new Scene(rootMain);
+        FXMLBoot.primaryStage.setScene(sceneMain);
+
+    }
+    
 
     @FXML
     private void handleResumeButtonAction(ActionEvent event) throws Exception {

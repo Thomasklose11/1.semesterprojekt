@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 wrf     0
+=======
+
+THOMAS     0
+MATHIAS     0
+STEFFEN     0
+MORTEN     0
+RENE     0
+sdsd     0
+>>>>>>> HighscoreFile
