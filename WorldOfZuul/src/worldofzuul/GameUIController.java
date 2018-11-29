@@ -15,13 +15,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import worldofzuul.domain.Item;
 import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
-import worldofzuul.domain.Score;
 
 /**
  * FXML Controller class
@@ -29,6 +29,8 @@ import worldofzuul.domain.Score;
  * @author morte
  */
 public class GameUIController implements Initializable {
+
+    
 
     @FXML
     private Button NorthButton;
@@ -39,7 +41,7 @@ public class GameUIController implements Initializable {
     @FXML
     private Button EastButton;
     @FXML
-    private TextField UiTekstField;
+    private TextFlow TextFlowUI;
     @FXML
     private ImageView RoomDisplayImage;
     @FXML
@@ -123,6 +125,7 @@ public class GameUIController implements Initializable {
     }
 
     private void moveUI(String direction) {
+        
         for (int i = 0; i < Rooms.getCurrentRoom().doors.size(); i++) {
             if (Rooms.getCurrentRoom().doors.get(i).getDirection().equals(direction)) {
                 if (Rooms.getCurrentRoom().doors.get(i).getLocked() == true) {
@@ -134,6 +137,7 @@ public class GameUIController implements Initializable {
                     if (nextRoom == null) {
                         System.out.println("There is no door!");
                     }
+                    
                     Rooms.setCurrentRoom(nextRoom);
                     RoomDisplayImage.setImage(nextRoom.getImage());
                     if (Rooms.getCurrentRoom().hasItems == true) {
@@ -142,7 +146,15 @@ public class GameUIController implements Initializable {
                     } else {
                         itemImage.setImage(null);
                     }
-                    System.out.println(Rooms.getCurrentRoom().getLongDescription());
+                      
+                    //Deletes current TextFlow so it doesn't break through the flowbox when more text is added.
+                    TextFlowUI.getChildren().clear();
+                    Text text = new Text(Rooms.getCurrentRoom().getLongDescription());
+                    //Adds Room current room description to the TextFlow along with 2 line separators.
+                    TextFlowUI.getChildren().add(text);
+                    TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
+                    TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
+
                     break;
                 }
             }

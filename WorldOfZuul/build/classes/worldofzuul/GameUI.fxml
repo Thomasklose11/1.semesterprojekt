@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -11,6 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1370.0" stylesheets="@ButtonShapeSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.GameUIController">
     <children>
         <ImageView fitHeight="270" fitWidth="1370.0" layoutX="0" layoutY="500" pickOnBounds="true" preserveRatio="true">
@@ -67,4 +73,58 @@
         <Button layoutX="453.0" layoutY="114.0" mnemonicParsing="false" onAction="#handlePickUp" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #FF000000;" />
         <Button layoutX="645.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleGoToQuestion" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #FF000000;"/>
     </children>
+=======
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1370.0" stylesheets="@ButtonShapeSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.GameUIController">
+   <children>
+     <GridPane fx:id="Inventory" layoutX="56.0" layoutY="499.0" prefHeight="219.0" prefWidth="244.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="Inventory1" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Inventory4" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="Inventory7" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+            <ImageView fx:id="Inventory2" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fx:id="Inventory5" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="Inventory8" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="Inventory3" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+            <ImageView fx:id="Inventory6" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fx:id="Inventory9" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <ImageView fitHeight="195.0" fitWidth="195.0" layoutX="628.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="UI/CompasBG.png" />
+         </image></ImageView>
+         
+      <Button fx:id="NorthButton" layoutX="703.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleGoNorth" prefHeight="75.0" prefWidth="45.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasN.png); -fx-background-size: 75px 45px; " styleClass="north_button" />
+      <Button fx:id="SouthButton" layoutX="703.0" layoutY="664.0" mnemonicParsing="false" onAction="#handleGoSouth" prefHeight="75.0" prefWidth="45.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasS.png); -fx-background-size: 75px 45px; " styleClass="south_button" />
+      <Button fx:id="WestButton" layoutX="628.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleGoWest" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasW.png); -fx-background-size: 45px 75px; " styleClass="west_button" />
+      <Button fx:id="EastButton" layoutX="748.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleGoEast" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasE.png); -fx-background-size: 45px 75px; " styleClass="east_button" />
+      <ImageView fx:id="RoomDisplayImage" fitHeight="500.0" fitWidth="1370.0" layoutX="-11.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+              <Image url="Rooms/StartRoom.png" />
+        </image> 
+      </ImageView>
+      <Label fx:id="HighscoreLabel" layoutX="1213.0" layoutY="14.0" prefHeight="39.0" prefWidth="138.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Press Start 2P" size="25.0" />
+         </font></Label>
+      <Button fx:id="MenuWindowButton" layoutX="331.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleMenuWindowButton" prefHeight="33.0" prefWidth="100.0" text="Menu" />
+      <ImageView id="itemView" fx:id="itemImage" fitHeight="80.0" fitWidth="80.0" layoutX="453.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="453.0" layoutY="114.0" mnemonicParsing="false" onAction="#handlePickUp" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: false;" />
+      <ScrollPane layoutX="944.0" layoutY="499.0" prefViewportHeight="200.0" prefViewportWidth="386.0" vvalue="1.0">
+         <content>
+            <TextFlow fx:id="TextFlowUI" layoutX="982.0" layoutY="500.0" prefHeight="200.0" prefWidth="386.0" />
+         </content>
+      </ScrollPane>
+   </children>
+>>>>>>> UiOutput
 </AnchorPane>

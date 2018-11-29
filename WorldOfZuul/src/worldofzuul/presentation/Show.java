@@ -1,5 +1,6 @@
 package worldofzuul.presentation;
 
+import javafx.scene.text.Text;
 import worldofzuul.command.CommandWord;
 import worldofzuul.domain.Inventory;
 import worldofzuul.command.Parser;
@@ -12,13 +13,15 @@ import worldofzuul.domain.Rooms;
 public class Show {
 
     public static void welcome() {
-        System.out.println();
-        System.out.println("Welcome to TempleRaider!");
-        System.out.println("This is a adventure game.");
-        System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
-        System.out.println();
-        System.out.println(Rooms.getCurrentRoom().getLongDescription());
-    }
+
+        //System.out.println();
+        //System.out.println("Welcome to TempleRaider!");
+        //System.out.println("This is an adventure game.");
+        //System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
+        //System.out.println();
+        //System.out.println(Rooms.getCurrentRoom().getLongDescription());
+ ;
+      }
 
     public static void help() {
         System.out.println("You are lost. You are alone.");
