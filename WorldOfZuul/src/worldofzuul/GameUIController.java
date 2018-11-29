@@ -24,6 +24,7 @@ import worldofzuul.domain.Inventory;
 import worldofzuul.domain.Item;
 import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
+import worldofzuul.domain.Bonus;
 import worldofzuul.domain.Score;
 import worldofzuul.domain.SendMail;
 
@@ -33,7 +34,6 @@ import worldofzuul.domain.SendMail;
  * @author morte
  */
 public class GameUIController implements Initializable {
-
     
 
     @FXML
@@ -49,7 +49,7 @@ public class GameUIController implements Initializable {
     @FXML
     private ImageView RoomDisplayImage;
     @FXML
-    public static Label HighscoreLabel;
+    public Label HighscoreLabel;
     @FXML
     private Button MenuWindowButton;
     @FXML
@@ -83,6 +83,7 @@ public class GameUIController implements Initializable {
     private ImageView Inventory9;
     @FXML
     private TextField UiTekstField;
+    private int roomCounter;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -142,14 +143,20 @@ public class GameUIController implements Initializable {
                     if (nextRoom == null) {
                         System.out.println("There is no door!");
                     }
-                    
+                             
                     Rooms.setCurrentRoom(nextRoom);
+                    
+                    if(Rooms.getCurrentRoom().getVisited() == false ){
+                        incrementRoomCounter();
+                        System.out.println("Room counter: " + roomCounter);
+                                            }   
+                    Rooms.getCurrentRoom(). setVisited();
                     RoomDisplayImage.setImage(nextRoom.getImage());
                     if (Rooms.getCurrentRoom().hasItems == true) {
                         itemImage.setImage(Rooms.getCurrentRoom().getItem(0).getIcon());
 
                     } else {
-                        itemImage.setImage(null);
+                        itemImage.setImage(null);  
                     }
                       
                     //Deletes current TextFlow so it doesn't break through the flowbox when more text is added.
@@ -168,15 +175,33 @@ public class GameUIController implements Initializable {
 
     @FXML
     private void handlePickUp(ActionEvent event) {
-        Item newItem = Rooms.getCurrentRoom().getItem(0);
+        if (Rooms.getCurrentRoom().getItem(0) != null) {
+            if (Rooms.getCurrentRoom().getItem(0) instanceof Bonus) {
+                Bonus currentBonus = (Bonus) Rooms.getCurrentRoom().getItem(0);
+                if (currentBonus.getBonus() == 1) {
+                    Rooms.getCurrentRoom().removeItem(0);
+                    itemImage.setImage(null);
+                    Score.incrementScore(1000);
+                    setScore();
+                } else if (currentBonus.getBonus() == 2) {
+                    Rooms.getCurrentRoom().removeItem(0);
+                    itemImage.setImage(null);
+                    Score.incrementScore(2000);
+                    setScore();
+                }
 
-        worldofzuul.domain.Inventory.addToInventory(newItem);
-        Rooms.getCurrentRoom().removeItem(0);
-         itemImage.setImage(null);
+            } else {
+                Item newItem = Rooms.getCurrentRoom().getItem(0);
 
-        itemImage.setImage(null);
-        displayInventory();
-    }
+                worldofzuul.domain.Inventory.addToInventory(newItem);
+                Rooms.getCurrentRoom().removeItem(0);
+
+                itemImage.setImage(null);
+                displayInventory();
+            }
+        } else {
+            System.out.println("There is no item in this room");
+        }
 
     @FXML
     private void handleGoToQuestion(ActionEvent event) throws Exception {
@@ -197,4 +222,13 @@ public class GameUIController implements Initializable {
         Inventory9.setImage(worldofzuul.domain.Inventory.getItem(8).getIcon());
     }
 
+    }
+
+    public void setScore() {
+        HighscoreLabel.setText(String.valueOf(Score.getScore()));
+    }
+    
+    public void incrementRoomCounter ()  {
+        roomCounter += 1;
+    }
 }

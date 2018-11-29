@@ -52,6 +52,7 @@
             </image>
         </ImageView>
          
+<<<<<<< HEAD
         <Button fx:id="NorthButton" layoutX="703.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleGoNorth" prefHeight="75.0" prefWidth="45.0" style="-fx-background-color: #FF000000; -fx-background-image: url(UI/CompasN.png); -fx-background-size: 75px 45px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0); " styleClass="north_button" />
         <Button fx:id="SouthButton" layoutX="703.0" layoutY="664.0" mnemonicParsing="false" onAction="#handleGoSouth" prefHeight="75.0" prefWidth="45.0" style="-fx-background-color: #FF000000; -fx-background-image: url(UI/CompasS.png); -fx-background-size: 75px 45px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" styleClass="south_button" />
         <Button fx:id="WestButton" layoutX="628.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleGoWest" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: #FF000000; -fx-background-image: url(UI/CompasW.png); -fx-background-size: 45px 75px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" styleClass="west_button" />
@@ -76,5 +77,24 @@
             <TextFlow fx:id="TextFlowUI" layoutX="982.0" layoutY="500.0" prefHeight="200.0" prefWidth="386.0" />
          </content>
       </ScrollPane>
+=======
+      <Button fx:id="NorthButton" layoutX="703.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleGoNorth" prefHeight="75.0" prefWidth="45.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasN.png); -fx-background-size: 75px 45px; " styleClass="north_button" />
+      <Button fx:id="SouthButton" layoutX="703.0" layoutY="664.0" mnemonicParsing="false" onAction="#handleGoSouth" prefHeight="75.0" prefWidth="45.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasS.png); -fx-background-size: 75px 45px; " styleClass="south_button" />
+      <Button fx:id="WestButton" layoutX="628.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleGoWest" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasW.png); -fx-background-size: 45px 75px; " styleClass="west_button" />
+      <Button fx:id="EastButton" layoutX="748.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleGoEast" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: false; -fx-background-image: url(UI/CompasE.png); -fx-background-size: 45px 75px; " styleClass="east_button" />
+      <TextField fx:id="UiTekstField" layoutX="982.0" layoutY="500.0" prefHeight="200.0" prefWidth="386.0" />
+      <ImageView fx:id="RoomDisplayImage" fitHeight="500.0" fitWidth="1370.0" layoutX="-11.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+              <Image url="Rooms/StartRoom.png" />
+        </image> 
+      </ImageView>
+      <Label fx:id="HighscoreLabel" layoutX="1213.0" layoutY="14.0" prefHeight="39.0" prefWidth="138.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Press Start 2P" size="25.0" />
+         </font></Label>
+      <Button fx:id="MenuWindowButton" layoutX="331.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleMenuWindowButton" prefHeight="33.0" prefWidth="100.0" text="Menu" />
+      <ImageView id="itemView" fx:id="itemImage" fitHeight="80.0" fitWidth="80.0" layoutX="453.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="453.0" layoutY="114.0" mnemonicParsing="false" onAction="#handlePickUp" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: false;" />
+>>>>>>> Bonus
    </children>
 </AnchorPane>

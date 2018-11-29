@@ -33,7 +33,7 @@ public class Commands {
         } else if (commandWord == CommandWord.INVENTORY) {
             Show.inventory();
         } else if (commandWord == CommandWord.GETITEM) {
-            Commands.getItem(command);
+//            Commands.getItem(command);
         } else if (commandWord == CommandWord.GETSCORE) {
             System.out.println("Your score is: " + Score.getScore());
         } else if (commandWord == CommandWord.ANSWER) {
@@ -44,38 +44,38 @@ public class Commands {
         return wantToQuit;
     }
 
-    private static void getItem(Command command) {
-        if (!command.hasSecondWord()) {
-            System.out.println("Get what?");
-            return;
-        }
-        String temp;
-        temp = command.getSecondWord();
-
-        if (temp.equals("treasure")) {
-            if (Rooms.getCurrentRoom().getBonus() == 1) {
-                Score.incrementScore(1000);
-                Rooms.getCurrentRoom().setBonus0();
-                System.out.println("1000 points were added to your score. Your score is: " + Score.getScore());
-            } else if (Rooms.getCurrentRoom().getBonus() == 2) {
-                Score.incrementScore(2000);
-                Rooms.getCurrentRoom().setBonus0();
-                System.out.println("2000 points were added to your score. Your score is: " + Score.getScore());
-            }
-        } else {
-            String item = command.getSecondWord();
-
-            Item newItem = Rooms.getCurrentRoom().getItem(item);
-
-            if (newItem == null) {
-                System.out.println("That item is not here!");
-            } else {
-                Inventory.addToInventory(newItem);
-                Rooms.getCurrentRoom().removeItem(item);
-                System.out.println("Picked up: " + item);
-            }
-        }
-    }
+//    private static void getItem(Command command) {
+//        if (!command.hasSecondWord()) {
+//            System.out.println("Get what?");
+//            return;
+//        }
+//        String temp;
+//        temp = command.getSecondWord();
+//
+//        if (temp.equals("treasure")) {
+//            if (Rooms.getCurrentRoom().getBonus() == 1) {
+//                Score.incrementScore(1000);
+//                Rooms.getCurrentRoom().setBonus0();
+//                System.out.println("1000 points were added to your score. Your score is: " + Score.getScore());
+//            } else if (Rooms.getCurrentRoom().getBonus() == 2) {
+//                Score.incrementScore(2000);
+//                Rooms.getCurrentRoom().setBonus0();
+//                System.out.println("2000 points were added to your score. Your score is: " + Score.getScore());
+//            }
+//        } else {
+//            String item = command.getSecondWord();
+//
+//            Item newItem = Rooms.getCurrentRoom().getItem(item);
+//
+//            if (newItem == null) {
+//                System.out.println("That item is not here!");
+//            } else {
+//                Inventory.addToInventory(newItem);
+//                Rooms.getCurrentRoom().removeItem(item);
+//                System.out.println("Picked up: " + item);
+//            }
+//        }
+//    }
 
     public static void go(Command command) {
         if (!command.hasSecondWord()) {

@@ -8,6 +8,10 @@ import worldofzuul.GameUIController;
 
 public class Room {
 
+    public static Room isVisited(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private final String description;
     private final HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
@@ -19,12 +23,17 @@ public class Room {
 
     public ArrayList<Door> doors = new ArrayList<>();
 
-    private int bonus = 0;
-
     private Image roomImage;
+    private boolean visited = false;
     
     private String secondRoomImage;
 
+    public Room(String description, HashMap<String, Room> exits) {
+        this.description = description;
+        this.exits = exits;
+    }
+
+    
     public Room(String description) {
         this.description = description;
         exits = new HashMap<String, Room>();
@@ -33,7 +42,7 @@ public class Room {
     public Room(String description, String imageURL) {
         this.description = description;
         exits = new HashMap<String, Room>();
-        roomImage = new Image(imageURL, true);
+        roomImage = new Image(imageURL, true); 
     }
     
     public Room(String description, String imageURL, String secondImageURL) {
@@ -54,6 +63,7 @@ public class Room {
         exits.put(direction, neighbor);
         doors.add(new Door(direction, color));
     }
+        
 
     public String getShortDescription() {
         return description;
@@ -72,12 +82,6 @@ public class Room {
         if (hasItems) {
             returnString += "\nItems in the room: ";
             returnString += getRoomItems();
-        }
-
-        if (bonus == 1) {
-            returnString += "\nThere is a treasure here!";
-        } else if (bonus == 2) {
-            returnString += "\nThere is a grand treasure here!";
         }
 
         if (hasQuestion() == true) {
@@ -161,23 +165,6 @@ public class Room {
 
     }
 
-    // Get the type of bonus from this room ( 0 = no bonus, 1 = bonus, 2 = bonus+)
-    public int getBonus() {
-        return bonus;
-    }
-
-    public void setBonus0() {
-        bonus = 0;
-    }
-
-    public void setBonus1() {
-        bonus = 1;
-    }
-
-    public void setBonus2() {
-        bonus = 2;
-    }
-
     public Door findDoor(String direction) {
         for (int i = 0; i < doors.size(); i++) {
             if (doors.get(i).getDirection().equals(direction)) {
@@ -234,5 +221,13 @@ public class Room {
 
     public Image getImage() {
         return roomImage;
+    }
+    
+    public void setVisited () {
+        visited=true;
+    }
+    
+    public boolean getVisited(){
+        return visited;
     }
 }
