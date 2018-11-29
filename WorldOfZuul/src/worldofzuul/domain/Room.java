@@ -8,6 +8,10 @@ import worldofzuul.GameUIController;
 
 public class Room {
 
+    public static Room isVisited(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private final String description;
     private final HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
@@ -20,7 +24,14 @@ public class Room {
     public ArrayList<Door> doors = new ArrayList<>();
 
     private Image roomImage;
+    private boolean visited = false;
 
+    public Room(String description, HashMap<String, Room> exits) {
+        this.description = description;
+        this.exits = exits;
+    }
+
+    
     public Room(String description) {
         this.description = description;
         exits = new HashMap<String, Room>();
@@ -29,7 +40,7 @@ public class Room {
     public Room(String description, String imageURL) {
         this.description = description;
         exits = new HashMap<String, Room>();
-        roomImage = new Image(imageURL, true);
+        roomImage = new Image(imageURL, true); 
     }
 
     //Setter exit for et rum
@@ -43,6 +54,7 @@ public class Room {
         exits.put(direction, neighbor);
         doors.add(new Door(direction, color));
     }
+        
 
     public String getShortDescription() {
         return description;
@@ -198,5 +210,13 @@ public class Room {
 
     public Image getImage() {
         return roomImage;
+    }
+    
+    public void setVisited () {
+        visited=true;
+    }
+    
+    public boolean getVisited(){
+        return visited;
     }
 }

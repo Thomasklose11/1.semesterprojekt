@@ -73,6 +73,9 @@ public class GameUIController implements Initializable {
     private ImageView Inventory9;
     @FXML
     private ImageView bonusImage1;
+    
+    
+    private int roomCounter;
 
     /**
      * Initializes the controller class.
@@ -132,13 +135,20 @@ public class GameUIController implements Initializable {
                     if (nextRoom == null) {
                         System.out.println("There is no door!");
                     }
+                             
                     Rooms.setCurrentRoom(nextRoom);
+                    
+                    if(Rooms.getCurrentRoom().getVisited() == false ){
+                        incrementRoomCounter();
+                        System.out.println("Room counter: " + roomCounter);
+                                            }   
+                    Rooms.getCurrentRoom(). setVisited();
                     RoomDisplayImage.setImage(nextRoom.getImage());
                     if (Rooms.getCurrentRoom().hasItems == true) {
                         itemImage.setImage(Rooms.getCurrentRoom().getItem(0).getIcon());
 
                     } else {
-                        itemImage.setImage(null);
+                        itemImage.setImage(null);  
                     }
                     System.out.println(Rooms.getCurrentRoom().getLongDescription());
                     break;
@@ -194,5 +204,9 @@ public class GameUIController implements Initializable {
 
     public void setScore() {
         HighscoreLabel.setText(String.valueOf(Score.getScore()));
+    }
+    
+    public void incrementRoomCounter ()  {
+        roomCounter += 1;
     }
 }
