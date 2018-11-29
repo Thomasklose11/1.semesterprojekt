@@ -28,6 +28,7 @@ import worldofzuul.domain.Rooms;
 import worldofzuul.domain.Bonus;
 import worldofzuul.domain.Score;
 import worldofzuul.domain.Inventory;
+import static worldofzuul.domain.Rooms.getCurrentRoom;
 //import worldofzuul.domain.SendMail;
 
 /**
@@ -151,32 +152,27 @@ public class GameUIController implements Initializable {
         for (int i = 0; i < Rooms.getCurrentRoom().doors.size(); i++) {
             if (Rooms.getCurrentRoom().doors.get(i).getDirection().equals(direction)) {
                 if (Rooms.getCurrentRoom().doors.get(i).getLocked() == true) {
-                    System.out.println("The door is locked");
-                    break;
-                } else {
-                    Room nextRoom = Rooms.getCurrentRoom().getExit(direction);
-
-                    if (nextRoom == null) {
-                        System.out.println("There is no door!");
-                    }
-
-                    Rooms.setCurrentRoom(nextRoom);
-
-                    if (Rooms.getCurrentRoom().getVisited() == false) {
-                        Rooms.incrementRoomCounter();
-                        System.out.println("Room counter: " + Rooms.getRoomCounter());
-                    }
-                    Rooms.getCurrentRoom().setVisited();
-                    RoomDisplayImage.setImage(nextRoom.getImage());
-                    if (Rooms.getCurrentRoom().hasItems == true) {
-                        itemImage.setImage(Rooms.getCurrentRoom().getItem(0).getIcon());
-
+                    if (Rooms.findDoorColor(direction).equals("none")) {
+                        Text text = new Text("The door is locked");
+                        TextFlowUI.getChildren().add(text);
+                        TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
+                        System.out.println("The door is locked");
+                        break;
                     } else {
-                        itemImage.setImage(null);
+                        String checkColor = Rooms.findDoorColor(direction);
+                        if (Inventory.checkInventoryForKey(checkColor) == true) {
+                            go(direction);
+                            break;
+                        } else {
+                            Text text = new Text("You don't have a " + Rooms.getCurrentRoom().doors.get(i).getColor() + " for this door");
+                            TextFlowUI.getChildren().add(text);
+                            TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
+                            System.out.println("You don't have a " + Rooms.getCurrentRoom().doors.get(i).getColor() + " for this door");
+                            break;
+                        }
                     }
-                    
-                    print2TextFlow();
-
+                } else {
+                    go(direction);
                     break;
                 }
             }
@@ -210,6 +206,9 @@ public class GameUIController implements Initializable {
                 displayInventory();
             }
         } else {
+            Text text = new Text("There is no item in this room");
+            TextFlowUI.getChildren().add(text);
+            TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
             System.out.println("There is no item in this room");
         }
     }
@@ -222,11 +221,8 @@ public class GameUIController implements Initializable {
     }
 
     private void displayInventory() {
-        System.out.println("Metode Startet");
         for (int i = 0; i < Inventory.getInvSize(); i++) {
-            System.out.println("Forløkke");
             if (Inventory.getItem(i) != null) {
-                System.out.println("Fundet Item");
                 inventorySpots.get(i).setImage(Inventory.getItem(i).getIcon());
             }
         }
@@ -246,4 +242,28 @@ public class GameUIController implements Initializable {
         TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
     }
 
+    private void go(String direction) {
+        Room nextRoom = Rooms.getCurrentRoom().getExit(direction);
+
+        if (nextRoom == null) {
+            System.out.println("There is no door!");
+        }
+
+        Rooms.setCurrentRoom(nextRoom);
+
+        if (Rooms.getCurrentRoom().getVisited() == false) {
+            Rooms.incrementRoomCounter();
+            System.out.println("Room counter: " + Rooms.getRoomCounter());
+        }
+        Rooms.getCurrentRoom().setVisited();
+        RoomDisplayImage.setImage(nextRoom.getImage());
+        if (Rooms.getCurrentRoom().hasItems == true) {
+            itemImage.setImage(Rooms.getCurrentRoom().getItem(0).getIcon());
+
+        } else {
+            itemImage.setImage(null);
+        }
+
+        print2TextFlow();
+    }
 }

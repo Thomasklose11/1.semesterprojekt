@@ -160,7 +160,7 @@ public class Rooms {
         f1_A3.setExit("east", f1_B3);
 
         f1_B3.setExit("west", f1_A3);
-        f1_B3.setExit("north", f2_B1);
+        f1_B3.setExitWithColor("north", f2_B1,"whip");
         f1_B3.setExit("east", f1_C3);
 
         f1_C3.setExit("west", f1_B3);
@@ -178,7 +178,7 @@ public class Rooms {
         f2_C1.setExit("north", f2_C2);
         f2_C1.setExit("west", f2_B1);
 
-        f2_A2.setExit("north", f2_A3);
+        f2_A2.setExitWithColor("north", f2_A3,"whip");
         f2_A2.setExit("south", f2_A1);
 
         f2_B2.setExit("north", f2_B3);
@@ -193,7 +193,7 @@ public class Rooms {
 
         f2_A3.setExit("north", f2_A4);
         f2_A3.setExit("east", f2_B3);
-        f2_A3.setExit("south", f2_A2);
+        f2_A3.setExitWithColor("south", f2_A2,"whip");
 
         f2_B3.setExit("west", f2_A3);
         f2_B3.setExit("south", f2_B2);
@@ -201,10 +201,10 @@ public class Rooms {
 
         f2_C3.setExit("north", f2_C4);
         f2_C3.setExit("south", f2_C2);
-        f2_C3.setExit("east", f2_D3);
+        f2_C3.setExitWithColor("east", f2_D3,"whip");
         f2_C3.setExit("west", f2_B3);
 
-        f2_D3.setExit("west", f2_C3);
+        f2_D3.setExitWithColor("west", f2_C3,"whip");
         f2_D3.setExit("south", f2_D2);
 
         f2_A4.setExit("south", f2_A3);
@@ -218,14 +218,14 @@ public class Rooms {
 
         f2_D4.setExit("west", f2_C4);
 
-        f2_A5.setExit("north", f3_B1);
+        f2_A5.setExitWithColor("north", f3_B1,"whip");
         f2_A5.setExit("east", f2_B5);
 
         f2_B5.setExit("east", f2_C5);
         f2_B5.setExit("west", f2_A5);
 
         f2_C5.setExit("south", f2_C4);
-        f2_C5.setExit("east", f2_D5);
+        f2_C5.setExitWithColor("east", f2_D5,"whip");
         f2_C5.setExit("west", f2_B5);
 
         f2_D5.setExit("north", f3_E1);
@@ -239,7 +239,7 @@ public class Rooms {
         f3_B1.setExit("east", f3_C1);
         f3_B1.setExit("north", f3_B2);
         f3_B1.setExit("west", f3_A1);
-        f3_B1.setExit("south", f2_A5);
+        f3_B1.setExitWithColor("south", f2_A5,"whip");
 
         f3_C1.setExit("west", f3_B1);
         f3_C1.setExit("north", f3_C2);
@@ -312,7 +312,7 @@ public class Rooms {
 
         f3_E4.setExit("north", f3_E5);
         f3_E4.setExit("west", f3_D4);
-        f3_E4.setExit("south", f3_E3);
+        f3_E4.setExitWithColor("south", f3_E3,"gasmask");
 
         f3_F4.setExit("north", f3_F5);
 
@@ -349,7 +349,7 @@ public class Rooms {
         f3_C6.setExit("south", f3_C5);
         f3_C6.setExit("north", f3_C7);
 
-        f3_D6.setExit("north", f3_D7);
+        f3_D6.setExitWithColor("north", f3_D7, "whip");
         f3_D6.setExit("south", f3_D5);
 
         f3_E6.setExit("south", f3_E5);
@@ -368,7 +368,7 @@ public class Rooms {
         f3_C7.setExit("east", f3_D7);
 
         f3_D7.setExit("west", f3_C7);
-        f3_D7.setExit("south", f3_D6);
+        f3_D7.setExitWithColor("south", f3_D6,"whip");
         f3_D7.setExit("north", endRoom);
         f3_D7.setExit("east", f3_E7);
 
@@ -383,17 +383,17 @@ public class Rooms {
         currentRoom = startRoom;
 
         // Anbringer et item i et rum
-        f1_C1.setItem(new Item("whip", "Inventory/WhipUpscaled.png"));
-        f2_D4.setItem(new Item("gasmask", "Inventory/GasMaskUpscaled.png"));
+        f1_C1.setKey(new Key("whip", "Inventory/WhipUpscaled.png","whip"));
+        f2_D4.setKey(new Key("gasmask", "Inventory/GasMaskUpscaled.png","gasmask"));
         f2_A4.setItem(new Item("torch", "Inventory/TorchUpscaled.png"));
         f3_D3.setItem(new Item("pistol", "Inventory/GunUpscaled.png"));
         f3_F4.setItem(new Item("hat", "Inventory/HatUpscaled.png"));
         endRoom.setItem(new Item("statue", "Inventory/statueUpscaled.png"));
 
         // Anbringer en key i et rum
-        f3_D2.setKey(new Key("red_key", "Inventory/RedKeyUpscaled.png"));
-        f3_A5.setKey(new Key("blue_key", "Inventory/BlueKeyUpscaled.png"));
-        f3_F7.setKey(new Key("green_key", "Inventory/GreenKeyUpscaled.png"));
+        f3_D2.setKey(new Key("red_key", "Inventory/RedKeyUpscaled.png","red"));
+        f3_A5.setKey(new Key("blue_key", "Inventory/BlueKeyUpscaled.png","blue"));
+        f3_F7.setKey(new Key("green_key", "Inventory/GreenKeyUpscaled.png","green"));
 
         // Anbringer alm bonusser i rum
         f1_A2.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
@@ -436,6 +436,19 @@ public class Rooms {
     
     public static int getRoomCounter () {
         return roomCounter;
+    }
+    
+    public static String findDoorColor(String direction){
+        for (int i = 0; i < getCurrentRoom().doors.size(); i++) {
+            if (getCurrentRoom().doors.get(i).getDirection().equals(direction)) {
+                if (getCurrentRoom().doors.get(i).getColor()!=null){
+                    return getCurrentRoom().doors.get(i).getColor(); 
+                } else {
+                    return "none";
+                }
+            }
+        }
+        return "none";
     }
 
 }
