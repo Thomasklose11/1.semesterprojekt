@@ -19,13 +19,14 @@
             <file>file:/C:/Users/s_b_k/Documents/NetBeansProjects/World_of_Zuul/1.semesterprojekt/WorldOfZuul/src/worldofzuul/command/Commands.java</file>
         </group>
         <group>
-            <file>file:/C:/Users/Rene_/OneDrive/Dokumenter/1.semesterprojekt/WorldOfZuul/src/worldofzuul/GameUI.fxml</file>
-            <file>file:/C:/Users/Rene_/OneDrive/Dokumenter/1.semesterprojekt/WorldOfZuul/src/worldofzuul/GameUIController.java</file>
-            <file>file:/C:/Users/Rene_/OneDrive/Dokumenter/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Rooms.java</file>
-            <file>file:/C:/Users/Rene_/OneDrive/Dokumenter/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Inventory.java</file>
-            <file>file:/C:/Users/Rene_/OneDrive/Dokumenter/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Item.java</file>
-            <file>file:/C:/Users/Rene_/OneDrive/Dokumenter/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Room.java</file>
-            <file>file:/C:/Users/Rene_/OneDrive/Dokumenter/1.semesterprojekt/WorldOfZuul/src/worldofzuul/command/Commands.java</file>
+            <file>file:/C:/Users/thoma/Desktop/Softwareingeniør/GitKraken/1.semesterprojekt/WorldOfZuul/src/worldofzuul/MainMenu.fxml</file>
+            <file>file:/C:/Users/thoma/Desktop/Softwareingeniør/GitKraken/1.semesterprojekt/WorldOfZuul/src/worldofzuul/FXMLController.java</file>
+            <file>file:/C:/Users/thoma/Desktop/Softwareingeniør/GitKraken/1.semesterprojekt/WorldOfZuul/src/worldofzuul/HelpWindow.fxml</file>
+            <file>file:/C:/Users/thoma/Desktop/Softwareingeniør/GitKraken/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Score.java</file>
+            <file>file:/C:/Users/thoma/Desktop/Softwareingeniør/GitKraken/1.semesterprojekt/WorldOfZuul/src/worldofzuul/GameUIController.java</file>
+            <file>file:/C:/Users/thoma/Desktop/Softwareingeniør/GitKraken/1.semesterprojekt/WorldOfZuul/src/worldofzuul/Highscore.fxml</file>
+            <file>file:/C:/Users/thoma/Desktop/Softwareingeniør/GitKraken/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Highscore.java</file>
+            <file>file:/C:/Users/thoma/Desktop/Softwareingeniør/GitKraken/1.semesterprojekt/WorldOfZuul/src/worldofzuul/PauseMenu.fxml</file>
         </group>
     </open-files>
 </project-private>

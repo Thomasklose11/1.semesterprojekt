@@ -77,11 +77,19 @@ public class FXMLController implements Initializable {
     @FXML
     private void handleHighscoreButtonAction(ActionEvent event) throws Exception {
 
-        Parent rootHigh = FXMLLoader.load(getClass().getResource("Highscore.fxml"));
+        Parent rootHigh = FXMLLoader.load(getClass().getResource("HighscoreMenu.fxml"));
         Scene sceneHigh = new Scene(rootHigh);
         FXMLBoot.primaryStage.setScene(sceneHigh);
 
     }
+    @FXML
+    private void handleBackToMenuButtonAction(ActionEvent event) throws Exception {
+        Parent rootMain = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Scene sceneMain = new Scene(rootMain);
+        FXMLBoot.primaryStage.setScene(sceneMain);
+
+    }
+    
 
     @FXML
     private void handleResumeButtonAction(ActionEvent event) throws Exception {
