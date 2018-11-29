@@ -13,16 +13,16 @@ public class Game {
         //Show.welcome();
     }
 
-    public static void play() {
-
-        boolean finished = false;
-        while (!finished) {
-            Command command = Parser.getCommand();
-            finished = Commands.processCommand(command);
-            End.end();
-        }
-        System.out.println("Thank you for playing. Goodbye.");
-    }
+//    public static void play() {
+//
+//        boolean finished = false;
+//        while (!finished) {
+//            Command command = Parser.getCommand();
+//            finished = Commands.processCommand(command);
+//            End.end();
+//        }
+//        System.out.println("Thank you for playing. Goodbye.");
+//    }
 
     // end game
     public static void endGame() {

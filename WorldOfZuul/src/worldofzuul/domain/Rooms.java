@@ -388,6 +388,7 @@ public class Rooms {
         f2_A4.setItem(new Item("torch", "Inventory/TorchUpscaled.png"));
         f3_D3.setItem(new Item("pistol", "Inventory/GunUpscaled.png"));
         f3_F4.setItem(new Item("hat", "Inventory/HatUpscaled.png"));
+        //f3_A7.setItem(new Item("MythicalTreasure","Inventory/MythicalTreasureUpscaled.png",))
         endRoom.setItem(new Item("statue", "Inventory/statueUpscaled.png"));
 
         // Anbringer en key i et rum

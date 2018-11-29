@@ -29,8 +29,9 @@ import worldofzuul.domain.Bonus;
 import worldofzuul.domain.Score;
 import worldofzuul.domain.Inventory;
 import static worldofzuul.domain.Rooms.getCurrentRoom;
-//import worldofzuul.domain.SendMail;
+import worldofzuul.domain.End;
 
+//import worldofzuul.domain.SendMail;
 /**
  * FXML Controller class
  *
@@ -211,6 +212,7 @@ public class GameUIController implements Initializable {
             TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
             System.out.println("There is no item in this room");
         }
+        End.end();
     }
 
     @FXML
