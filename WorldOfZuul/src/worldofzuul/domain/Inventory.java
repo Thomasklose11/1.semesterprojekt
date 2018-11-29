@@ -21,18 +21,22 @@ public class Inventory {
     }
 
     //Checker om en item med en given description ligger i inventory, returner null hvis item ikke findes.
-    public static Item checkInventoryForKey(String color) {
+    public static boolean checkInventoryForKey(String color) {
         for (int i = 0; i < inventory.size(); i++) {
             if (inventory.get(i) instanceof Key) {
                 if (((Key)inventory.get(i)).getColor().equals(color)) {
-                    return inventory.get(i);
+                    return true;
                 }
             }
         }
-        return null;
+        return false;
     }
     
     public static Item getItem(int i){
         return inventory.get(i);
+    }
+    
+    public static int getInvSize () {
+        return inventory.size();
     }
 }

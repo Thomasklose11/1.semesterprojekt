@@ -13,8 +13,8 @@ public class Key extends Item{
     
     private String color;
     
-    public Key (String description, String color){
-        super(description);
+    public Key (String description, String URL,String color){
+        super(description, URL);
         this.color = color;
     }
     

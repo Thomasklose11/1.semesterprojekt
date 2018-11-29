@@ -23,7 +23,7 @@
                 <Image url="UI/BottomBarUpscaled.png" />
             </image> 
         </ImageView>
-        <GridPane fx:id="Inventory" layoutX="56.0" layoutY="515.0" prefHeight="219.0" prefWidth="244.0">
+        <GridPane fx:id="InventoryGrid" layoutX="56.0" layoutY="515.0" prefHeight="219.0" prefWidth="244.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
