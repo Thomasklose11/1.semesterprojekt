@@ -23,7 +23,7 @@ public class FXMLBoot extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
 
         Scene scene = new Scene(root);
-
+        scene.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         primaryStage = stage;
         primaryStage.setScene(scene);
         primaryStage.show();

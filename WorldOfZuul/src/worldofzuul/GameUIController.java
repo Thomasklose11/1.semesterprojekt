@@ -126,6 +126,7 @@ public class GameUIController implements Initializable {
     private void handleMenuWindowButton(ActionEvent event) throws Exception {
         Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
         Scene scenePause = new Scene(rootPause);
+        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
@@ -207,6 +208,7 @@ public class GameUIController implements Initializable {
     private void handleGoToQuestion(ActionEvent event) throws Exception {
         Parent rootPause = FXMLLoader.load(getClass().getResource("QuestionUI.fxml"));
         Scene scenePause = new Scene(rootPause);
+        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 

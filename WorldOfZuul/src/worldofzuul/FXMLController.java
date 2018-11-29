@@ -22,6 +22,7 @@ public class FXMLController implements Initializable {
     private void handleStartButtonAction(ActionEvent event) throws Exception {
         Parent rootNameEnterPrompt = FXMLLoader.load(getClass().getResource("EnterNamePrompt.fxml"));
         Scene sceneNameEnterPrompt = new Scene(rootNameEnterPrompt);
+        sceneNameEnterPrompt.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneNameEnterPrompt);
 
     }
@@ -38,6 +39,7 @@ public class FXMLController implements Initializable {
         if (TextField.getLength() > 0) {
             Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
             Scene sceneGame = new Scene(rootGame);
+            sceneGame.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
             FXMLBoot.primaryStage.setScene(sceneGame);
             Game.init();
             //Game.play();
@@ -63,6 +65,7 @@ public class FXMLController implements Initializable {
     private void handlePauseButtonAction(ActionEvent event) throws Exception {
         Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
         Scene scenePause = new Scene(rootPause);
+        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
 
     }
@@ -72,6 +75,7 @@ public class FXMLController implements Initializable {
 
         Parent rootMain = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene sceneMain = new Scene(rootMain);
+        sceneMain.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneMain);
 
     }
@@ -81,6 +85,7 @@ public class FXMLController implements Initializable {
 
         Parent rootHigh = FXMLLoader.load(getClass().getResource("HighscoreMenu.fxml"));
         Scene sceneHigh = new Scene(rootHigh);
+        sceneHigh.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneHigh);
 
     }
@@ -88,6 +93,7 @@ public class FXMLController implements Initializable {
     private void handleBackToMenuButtonAction(ActionEvent event) throws Exception {
         Parent rootMain = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene sceneMain = new Scene(rootMain);
+        sceneMain.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneMain);
 
     }
@@ -97,6 +103,7 @@ public class FXMLController implements Initializable {
     private void handleResumeButtonAction(ActionEvent event) throws Exception {
         Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
         Scene sceneGame = new Scene(rootGame);
+        sceneGame.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneGame);
     }
 
@@ -104,6 +111,7 @@ public class FXMLController implements Initializable {
     private void handleHelpButtonAction(ActionEvent event) throws Exception {
         Parent rootHelp = FXMLLoader.load(getClass().getResource("HelpWindow.fxml"));
         Scene sceneHelp = new Scene(rootHelp);
+        sceneHelp.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneHelp);
 
     }
@@ -112,6 +120,7 @@ public class FXMLController implements Initializable {
     private void handleBackButtonAction(ActionEvent event) throws Exception {
         Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
         Scene scenePause = new Scene(rootPause);
+        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
 
     }
