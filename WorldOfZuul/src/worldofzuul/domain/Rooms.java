@@ -404,7 +404,6 @@ public class Rooms {
         f2_D5.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
         f3_F2.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
         f3_E6.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
-        f1_A1.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2)); //TEST
 
         //Anbringer spørgsmål i rum og låser døre
         f1_B2.setQuestion(0);
