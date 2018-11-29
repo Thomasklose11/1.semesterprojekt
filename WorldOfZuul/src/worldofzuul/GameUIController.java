@@ -80,8 +80,6 @@ public class GameUIController implements Initializable {
     private ImageView Inventory6;
     @FXML
     private ImageView Inventory9;
-    @FXML
-    private TextField UiTekstField;
     
 
     private static int counter = 0;

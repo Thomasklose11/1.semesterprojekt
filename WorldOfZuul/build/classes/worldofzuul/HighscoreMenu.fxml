@@ -24,7 +24,7 @@
             <Font name="Adventure" size="26.0" />
          </font>
       </TextArea>
-      <Button layoutX="185.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleBackToMenuButtonAction"   prefHeight="70.0" prefWidth="230.0" text="Back">
+      <Button layoutX="185.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleBackToMenuButtonAction"   prefHeight="70.0" prefWidth="230.0" text="Back" style = "-fx-background-color: #FF000000">
          <font>
             <Font name="Adventure" size="35.0" />
          </font>

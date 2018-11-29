@@ -64,30 +64,12 @@ public class Room {
         doors.add(new Door(direction, color));
     }
         
-
     public String getShortDescription() {
         return description;
     }
 
     public String getLongDescription() {
-        return "" + description + ".\n" + getExitString();
-    }
-
-    private String getExitString() {
-        String returnString = "Exits:";
-        Set<String> keys = exits.keySet();
-        for (String exit : keys) {
-            returnString += " " + exit;
-        }
-        if (hasItems) {
-            returnString += "\nItems in the room: ";
-            returnString += getRoomItems();
-        }
-
-        if (hasQuestion() == true) {
-            returnString += "\n" + roomQuestion.getPrompt();
-        }
-        return returnString;
+        return "" + description;
     }
 
     public Room getExit(String direction) {

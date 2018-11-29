@@ -8,13 +8,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #663d19;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.FXMLController">
    <children>
-      <TextArea editable="false" layoutX="86.0" layoutY="48.0" prefHeight="502.0" prefWidth="630.0" style="-fx-background-color: #000000;" text="- In order to move in a direction click &#10;  the corresponding arrow on the compass&#10;  located in the middle of the screen.&#10;&#10;- Your inventory is displayed in the &#10;  bottom left corner of the screen.&#10;  This displays the items you have aquired.&#10;&#10;- Your score is displayed in the top right &#10;  of the screen. Collect treasures in &#10;  the rooms to increase your score.&#10;&#10;- ">
+      <TextArea editable="false" layoutX="86.0" layoutY="48.0" prefHeight="502.0" prefWidth="630.0" style="-fx-background-color: #FF000000;" text="- In order to move in a direction click &#10;  the corresponding arrow on the compass&#10;  located in the middle of the screen.&#10;&#10;- Your inventory is displayed in the &#10;  bottom left corner of the screen.&#10;  This displays the items you have aquired.&#10;&#10;- Your score is displayed in the top right &#10;  of the screen. Collect treasures in &#10;  the rooms to increase your score.&#10;&#10;- ">
          <font>
             <Font name="Press Start 2P" size="12.0" />
          </font>
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor></TextArea>
+         </TextArea>
       <Button layoutX="370.0" layoutY="550.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="43.0" prefWidth="60.0" text="Back" />
    </children>
 </AnchorPane>

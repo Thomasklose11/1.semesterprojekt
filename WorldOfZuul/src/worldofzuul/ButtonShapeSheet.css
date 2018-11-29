@@ -15,7 +15,6 @@ and open the template in the editor.
 
 .north_button{
     -fx-shape: "M 300 450 L 400 150 L 500 450 L 300 450 ";
-    
 }
 .east_button{
     -fx-shape: "M 250 250 L 600 300 L 250 350 L 250 250" ;
@@ -25,5 +24,4 @@ and open the template in the editor.
 }
 .west_button{
     -fx-shape: "M 600 200 L 250 300 L 600 400 L 600 200 ";
-
 }
