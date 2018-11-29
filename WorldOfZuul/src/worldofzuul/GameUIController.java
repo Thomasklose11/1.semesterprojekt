@@ -15,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
@@ -62,6 +63,26 @@ public class GameUIController implements Initializable {
      * Initializes the controller class.
      */
     public static boolean revisit = false;
+    @FXML
+    private ImageView Inventory1;
+    @FXML
+    private ImageView Inventory4;
+    @FXML
+    private ImageView Inventory7;
+    @FXML
+    private ImageView Inventory2;
+    @FXML
+    private ImageView Inventory5;
+    @FXML
+    private ImageView Inventory8;
+    @FXML
+    private ImageView Inventory3;
+    @FXML
+    private ImageView Inventory6;
+    @FXML
+    private ImageView Inventory9;
+    @FXML
+    private TextField UiTekstField;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -81,8 +102,7 @@ public class GameUIController implements Initializable {
     private void handleGoNorth(ActionEvent event) {
         String direction = "north";
         moveUI(direction);
-        SendMail.mail();
-    }
+    }    
 
     @FXML
     private void handleGoSouth(ActionEvent event) {

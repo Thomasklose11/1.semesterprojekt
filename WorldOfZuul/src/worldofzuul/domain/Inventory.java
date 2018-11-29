@@ -31,4 +31,8 @@ public class Inventory {
         }
         return null;
     }
+    
+    public static Item getItem(int i){
+        return inventory.get(i);
+    }
 }
