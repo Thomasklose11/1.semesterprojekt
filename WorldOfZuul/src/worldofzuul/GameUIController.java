@@ -26,7 +26,7 @@ import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
 import worldofzuul.domain.Bonus;
 import worldofzuul.domain.Score;
-import worldofzuul.domain.SendMail;
+//import worldofzuul.domain.SendMail;
 
 /**
  * FXML Controller class
@@ -55,7 +55,6 @@ public class GameUIController implements Initializable {
     @FXML
     private GridPane Inventory;
 
-    private static int counter = 0;
     @FXML
     private ImageView itemImage;
 
@@ -83,8 +82,9 @@ public class GameUIController implements Initializable {
     private ImageView Inventory9;
     @FXML
     private TextField UiTekstField;
-    private int roomCounter;
+    
 
+    private static int counter = 0;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         if (revisit != false) {
@@ -147,8 +147,8 @@ public class GameUIController implements Initializable {
                     Rooms.setCurrentRoom(nextRoom);
                     
                     if(Rooms.getCurrentRoom().getVisited() == false ){
-                        incrementRoomCounter();
-                        System.out.println("Room counter: " + roomCounter);
+                        Rooms.incrementRoomCounter();
+                        System.out.println("Room counter: " + Rooms.getRoomCounter());
                                             }   
                     Rooms.getCurrentRoom(). setVisited();
                     RoomDisplayImage.setImage(nextRoom.getImage());
@@ -202,6 +202,7 @@ public class GameUIController implements Initializable {
         } else {
             System.out.println("There is no item in this room");
         }
+    }
 
     @FXML
     private void handleGoToQuestion(ActionEvent event) throws Exception {
@@ -222,13 +223,10 @@ public class GameUIController implements Initializable {
         Inventory9.setImage(worldofzuul.domain.Inventory.getItem(8).getIcon());
     }
 
-    }
+    
 
     public void setScore() {
         HighscoreLabel.setText(String.valueOf(Score.getScore()));
     }
     
-    public void incrementRoomCounter ()  {
-        roomCounter += 1;
-    }
 }

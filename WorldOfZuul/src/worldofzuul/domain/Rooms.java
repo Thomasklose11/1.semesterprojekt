@@ -7,7 +7,9 @@ import worldofzuul.command.CommandWord;
  * @author Rene_
  */
 public class Rooms {
-
+    
+    private static int roomCounter = 0;
+    
     private static Room currentRoom;
 
     //First floor
@@ -425,6 +427,15 @@ public class Rooms {
 
     public static Room getEndRoom() {
         return endRoom;
+    }
+    
+    
+    public static void incrementRoomCounter ()  {
+        roomCounter += 1;
+    }
+    
+    public static int getRoomCounter () {
+        return roomCounter;
     }
 
 }
