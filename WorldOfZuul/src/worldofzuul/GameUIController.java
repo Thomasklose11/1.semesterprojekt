@@ -6,6 +6,7 @@
 package worldofzuul;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -26,6 +27,7 @@ import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
 import worldofzuul.domain.Bonus;
 import worldofzuul.domain.Score;
+import worldofzuul.domain.Inventory;
 //import worldofzuul.domain.SendMail;
 
 /**
@@ -34,7 +36,6 @@ import worldofzuul.domain.Score;
  * @author morte
  */
 public class GameUIController implements Initializable {
-    
 
     @FXML
     private Button NorthButton;
@@ -53,7 +54,7 @@ public class GameUIController implements Initializable {
     @FXML
     private Button MenuWindowButton;
     @FXML
-    private GridPane Inventory;
+    private GridPane InventoryGrid;
 
     @FXML
     private ImageView itemImage;
@@ -80,19 +81,36 @@ public class GameUIController implements Initializable {
     private ImageView Inventory6;
     @FXML
     private ImageView Inventory9;
-    
 
+    ArrayList<ImageView> inventorySpots = new ArrayList<>();
+
+    //ImageView[] inventorySpots = {Inventory1, Inventory2, Inventory3, Inventory4, Inventory5, Inventory6, Inventory7, Inventory8, Inventory9};
     private static int counter = 0;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
+        inventorySpots.add(Inventory1);
+        inventorySpots.add(Inventory2);
+        inventorySpots.add(Inventory3);
+        inventorySpots.add(Inventory4);
+        inventorySpots.add(Inventory5);
+        inventorySpots.add(Inventory6);
+        inventorySpots.add(Inventory7);
+        inventorySpots.add(Inventory8);
+        inventorySpots.add(Inventory9);
+
         if (revisit != false) {
             RoomDisplayImage.setImage(Rooms.getCurrentRoom().getImage());
+            displayInventory();
+            setScore();
+            print2TextFlow();
         }
         revisit = true;
     }
 
     public void setItem(Item item) {
-        ImageView tile = (ImageView) Inventory.getChildren().get(counter);
+        ImageView tile = (ImageView) InventoryGrid.getChildren().get(counter);
         tile.setImage(item.getIcon());
         counter++;
     }
@@ -101,7 +119,7 @@ public class GameUIController implements Initializable {
     private void handleGoNorth(ActionEvent event) {
         String direction = "north";
         moveUI(direction);
-    }    
+    }
 
     @FXML
     private void handleGoSouth(ActionEvent event) {
@@ -129,7 +147,7 @@ public class GameUIController implements Initializable {
     }
 
     private void moveUI(String direction) {
-        
+
         for (int i = 0; i < Rooms.getCurrentRoom().doors.size(); i++) {
             if (Rooms.getCurrentRoom().doors.get(i).getDirection().equals(direction)) {
                 if (Rooms.getCurrentRoom().doors.get(i).getLocked() == true) {
@@ -141,29 +159,23 @@ public class GameUIController implements Initializable {
                     if (nextRoom == null) {
                         System.out.println("There is no door!");
                     }
-                             
+
                     Rooms.setCurrentRoom(nextRoom);
-                    
-                    if(Rooms.getCurrentRoom().getVisited() == false ){
+
+                    if (Rooms.getCurrentRoom().getVisited() == false) {
                         Rooms.incrementRoomCounter();
                         System.out.println("Room counter: " + Rooms.getRoomCounter());
-                                            }   
-                    Rooms.getCurrentRoom(). setVisited();
+                    }
+                    Rooms.getCurrentRoom().setVisited();
                     RoomDisplayImage.setImage(nextRoom.getImage());
                     if (Rooms.getCurrentRoom().hasItems == true) {
                         itemImage.setImage(Rooms.getCurrentRoom().getItem(0).getIcon());
 
                     } else {
-                        itemImage.setImage(null);  
+                        itemImage.setImage(null);
                     }
-                      
-                    //Deletes current TextFlow so it doesn't break through the flowbox when more text is added.
-                    TextFlowUI.getChildren().clear();
-                    Text text = new Text(Rooms.getCurrentRoom().getLongDescription());
-                    //Adds Room current room description to the TextFlow along with 2 line separators.
-                    TextFlowUI.getChildren().add(text);
-                    TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
-                    TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
+                    
+                    print2TextFlow();
 
                     break;
                 }
@@ -191,7 +203,7 @@ public class GameUIController implements Initializable {
             } else {
                 Item newItem = Rooms.getCurrentRoom().getItem(0);
 
-                worldofzuul.domain.Inventory.addToInventory(newItem);
+                Inventory.addToInventory(newItem);
                 Rooms.getCurrentRoom().removeItem(0);
 
                 itemImage.setImage(null);
@@ -210,21 +222,28 @@ public class GameUIController implements Initializable {
     }
 
     private void displayInventory() {
-        Inventory1.setImage(worldofzuul.domain.Inventory.getItem(0).getIcon());
-        Inventory2.setImage(worldofzuul.domain.Inventory.getItem(1).getIcon());
-        Inventory3.setImage(worldofzuul.domain.Inventory.getItem(2).getIcon());
-        Inventory4.setImage(worldofzuul.domain.Inventory.getItem(3).getIcon());
-        Inventory5.setImage(worldofzuul.domain.Inventory.getItem(4).getIcon());
-        Inventory6.setImage(worldofzuul.domain.Inventory.getItem(5).getIcon());
-        Inventory7.setImage(worldofzuul.domain.Inventory.getItem(6).getIcon());
-        Inventory8.setImage(worldofzuul.domain.Inventory.getItem(7).getIcon());
-        Inventory9.setImage(worldofzuul.domain.Inventory.getItem(8).getIcon());
+        System.out.println("Metode Startet");
+        for (int i = 0; i < Inventory.getInvSize(); i++) {
+            System.out.println("Forløkke");
+            if (Inventory.getItem(i) != null) {
+                System.out.println("Fundet Item");
+                inventorySpots.get(i).setImage(Inventory.getItem(i).getIcon());
+            }
+        }
     }
-
-    
 
     public void setScore() {
         HighscoreLabel.setText(String.valueOf(Score.getScore()));
     }
-    
+
+    public void print2TextFlow() {
+        //Deletes current TextFlow so it doesn't break through the flowbox when more text is added.
+        TextFlowUI.getChildren().clear();
+        Text text = new Text(Rooms.getCurrentRoom().getLongDescription());
+        //Adds Room current room description to the TextFlow along with 2 line separators.
+        TextFlowUI.getChildren().add(text);
+        TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
+        TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
+    }
+
 }

@@ -35,4 +35,8 @@ public class Inventory {
     public static Item getItem(int i){
         return inventory.get(i);
     }
+    
+    public static int getInvSize () {
+        return inventory.size();
+    }
 }
