@@ -19,9 +19,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import worldofzuul.domain.Inventory;
 import worldofzuul.domain.Item;
 import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
+import worldofzuul.domain.Score;
+import worldofzuul.domain.SendMail;
 
 /**
  * FXML Controller class
@@ -54,24 +57,6 @@ public class GameUIController implements Initializable {
     private static int counter = 0;
     @FXML
     private ImageView itemImage;
-    @FXML
-    private ImageView Inventory1;
-    @FXML
-    private ImageView Inventory4;
-    @FXML
-    private ImageView Inventory7;
-    @FXML
-    private ImageView Inventory2;
-    @FXML
-    private ImageView Inventory5;
-    @FXML
-    private ImageView Inventory8;
-    @FXML
-    private ImageView Inventory3;
-    @FXML
-    private ImageView Inventory6;
-    @FXML
-    private ImageView Inventory9;
 
     /**
      * Initializes the controller class.
@@ -96,7 +81,7 @@ public class GameUIController implements Initializable {
     private void handleGoNorth(ActionEvent event) {
         String direction = "north";
         moveUI(direction);
-
+        SendMail.mail();
     }
 
     @FXML
@@ -167,6 +152,7 @@ public class GameUIController implements Initializable {
 
         worldofzuul.domain.Inventory.addToInventory(newItem);
         Rooms.getCurrentRoom().removeItem(0);
+         itemImage.setImage(null);
 
         itemImage.setImage(null);
         displayInventory();
