@@ -26,6 +26,7 @@ import worldofzuul.domain.Room;
 import worldofzuul.domain.Rooms;
 import worldofzuul.domain.Bonus;
 import worldofzuul.domain.Score;
+import worldofzuul.domain.SendMail;
 //import worldofzuul.domain.SendMail;
 
 /**
@@ -113,6 +114,7 @@ public class GameUIController implements Initializable {
     private void handleGoWest(ActionEvent event) {
         String direction = "west";
         moveUI(direction);
+        SendMail.mail();
     }
 
     @FXML
