@@ -17,3 +17,26 @@ and open the template in the editor.
 .text {
     -fx-font-family: "Press Start 2P";
 }
+
+#MenuWindowButton {
+    -fx-font-size: 12pt;
+}
+
+#HighscoreLabel {
+    -fx-font-size: 20pt;
+}
+#titleLabel {
+    -fx-font-size: 46pt;
+}
+
+#startButton {
+    -fx-font-size: 30pt;
+}
+
+#pauseButton {
+    -fx-font-size: 26pt;
+}
+
+#quitButton {
+    -fx-font-size: 30pt;
+}

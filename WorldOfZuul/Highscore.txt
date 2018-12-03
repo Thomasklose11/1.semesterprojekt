@@ -57,3 +57,8 @@ sa     0
 asd     0
 ds     0
 Player: sd  Score: 0  Rooms: 0
+Player: sad  Score: 0  Rooms: 0
+Player: asd  Score: 0  Rooms: 0
+Player: fg  Score: 0  Rooms: 0
+Player: dfs  Score: 0  Rooms: 0
+Player: asd  Score: 0  Rooms: 0
