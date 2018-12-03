@@ -54,6 +54,7 @@ public class QuestionUIController implements Initializable {
 
         Parent rootPause = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
         Scene scenePause = new Scene(rootPause);
+        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
@@ -63,6 +64,7 @@ public class QuestionUIController implements Initializable {
 
         Parent rootPause = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
         Scene scenePause = new Scene(rootPause);
+        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
@@ -72,6 +74,7 @@ public class QuestionUIController implements Initializable {
 
         Parent rootPause = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
         Scene scenePause = new Scene(rootPause);
+        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
@@ -81,6 +84,7 @@ public class QuestionUIController implements Initializable {
 
         Parent rootPause = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
         Scene scenePause = new Scene(rootPause);
+        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 

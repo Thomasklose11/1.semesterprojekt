@@ -258,6 +258,8 @@ public class GameUIController implements Initializable {
 
         if (Rooms.getCurrentRoom().getVisited() == false) {
             Rooms.incrementRoomCounter();
+            Score.incrementScore(50);
+            setScore();
             System.out.println("Room counter: " + Rooms.getRoomCounter());
         }
         Rooms.getCurrentRoom().setVisited();
