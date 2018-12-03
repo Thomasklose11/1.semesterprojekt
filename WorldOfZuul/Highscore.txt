@@ -56,3 +56,4 @@ sad     0
 sa     0
 asd     0
 ds     0
+Player: sd  Score: 0  Rooms: 0

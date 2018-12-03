@@ -23,7 +23,7 @@ public class Highscore {
       try {
          // APPEND MODE SET HERE
          bw = new BufferedWriter(new FileWriter("Highscore.txt", true));
-	 bw.write(FXMLController.playerName + "     " + Score.getScore());
+	 bw.write("Player: " + FXMLController.playerName + "  " + "Score: " + Score.getScore() + "  " + "Rooms: " + Rooms.getRoomCounter());
 	 bw.newLine();
 	 bw.flush();
       } catch (IOException ioe) {
