@@ -58,13 +58,9 @@ and open the template in the editor.
     -fx-font-family: 'Press Start 2P';
     -fx-font-size: 30pt;
 }
-<<<<<<< HEAD
-#TextFlowUI {
-    -fx-background-color:#b39682;
-}
 #pause {
     -fx-font-size: 20pt;
-=======
+}
 
 #TYforPlaying{
 
@@ -88,5 +84,4 @@ and open the template in the editor.
 #TextFlowUI {
     -fx-font-family: 'Permanent Marker',cursive;
     -fx-font-size: 12pt;
->>>>>>> SidsteUIOgEndscreen
 }

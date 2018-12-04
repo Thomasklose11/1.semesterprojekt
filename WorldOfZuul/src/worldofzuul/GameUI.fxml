@@ -69,7 +69,7 @@
         <Button fx:id="MenuWindowButton" layoutX="520.0" layoutY="700" mnemonicParsing="false" onAction="#handleMenuWindowButton" prefHeight="60.0" prefWidth="100.0" text="Menu"  style="-fx-background-color: #FF000000; -fx-background-image: url(UI/GameButtonUpscaled.png); -fx-background-size: 100px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" />
         <ImageView id="itemView" fx:id="itemImage" fitHeight="80.0" fitWidth="80.0" layoutX="453.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true" />
         <Button layoutX="453.0" layoutY="114.0" mnemonicParsing="false" onAction="#handlePickUp" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #FF000000;" />
-        <Button layoutX="645.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleGoToQuestion" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #FF000000;"/>
+        <Button layoutX="645.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleGoToQuestion" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #FF000000;"/>
         <ImageView layoutX="950" layoutY="520.0" style=" -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);">
             <image> 
                 <Image url = "UI/Notebook.png" />

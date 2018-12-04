@@ -225,10 +225,12 @@ public class GameUIController implements Initializable {
 
     @FXML
     private void handleGoToQuestion(ActionEvent event) throws Exception {
-        Parent rootPause = FXMLLoader.load(getClass().getResource("QuestionUI.fxml"));
-        Scene scenePause = new Scene(rootPause);
-        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
-        FXMLBoot.primaryStage.setScene(scenePause);
+        if (Rooms.getCurrentRoom().hasQuestion() == true) {
+            Parent rootPause = FXMLLoader.load(getClass().getResource("QuestionUI.fxml"));
+            Scene scenePause = new Scene(rootPause);
+            scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
+            FXMLBoot.primaryStage.setScene(scenePause);
+        } 
     }
 
     private void displayInventory() {

@@ -32,11 +32,7 @@
             <Font name="Adventure" size="28.0" />
          </font>
       </Button>
-<<<<<<< HEAD
-      <Label fx:id="pause" alignment="CENTER" layoutX="82.0" layoutY="14.0" prefHeight="90.0" prefWidth="300.0" style="-fx-background-image: url(PauseMenuButtonUpscaled.png); -fx-background-size: 300px 90px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="PAUSE" textAlignment="CENTER" textFill="#431606">
-=======
-      <Label fx:id="pause" alignment="CENTER" layoutX="82.0" layoutY="14.0" prefHeight="90.0" prefWidth="300.0" style="-fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 300px 90px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Pause" textAlignment="CENTER" textFill="#431606">
->>>>>>> SidsteUIOgEndscreen
+      <Label fx:id="pause" alignment="CENTER" layoutX="82.0" layoutY="14.0" prefHeight="90.0" prefWidth="300.0" style="-fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 300px 90px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="PAUSE" textAlignment="CENTER" textFill="#431606">
          <font>
             <Font name="Adventure" size="44.0" />
          </font>
