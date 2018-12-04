@@ -73,3 +73,4 @@ Player: hy  Score: 0  Rooms: 0
 Player: ad  Score: 0  Rooms: 0
 Player: aed  Score: 0  Rooms: 0
 Player: ag  Score: 0  Rooms: 0
+Player: ad  Score: 0  Rooms: 0
