@@ -20,6 +20,7 @@ and open the template in the editor.
 
 #MenuWindowButton {
     -fx-font-size: 12pt;
+    -fx-text-fill: #ffffff;
 }
 
 #HighscoreLabel {
@@ -39,4 +40,10 @@ and open the template in the editor.
 
 #quitButton {
     -fx-font-size: 30pt;
+}
+#TextFlowUI {
+    -fx-background-color:#b39682;
+}
+#pause {
+    -fx-font-size: 20pt;
 }
