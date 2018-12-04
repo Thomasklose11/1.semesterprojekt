@@ -44,7 +44,6 @@ public class FXMLController implements Initializable {
             Game.init();
             //Game.play();
             playerName = TextField.getText();
-            Highscore.scorenm();
         } else {
             LabelName.setText("Please enter a name");
         }

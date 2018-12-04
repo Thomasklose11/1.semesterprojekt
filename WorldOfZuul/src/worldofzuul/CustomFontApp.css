@@ -14,36 +14,74 @@ and open the template in the editor.
     src: url('PressStart2P-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Permanent Marker',cursive;
+    src: url('PermanentMarker-Regular.ttf');
+}
+
 .text {
-    -fx-font-family: "Press Start 2P";
+    -fx-font-family: 'Press Start 2P';
 }
 
 #MenuWindowButton {
+
+    -fx-font-family: 'Press Start 2P';
     -fx-font-size: 12pt;
     -fx-text-fill: #ffffff;
 }
 
 #HighscoreLabel {
+
+    -fx-font-family: 'Press Start 2P';
     -fx-font-size: 20pt;
 }
 #titleLabel {
+
+    -fx-font-family: 'Press Start 2P';
     -fx-font-size: 46pt;
 }
 
 #startButton {
+
+    -fx-font-family: 'Press Start 2P';
     -fx-font-size: 30pt;
 }
 
 #pauseButton {
+
+    -fx-font-family: 'Press Start 2P';
     -fx-font-size: 26pt;
 }
 
 #quitButton {
+
+    -fx-font-family: 'Press Start 2P';
     -fx-font-size: 30pt;
-}
-#TextFlowUI {
-    -fx-background-color:#b39682;
 }
 #pause {
     -fx-font-size: 20pt;
+}
+
+#TYforPlaying{
+
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-sixe: 46pt;
+}
+
+#YourFinalScore {
+
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 46pt;
+}
+
+#ScoreLabel {
+
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 46pt;
+}
+
+
+#TextFlowUI {
+    -fx-font-family: 'Permanent Marker',cursive;
+    -fx-font-size: 12pt;
 }

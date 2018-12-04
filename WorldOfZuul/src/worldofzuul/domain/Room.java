@@ -8,9 +8,9 @@ import worldofzuul.GameUIController;
 
 public class Room {
 
-    public static Room isVisited(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    public static Room isVisited(boolean b) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     private final String description;
     private final HashMap<String, Room> exits;

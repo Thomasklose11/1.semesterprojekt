@@ -19,20 +19,20 @@
             <Image url="@../Pause%20MenuUpscaled.png" />
          </image>
       </ImageView>
-      <Button fx:id="buttonResume" onAction="#handleResumeButtonAction" layoutX="130.0" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="RESUME" textFill="#431606">
+      <Button fx:id="buttonResume" onAction="#handleResumeButtonAction" layoutX="130.0" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="RESUME" textFill="#431606">
          <font>
             <Font name="Adventure" size="28.0" />
          </font></Button>
-      <Button fx:id="buttonHelp" onAction="#handleHelpButtonAction" layoutX="130.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="HELP" textFill="#431606">
+      <Button fx:id="buttonHelp" onAction="#handleHelpButtonAction" layoutX="130.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="HELP" textFill="#431606">
          <font>
             <Font name="Adventure" size="28.0" />
          </font></Button>
-      <Button fx:id="buttonQuit" layoutX="132.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleQuitBtPauseMenuAction"  prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="QUIT" textFill="#431606">
+      <Button fx:id="buttonQuit" layoutX="132.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleQuitBtPauseMenuAction"  prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="QUIT" textFill="#431606">
          <font>
             <Font name="Adventure" size="28.0" />
          </font>
       </Button>
-      <Label fx:id="pause" alignment="CENTER" layoutX="82.0" layoutY="14.0" prefHeight="90.0" prefWidth="300.0" style="-fx-background-image: url(PauseMenuButtonUpscaled.png); -fx-background-size: 300px 90px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="PAUSE" textAlignment="CENTER" textFill="#431606">
+      <Label fx:id="pause" alignment="CENTER" layoutX="82.0" layoutY="14.0" prefHeight="90.0" prefWidth="300.0" style="-fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 300px 90px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="PAUSE" textAlignment="CENTER" textFill="#431606">
          <font>
             <Font name="Adventure" size="44.0" />
          </font>

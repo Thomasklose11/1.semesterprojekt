@@ -25,11 +25,11 @@ public class Game {
 //    }
 
     // end game
-    public static void endGame() {
-        System.out.println("Your score is: " + Score.getScore());
-        System.out.println("Thanks for playing!");
-        System.exit(0);
-
-    }
+//    public static void endGame() {
+//        System.out.println("Your score is: " + Score.getScore());
+//        System.out.println("Thanks for playing!");
+//        System.exit(0);
+//
+//    }
 
 }
