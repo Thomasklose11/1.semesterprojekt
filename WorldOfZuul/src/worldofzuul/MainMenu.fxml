@@ -17,7 +17,7 @@
             <Font name="Adventure" size="70.0" />
          </font>
       </Button>
-      <Button fx:id="pauseButton" layoutX="814.0" layoutY="275.0" mnemonicParsing="false" onAction="#handleHighscoreButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Highscore" textFill="#532104">
+      <Button fx:id="pauseButton" layoutX="814.0" layoutY="275.0" mnemonicParsing="false" onAction="#handleHighscoreButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Highscore" textFill="#532104">
          <font>
             <Font name="Adventure" size="66.0" />
          </font>

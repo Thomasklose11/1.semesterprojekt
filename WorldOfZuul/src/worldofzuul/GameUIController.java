@@ -5,6 +5,7 @@
  */
 package worldofzuul;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -183,7 +184,7 @@ public class GameUIController implements Initializable {
     }
 
     @FXML
-    private void handlePickUp(ActionEvent event) {
+    private void handlePickUp(ActionEvent event) throws IOException {
         if (Rooms.getCurrentRoom().getItem(0) != null) {
             if (Rooms.getCurrentRoom().getItem(0) instanceof Bonus) {
                 Bonus currentBonus = (Bonus) Rooms.getCurrentRoom().getItem(0);
@@ -215,6 +216,11 @@ public class GameUIController implements Initializable {
             System.out.println("There is no item in this room");
         }
         End.end();
+        if (End.endTrue == true) {
+            bootEndScreen();
+
+            SendMail.mail();
+        }
     }
 
     @FXML
@@ -258,8 +264,6 @@ public class GameUIController implements Initializable {
 
         if (Rooms.getCurrentRoom().getVisited() == false) {
             Rooms.incrementRoomCounter();
-            Score.incrementScore(50);
-            setScore();
             System.out.println("Room counter: " + Rooms.getRoomCounter());
         }
         Rooms.getCurrentRoom().setVisited();
@@ -272,5 +276,13 @@ public class GameUIController implements Initializable {
         }
 
         print2TextFlow();
+    }
+
+    public void bootEndScreen() throws IOException {
+        Parent rootPause = FXMLLoader.load(getClass().getResource("EndScreen.fxml"));
+        Scene scenePause = new Scene(rootPause);
+        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
+        FXMLBoot.primaryStage.setScene(scenePause);
+
     }
 }

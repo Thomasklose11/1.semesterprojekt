@@ -380,7 +380,7 @@ public class Rooms {
 
         endRoom.setExit("south", f3_D7);
 
-        currentRoom = startRoom;
+        currentRoom = f3_D7;
 
         // Anbringer et item i et rum
         f1_C1.setKey(new Key("whip", "Inventory/WhipUpscaled.png","whip"));

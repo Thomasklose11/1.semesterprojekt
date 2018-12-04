@@ -11,6 +11,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
+
 
 /**
  *
@@ -25,6 +27,7 @@ public class FXMLBoot extends Application {
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         primaryStage = stage;
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/UI/Icon.png")));
         primaryStage.setScene(scene);
         primaryStage.show();
         

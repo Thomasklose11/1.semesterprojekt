@@ -1,17 +1,15 @@
-
 package worldofzuul.domain;
 
 public class End {
-    
-    public static void end(){
-        if(Rooms.getCurrentRoom() == Rooms.getEndRoom() && Rooms.getEndRoom().hasItems == false){
-            
-            SendMail.mail();
-            Game.endGame();
-            
+
+    public static boolean endTrue = false;
+
+    public static void end() {
+        if (Rooms.getCurrentRoom() == Rooms.getEndRoom() && Rooms.getEndRoom().hasItems == false) {
+            endTrue = true;
+            Score.incrementScore(Rooms.getRoomCounter() * 50);
+            Highscore.scorenm();
         }
-            
+
     }
-    
-    
 }
