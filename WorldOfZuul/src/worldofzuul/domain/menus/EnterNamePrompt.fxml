@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="353.0" style="-fx-background-color: #302f29;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.domain.game.FXMLController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="353.0" style="-fx-background-color: #302f29;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.domain.game.EnterNameController">
    <children>
       <TextField fx:id="TextField" alignment="CENTER" layoutX="80.0" layoutY="120.0" />
       <Label alignment="CENTER" layoutX="48.0" layoutY="57.0" text="Enter your name" textFill="WHITE">

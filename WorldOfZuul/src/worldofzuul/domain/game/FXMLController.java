@@ -2,7 +2,9 @@ package worldofzuul.domain.game;
 
 import worldofzuul.domain.game.FXMLBoot;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,26 +31,22 @@ public class FXMLController implements Initializable {
 
     }
     public static String playerName;
-    @FXML
     private TextField TextField;
-    @FXML
     private Label LabelName;
-    @FXML 
-    private TextArea Highscoretable;
 
     @FXML
     private void handlePlayButtonAction(ActionEvent event) throws Exception {
-        if (TextField.getLength() > 0) {
-            Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
-            Scene sceneGame = new Scene(rootGame);
-            sceneGame.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
-            FXMLBoot.primaryStage.setScene(sceneGame);
-            Game.init();
-            //Game.play();
-            playerName = TextField.getText();
-        } else {
-            LabelName.setText("Please enter a name");
-        }
+//        if (TextField.getLength() > 0) {
+//            Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
+//            Scene sceneGame = new Scene(rootGame);
+//            sceneGame.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
+//            FXMLBoot.primaryStage.setScene(sceneGame);
+//            Game.init();
+//            //Game.play();
+//            playerName = TextField.getText();
+//        } else {
+//            LabelName.setText("Please enter a name");
+//        }
 
     }
 
@@ -77,10 +75,11 @@ public class FXMLController implements Initializable {
         Parent rootMain = FXMLLoader.load(getClass().getResource("../menus/MainMenu.fxml"));
         Scene sceneMain = new Scene(rootMain);
         sceneMain.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
+        new Highscore().read();
         FXMLBoot.primaryStage.setScene(sceneMain);
 
     }
-    
+
     @FXML
     private void handleHighscoreButtonAction(ActionEvent event) throws Exception {
 
@@ -88,8 +87,8 @@ public class FXMLController implements Initializable {
         Scene sceneHigh = new Scene(rootHigh);
         sceneHigh.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneHigh);
-
     }
+
     @FXML
     private void handleBackToMenuButtonAction(ActionEvent event) throws Exception {
         Parent rootMain = FXMLLoader.load(getClass().getResource("../menus/MainMenu.fxml"));
@@ -98,11 +97,10 @@ public class FXMLController implements Initializable {
         FXMLBoot.primaryStage.setScene(sceneMain);
 
     }
-    
 
     @FXML
     private void handleResumeButtonAction(ActionEvent event) throws Exception {
-        Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
+        Parent rootGame = FXMLLoader.load(getClass().getResource("../game/GameUI.fxml"));
         Scene sceneGame = new Scene(rootGame);
         sceneGame.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneGame);

@@ -12,7 +12,7 @@ public class End {
         if (Rooms.getCurrentRoom() == Rooms.getEndRoom() && Rooms.getEndRoom().hasItems == false) {
             endTrue = true;
             Score.incrementScore(Rooms.getRoomCounter() * 50);
-            new Highscore().appendToHighscore();
+            new Highscore().read();
         }
 
     }

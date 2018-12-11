@@ -23,6 +23,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import worldofzuul.domain.challenges.Highscore;
 import worldofzuul.domain.objects.Inventory;
 import worldofzuul.domain.objects.Item;
 import worldofzuul.domain.rooms.Room;
@@ -124,6 +125,7 @@ public class GameUIController implements Initializable {
     private void handleGoNorth(ActionEvent event) {
         String direction = "north";
         moveUI(direction);
+  //      new Highscore().read();
     }
 
     @FXML
