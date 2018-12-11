@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import worldofzuul.domain.objects.Score;
+import worldofzuul.domain.rooms.Rooms;
 
 /**
  * FXML Controller class
@@ -25,6 +26,10 @@ public class EndScreenController implements Initializable {
     private Label YourFinalScore;
     @FXML
     private Label ScoreLabel;
+    @FXML
+    private Label NumberOfRoom;
+    @FXML
+    private Label NumberOfRoomLabel;
 
     /**
      * Initializes the controller class.
@@ -33,6 +38,7 @@ public class EndScreenController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         ScoreLabel.setText("" + Score.getScore());
+        NumberOfRoom.setText("" + Rooms.getRoomCounter() + " out of 71 rooms");
     }    
     
 }
