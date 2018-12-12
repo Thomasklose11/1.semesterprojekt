@@ -13,6 +13,9 @@ public class Score {
         score += score1;
         
     }   
+    public static void multiplyScore (int multiplier){
+        score = score*multiplier;
+    }
 
     public static int getScore() {
         return score;

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import worldofzuul.domain.challenges.Highscore;
 import worldofzuul.domain.game.FXMLController;
+import worldofzuul.domain.objects.Inventory;
 import worldofzuul.domain.objects.Score;
 import worldofzuul.domain.rooms.Rooms;
 
@@ -17,8 +18,12 @@ public class End {
     public static void end() {
         if (Rooms.getCurrentRoom() == Rooms.getEndRoom() && Rooms.getEndRoom().hasItems == false) {
             endTrue = true;
+            if (Inventory.checkInventoryForItem("hat")==true){
+                Score.multiplyScore(2);
+            }
             Score.incrementScore(Rooms.getRoomCounter() * 50);
             new Highscore().read();
+            
         }
         //Writes to the file.    
         File file = new File("RoomCounter.txt");
