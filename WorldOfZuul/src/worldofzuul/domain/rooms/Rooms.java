@@ -382,7 +382,7 @@ public class Rooms {
 
         endRoom.setExit("south", f3_D7);
 
-        currentRoom = endRoom;
+        currentRoom = f3_A7;
 
         // Anbringer et item i et rum
         f1_C1.setKey(new Key("whip", "Inventory/WhipUpscaled.png","whip"));
@@ -412,6 +412,9 @@ public class Rooms {
         f2_D5.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
         f3_F2.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
         f3_E6.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
+        
+        //Anbringer store bonusser i rum
+        f3_A7.setItem(new Bonus("bonus3", "Bonus/Kidney.png",3));
 
         //Anbringer spørgsmål i rum og låser døre
         f1_B2.setQuestion(0);
