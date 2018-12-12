@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/C:/Users/Morten%20Nørgård/Desktop/Semesterprojekt/1.semesterprojekt/WorldOfZuul/src/worldofzuul/FXMLBoot.java</file>
             <file>file:/C:/Users/Morten%20Nørgård/Desktop/Semesterprojekt/1.semesterprojekt/WorldOfZuul/src/worldofzuul/QuestionUI.fxml</file>
@@ -9,5 +10,8 @@
             <file>file:/C:/Users/Morten%20Nørgård/Desktop/Semesterprojekt/1.semesterprojekt/WorldOfZuul/src/worldofzuul/MainMenu.fxml</file>
             <file>file:/C:/Users/Morten%20Nørgård/Desktop/Semesterprojekt/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Rooms.java</file>
         </group>
+=======
+        <group/>
+>>>>>>> HighScore
     </open-files>
 </project-private>

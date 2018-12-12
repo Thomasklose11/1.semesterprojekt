@@ -2,9 +2,9 @@ package worldofzuul.presentation;
 
 import javafx.scene.text.Text;
 import worldofzuul.command.CommandWord;
-import worldofzuul.domain.Inventory;
+import worldofzuul.domain.objects.Inventory;
 import worldofzuul.command.Parser;
-import worldofzuul.domain.Rooms;
+import worldofzuul.domain.rooms.Rooms;
 
 /**
  *
