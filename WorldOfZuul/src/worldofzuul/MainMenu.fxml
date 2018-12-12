@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -9,37 +10,42 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #663c06;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.FXMLController">
-   <children>
-      <ImageView fx:id="mainMenuArt" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="startButton" layoutX="814.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleStartButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FF000000; -fx-background-image: url(UI/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Start" textFill="#4d682a">
-         <font>
-            <Font name="Adventure" size="70.0" />
-         </font>
-      </Button>
-      <Button fx:id="pauseButton" layoutX="814.0" layoutY="275.0" mnemonicParsing="false" onAction="#handleHighscoreButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Highscore" textFill="#532104">
-         <font>
-            <Font name="Adventure" size="66.0" />
-         </font>
-      </Button>
-      <Button fx:id="quitButton" layoutX="814.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleQuitButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FF000000; -fx-background-image: url(UI/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Quit" textFill="#532104">
-         <font>
-            <Font name="Adventure" size="70.0" />
-         </font></Button>
-      <Label fx:id="titleLabel" text="Temple Raider">
-         <font>
-            <Font name="Adventure" size="120.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="0.004761904761904762" endY="1.0">
-               <stops>
-                  <Stop color="#479701" />
-                  <Stop color="#479701" offset="0.210727969348659" />
-                  <Stop color="#ff5900" offset="0.44807836631512415" />
-                  <Stop color="#e1ff00" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Label>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1370.0" style="-fx-background-color: #663c06;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.FXMLController">
+    <children>
+        <ImageView fx:id="mainMenuArt" fitHeight="770.0" fitWidth="1370.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url = "UI/MainMenuImg.png"/> 
+        </image>
+        </ImageView>
+        <Button fx:id="startButton" layoutX="900.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleStartButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FF000000; -fx-background-image: url(UI/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Start" textFill="#4d682a">
+            <font>
+                <Font name="Adventure" size="70.0" />
+            </font>
+        </Button>
+        <Button fx:id="pauseButton" layoutX="900.0" layoutY="275.0" mnemonicParsing="false" onAction="#handleHighscoreButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Highscore" textFill="#532104">
+            <font>
+                <Font name="Adventure" size="66.0" />
+            </font>
+        </Button>
+        <Button fx:id="quitButton" layoutX="900.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleQuitButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FF000000; -fx-background-image: url(UI/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Quit" textFill="#532104">
+            <font>
+                <Font name="Adventure" size="70.0" />
+            </font>
+        </Button>
+        <Label fx:id="titleLabel" text="Temple Raider">
+            <font>
+                <Font name="Adventure" size="120.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.004761904761904762" endY="1.0">
+                    <stops>
+                        <Stop color="#479701" />
+                        <Stop color="#479701" offset="0.210727969348659" />
+                        <Stop color="#ff5900" offset="0.44807836631512415" />
+                        <Stop color="#e1ff00" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+    </children>
 </AnchorPane>

@@ -3,20 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/FXMLBoot.java</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/FXMLController.java</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Item.java</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/GameUI.fxml</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/SendMail.java</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/CustomFontApp.css</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Room.java</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Game.java</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/End.java</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Highscore.java</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/GameUIController.java</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/MainMenu.fxml</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Rooms.java</file>
-            <file>file:/C:/Users/morte/Desktop/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Score.java</file>
+            <file>file:/C:/Users/Morten%20Nørgård/Desktop/Semesterprojekt/1.semesterprojekt/WorldOfZuul/src/worldofzuul/FXMLBoot.java</file>
+            <file>file:/C:/Users/Morten%20Nørgård/Desktop/Semesterprojekt/1.semesterprojekt/WorldOfZuul/src/worldofzuul/QuestionUI.fxml</file>
+            <file>file:/C:/Users/Morten%20Nørgård/Desktop/Semesterprojekt/1.semesterprojekt/WorldOfZuul/src/worldofzuul/GameUI.fxml</file>
+            <file>file:/C:/Users/Morten%20Nørgård/Desktop/Semesterprojekt/1.semesterprojekt/WorldOfZuul/src/worldofzuul/MainMenu.fxml</file>
+            <file>file:/C:/Users/Morten%20Nørgård/Desktop/Semesterprojekt/1.semesterprojekt/WorldOfZuul/src/worldofzuul/domain/Rooms.java</file>
         </group>
     </open-files>
 </project-private>

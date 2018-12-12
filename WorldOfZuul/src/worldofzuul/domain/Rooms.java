@@ -64,21 +64,21 @@ public class Rooms {
         f2_C1 = new Room("You’re standing in a dark room.");
 
         f2_A2 = new Room("You see a lever high up on the wall, it is out of your reach");
-        f2_B2 = new Room("");
+        f2_B2 = new Room("There seems to be a dart trap in this room, but another poor soul activated it before you");
         f2_C2 = new Room("");
         f2_D2 = new Room("");
 
         f2_A3 = new Room("You’re standing in a dark room.");
         f2_B3 = new Room("");
         f2_C3 = new Room("The doors around you are locked, answer this puzzle correct to continue through.");
-        f2_D3 = new Room("You see a button on the other side of a large gap, it is out of your reach .");
+        f2_D3 = new Room("You see a button on the other side of a large gap, it is out of your reach.");
 
         f2_A4 = new Room("You see a torch hanging on the wall, do you want to pick it up?");
         f2_B4 = new Room("");
-        f2_C4 = new Room("");
+        f2_C4 = new Room("A bejeweled sarcophage sits in the middle of the room.");
         f2_D4 = new Room("You spot a gas mask on the corpse of a dead Nazi soldier.");
 
-        f2_A5 = new Room("The only way forward is down through the hole in the floor, you see a branch sturdy enough to hold your weight.");
+        f2_A5 = new Room("The only way forward is over the large gap. You see a branch sturdy enough to hold your weight.");
         f2_B5 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.");
         f2_C5 = new Room("You smell gas coming from the door to the east");
         f2_D5 = new Room("The room is full of gas. Fortunately you have your gas mask on, and you find a valuable treasure on the ground");
@@ -88,7 +88,7 @@ public class Rooms {
         f3_B1 = new Room("You feel your soul connect with the large gemstone once again.");
         f3_C1 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.");
         f3_D1 = new Room("You are presented with a riddle, answer it to move on.");
-        f3_E1 = new Room("You feel the large gemstone connect with your soul once again. \n"
+        f3_E1 = new Room("You feel the large gemstone connect with your soul once again."
                 + "");
         f3_F1 = new Room("");
 
@@ -106,7 +106,7 @@ public class Rooms {
         f3_E3 = new Room("");
         f3_F3 = new Room("A large lever is in the room, pulling it may open the shut door to the west");
 
-        f3_A4 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.");
+        f3_A4 = new Room("The door to the north seems to need a special item to unlock.");
         f3_B4 = new Room("");
         f3_C4 = new Room("");
         f3_D4 = new Room("");
