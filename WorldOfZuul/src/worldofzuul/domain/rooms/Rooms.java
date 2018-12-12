@@ -49,12 +49,11 @@ public class Rooms {
                 + "A statue is standing in the middle of the room, it’s eyes starts to glow and it utters: “This ancient temple\n"
                 + "contains many secret treasures, but dangers lurk within, many have tried, but none have succeeded in\n"
                 + "obtaining the legendary jade statue”", "Rooms/F1_B1.png");
-        f1_C1 = new Room("You spot on the floor, a whip lying in the dust.", "Rooms/F1_C1.png");
+        f1_C1 = new Room("", "Rooms/F1_C1.png");
 
         f1_A2 = new Room("","Rooms/F1_A2.png");
-        f1_B2 = new Room("The door in front of you is locked, answer the statues puzzle to continue through.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
-        f1_C2 = new Room("You enter the room and spot a large shadow out of the corner of your eye, before you can get a good look\n"
-                + "at it, it disappears.", "Rooms/F1_C2.png");
+        f1_B2 = new Room("Prees the statue to answer the it's question.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
+        f1_C2 = new Room("", "Rooms/F1_C2.png");
 
         f1_A3 = new Room("", "Rooms/F1_A3.png");
         f1_B3 = new Room("You stand in front of a pit and see a large branch on the other side of it, it is out of your reach, but it looks stable and\n"
@@ -135,7 +134,7 @@ public class Rooms {
         f3_C7 = new Room("", "Rooms/F3_C7.png");
         f3_D7 = new Room("Answer this riddle to continue. You feel the pressure from behind the door, something is behind it.");
         f3_E7 = new Room("");
-        f3_F7 = new Room("You find a green key");
+        f3_F7 = new Room("");
 
         endRoom = new Room("The final room! On the pedestal in the middle of the room, you spot the long sought after Jade Statue");
 
