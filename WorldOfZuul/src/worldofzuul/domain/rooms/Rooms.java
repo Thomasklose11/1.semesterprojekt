@@ -38,10 +38,10 @@ public class Rooms {
     public static void createRooms() {
 
         //First floor rooms
-        startRoom = new Room("Welcome to Temple Raider! /n  This is an adventure game. /n Type '" + CommandWord.HELP + "' if you need help. /n"
-                + "You’re in the jungle in Belize.\n"
-                + "You, the Archeologist “El Whipper”, has through 16 years of devoted research, looked for ancient Mayan\n"
-                + "treasures. You now stand before the possibly greatest treasure to ever see the light of day. Will you\n"
+        startRoom = new Room("Welcome to Temple Raider! This is an adventure game. /n"
+                + "You’re in the jungle in Belize."
+                + "You, the Archeologist “El Whipper”, has through 16 years of devoted research, looked for ancient Mayan"
+                + "treasures. You now stand before the possibly greatest treasure to ever see the light of day. Will you"
                 + "succeed in finding the treasure or will you succumb to the dangers of the temple. It is up to you!", "Rooms/StartRoom.png");
 
         f1_A1 = new Room("You’re standing in a dark room.", "Rooms/F1_A1.png");
@@ -49,12 +49,11 @@ public class Rooms {
                 + "A statue is standing in the middle of the room, it’s eyes starts to glow and it utters: “This ancient temple\n"
                 + "contains many secret treasures, but dangers lurk within, many have tried, but none have succeeded in\n"
                 + "obtaining the legendary jade statue”", "Rooms/F1_B1.png");
-        f1_C1 = new Room("You spot on the floor, a whip lying in the dust.", "Rooms/F1_C1.png");
+        f1_C1 = new Room("", "Rooms/F1_C1.png");
 
         f1_A2 = new Room("","Rooms/F1_A2.png");
-        f1_B2 = new Room("The door in front of you is locked, answer the statues puzzle to continue through.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
-        f1_C2 = new Room("You enter the room and spot a large shadow out of the corner of your eye, before you can get a good look\n"
-                + "at it, it disappears.", "Rooms/F1_C2.png");
+        f1_B2 = new Room("Prees the statue to answer the it's question.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
+        f1_C2 = new Room("", "Rooms/F1_C2.png");
 
         f1_A3 = new Room("", "Rooms/F1_A3.png");
         f1_B3 = new Room("You stand in front of a pit and see a large branch on the other side of it, it is out of your reach, but it looks stable and\n"
@@ -71,7 +70,7 @@ public class Rooms {
         f2_C2 = new Room("", "Rooms/F2_C2.png");
         f2_D2 = new Room("", "Rooms/F2_D2.png");
 
-        f2_A3 = new Room("You’re standing in a dark room.", "Rooms/F2_A3.png");
+        f2_A3 = new Room("You’re standing in a dark room.", "Rooms/F2_A3.png", "Rooms/F2_A3U.png");
         f2_B3 = new Room("", "Rooms/F2_B3.png");
         f2_C3 = new Room("The doors around you are locked, answer this puzzle correct to continue through.", "Rooms/F2_C3.png");
         f2_D3 = new Room("You see a button on the other side of a large gap, it is out of your reach.", "Rooms/F2_D3.png");
@@ -135,7 +134,7 @@ public class Rooms {
         f3_C7 = new Room("", "Rooms/F3_C7.png");
         f3_D7 = new Room("Answer this riddle to continue. You feel the pressure from behind the door, something is behind it.");
         f3_E7 = new Room("");
-        f3_F7 = new Room("You find a green key");
+        f3_F7 = new Room("");
 
         endRoom = new Room("The final room! On the pedestal in the middle of the room, you spot the long sought after Jade Statue");
 
@@ -227,7 +226,7 @@ public class Rooms {
         f2_B5.setExit("west", f2_A5);
 
         f2_C5.setExit("south", f2_C4);
-        f2_C5.setExitWithColor("east", f2_D5,"whip");
+        f2_C5.setExitWithColor("east", f2_D5,"gasmask");
         f2_C5.setExit("west", f2_B5);
 
         f2_D5.setExit("north", f3_E1);
@@ -382,7 +381,11 @@ public class Rooms {
 
         endRoom.setExit("south", f3_D7);
 
+<<<<<<< HEAD
         currentRoom = f3_A7;
+=======
+        currentRoom = startRoom;
+>>>>>>> Rewards
 
         // Anbringer et item i et rum
         f1_C1.setKey(new Key("whip", "Inventory/WhipUpscaled.png","whip"));
@@ -413,8 +416,17 @@ public class Rooms {
         f3_F2.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
         f3_E6.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
         
+<<<<<<< HEAD
         //Anbringer store bonusser i rum
         f3_A7.setItem(new Bonus("bonus3", "Bonus/Kidney.png",3));
+=======
+        //Sætter mørke rum
+        f1_A1.setDarkRoom();
+        f2_C1.setDarkRoom();
+        f2_A3.setDarkRoom();
+        f3_A1.setDarkRoom();
+        f3_A3.setDarkRoom();
+>>>>>>> Rewards
 
         //Anbringer spørgsmål i rum og låser døre
         f1_B2.setQuestion(0);

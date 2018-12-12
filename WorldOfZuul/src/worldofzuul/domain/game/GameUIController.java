@@ -19,6 +19,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
@@ -106,11 +107,12 @@ public class GameUIController implements Initializable {
         inventorySpots.add(Inventory8);
         inventorySpots.add(Inventory9);
 
+        print2TextFlow();
+
         if (revisit != false) {
             RoomDisplayImage.setImage(Rooms.getCurrentRoom().getImage());
             displayInventory();
             setScore();
-            print2TextFlow();
         }
         revisit = true;
     }
@@ -125,7 +127,7 @@ public class GameUIController implements Initializable {
     private void handleGoNorth(ActionEvent event) {
         String direction = "north";
         moveUI(direction);
-  //      new Highscore().read();
+        //      new Highscore().read();
     }
 
     @FXML
@@ -238,7 +240,7 @@ public class GameUIController implements Initializable {
             Scene scenePause = new Scene(rootPause);
             scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
             FXMLBoot.primaryStage.setScene(scenePause);
-        } 
+        }
     }
 
     private void displayInventory() {
@@ -253,6 +255,7 @@ public class GameUIController implements Initializable {
         HighscoreLabel.setText(String.valueOf(Score.getScore()));
     }
 
+    @FXML
     public void print2TextFlow() {
         //Deletes current TextFlow so it doesn't break through the flowbox when more text is added.
         TextFlowUI.getChildren().clear();
@@ -268,6 +271,9 @@ public class GameUIController implements Initializable {
 
         if (nextRoom == null) {
             System.out.println("There is no door!");
+        }
+        if (nextRoom.getDarkRoom() == true && Inventory.checkInventoryForItem("torch")) {
+            nextRoom.setSecondImage();
         }
 
         Rooms.setCurrentRoom(nextRoom);
@@ -295,4 +301,5 @@ public class GameUIController implements Initializable {
         FXMLBoot.primaryStage.setScene(scenePause);
 
     }
+
 }

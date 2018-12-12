@@ -33,6 +33,15 @@ public class Inventory {
         return false;
     }
     
+    public static boolean checkInventoryForItem(String item) {
+        for (int i = 0; i < inventory.size(); i++) {
+            if (inventory.get(i).getDescription().equals(item)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     public static Item getItem(int i){
         return inventory.get(i);
     }

@@ -15,7 +15,6 @@ public class Room {
 //    public static Room isVisited(boolean b) {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-
     private final String description;
     private final HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
@@ -25,11 +24,13 @@ public class Room {
     private boolean question = false;
     private Question roomQuestion;
 
+    private boolean darkRoom = false;
+
     public ArrayList<Door> doors = new ArrayList<>();
 
     private Image roomImage;
     private boolean visited = false;
-    
+
     private String secondRoomImage;
 
     public Room(String description, HashMap<String, Room> exits) {
@@ -37,7 +38,6 @@ public class Room {
         this.exits = exits;
     }
 
-    
     public Room(String description) {
         this.description = description;
         exits = new HashMap<String, Room>();
@@ -46,9 +46,9 @@ public class Room {
     public Room(String description, String imageURL) {
         this.description = description;
         exits = new HashMap<String, Room>();
-        roomImage = new Image(imageURL, true); 
+        roomImage = new Image(imageURL, true);
     }
-    
+
     public Room(String description, String imageURL, String secondImageURL) {
         this.description = description;
         exits = new HashMap<String, Room>();
@@ -67,7 +67,7 @@ public class Room {
         exits.put(direction, neighbor);
         doors.add(new Door(direction, color));
     }
-        
+
     public String getShortDescription() {
         return description;
     }
@@ -107,7 +107,6 @@ public class Room {
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).getDescription().equals(itemName)) {
                 items.remove(i);
-
             }
         }
         if (items.isEmpty()) {
@@ -168,7 +167,7 @@ public class Room {
 //        }
 //        return "none";
 //    }
-    
+
     public void setQuestion(int i) {
         roomQuestion = Puzzles.questions[i];
         this.question = true;
@@ -192,8 +191,8 @@ public class Room {
                 doors.get(i).unlock();
             }
         }
-        roomImage= new Image(secondRoomImage,true);
-        
+        setSecondImage();
+
     }
 
     //checker om en nøgle i spillerens inventory passer til en dør i det nuværende rum
@@ -213,16 +212,27 @@ public class Room {
 //            System.out.println("There is no door there");
 //        }
 //    }
-
     public Image getImage() {
         return roomImage;
     }
-    
-    public void setVisited () {
-        visited=true;
+
+    public void setVisited() {
+        visited = true;
     }
-    
-    public boolean getVisited(){
+
+    public boolean getVisited() {
         return visited;
+    }
+
+    public void setDarkRoom() {
+        darkRoom = true;
+    }
+
+    public boolean getDarkRoom() {
+        return darkRoom;
+    }
+
+    public void setSecondImage() {
+        roomImage = new Image(secondRoomImage, true);
     }
 }
