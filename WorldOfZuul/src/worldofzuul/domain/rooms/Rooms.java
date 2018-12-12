@@ -49,12 +49,11 @@ public class Rooms {
                 + "A statue is standing in the middle of the room, it’s eyes starts to glow and it utters: “This ancient temple\n"
                 + "contains many secret treasures, but dangers lurk within, many have tried, but none have succeeded in\n"
                 + "obtaining the legendary jade statue”", "Rooms/F1_B1.png");
-        f1_C1 = new Room("You spot on the floor, a whip lying in the dust.", "Rooms/F1_C1.png");
+        f1_C1 = new Room("", "Rooms/F1_C1.png");
 
         f1_A2 = new Room("","Rooms/F1_A2.png");
-        f1_B2 = new Room("The door in front of you is locked, answer the statues puzzle to continue through.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
-        f1_C2 = new Room("You enter the room and spot a large shadow out of the corner of your eye, before you can get a good look\n"
-                + "at it, it disappears.", "Rooms/F1_C2.png");
+        f1_B2 = new Room("Prees the statue to answer the it's question.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
+        f1_C2 = new Room("", "Rooms/F1_C2.png");
 
         f1_A3 = new Room("", "Rooms/F1_A3.png");
         f1_B3 = new Room("You stand in front of a pit and see a large branch on the other side of it, it is out of your reach, but it looks stable and\n"
@@ -73,55 +72,54 @@ public class Rooms {
 
         f2_A3 = new Room("You’re standing in a dark room.");
         f2_B3 = new Room("");
-        f2_C3 = new Room("The doors around you are locked, answer this puzzle correct to continue through.");
+        f2_C3 = new Room("Prees the statue to answer the it's question..");
         f2_D3 = new Room("You see a button on the other side of a large gap, it is out of your reach.");
 
-        f2_A4 = new Room("You see a torch hanging on the wall, do you want to pick it up?");
+        f2_A4 = new Room("");
         f2_B4 = new Room("");
         f2_C4 = new Room("A bejeweled sarcophage sits in the middle of the room.");
-        f2_D4 = new Room("You spot a gas mask on the corpse of a dead Nazi soldier.");
+        f2_D4 = new Room("");
 
         f2_A5 = new Room("The only way forward is over the large gap. You see a branch sturdy enough to hold your weight.");
-        f2_B5 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.");
+        f2_B5 = new Room("Prees the statue to answer the it's question.");
         f2_C5 = new Room("You smell gas coming from the door to the east");
-        f2_D5 = new Room("The room is full of gas. Fortunately you have your gas mask on, and you find a valuable treasure on the ground");
+        f2_D5 = new Room("The room is full of gas.");
 
         //Third floor rooms
         f3_A1 = new Room("You stand in a dark room");
         f3_B1 = new Room("You feel your soul connect with the large gemstone once again.");
-        f3_C1 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.");
-        f3_D1 = new Room("You are presented with a riddle, answer it to move on.");
-        f3_E1 = new Room("You feel the large gemstone connect with your soul once again."
-                + "");
+        f3_C1 = new Room("Prees the statue to answer the it's question.");
+        f3_D1 = new Room("Prees the statue to answer the it's question.");
+        f3_E1 = new Room("You feel the large gemstone connect with your soul once again.");
         f3_F1 = new Room("");
 
         f3_A2 = new Room("");
         f3_B2 = new Room("");
-        f3_C2 = new Room("You’re stuck in a room, and have to answer this riddle to move on.");
-        f3_D2 = new Room("You spot a green key");
+        f3_C2 = new Room("Prees the statue to answer the it's question.");
+        f3_D2 = new Room("");
         f3_E2 = new Room("");
         f3_F2 = new Room("");
 
         f3_A3 = new Room("You stand in a dark room");
         f3_B3 = new Room("");
         f3_C3 = new Room("");
-        f3_D3 = new Room("You see a pair of guns lying on the floor.");
+        f3_D3 = new Room("");
         f3_E3 = new Room("");
-        f3_F3 = new Room("A large lever is in the room, pulling it may open the shut door to the west");
+        f3_F3 = new Room("");
 
-        f3_A4 = new Room("The door to the north seems to need a special item to unlock.");
+        f3_A4 = new Room("");
         f3_B4 = new Room("");
         f3_C4 = new Room("");
         f3_D4 = new Room("");
         f3_E4 = new Room("");
-        f3_F4 = new Room("You spot a somewhat familiar hat near the dead person");
+        f3_F4 = new Room("");
 
-        f3_A5 = new Room("You find a blue key");
+        f3_A5 = new Room("");
         f3_B5 = new Room("");
         f3_C5 = new Room("");
         f3_D5 = new Room("");
         f3_E5 = new Room("");
-        f3_F5 = new Room("You’re stuck in a room, and have to answer this riddle to move on.");
+        f3_F5 = new Room("Prees the statue to answer the it's question.");
 
         f3_A6 = new Room("");
         f3_B6 = new Room("");
@@ -133,9 +131,9 @@ public class Rooms {
         f3_A7 = new Room("The bonus here seems unusally large, and definitely worth collecting");
         f3_B7 = new Room("");
         f3_C7 = new Room("");
-        f3_D7 = new Room("Answer this riddle to continue. You feel the pressure from behind the door, something is behind it.");
+        f3_D7 = new Room("Prees the statue to answer the it's question.");
         f3_E7 = new Room("");
-        f3_F7 = new Room("You find a green key");
+        f3_F7 = new Room("");
 
         endRoom = new Room("The final room! On the pedestal in the middle of the room, you spot the long sought after Jade Statue");
 
