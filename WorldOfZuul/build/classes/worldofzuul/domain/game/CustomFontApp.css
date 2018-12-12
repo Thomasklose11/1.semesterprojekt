@@ -62,26 +62,44 @@ and open the template in the editor.
     -fx-font-size: 20pt;
 }
 
-#TYforPlaying{
+#TYforPlaying {
 
     -fx-font-family: 'Press Start 2P';
     -fx-font-sixe: 46pt;
+    -fx-text-fill:#ffffff;
+    -fx-text-alignment: center;
 }
 
 #YourFinalScore {
 
     -fx-font-family: 'Press Start 2P';
-    -fx-font-size: 46pt;
+    -fx-font-size: 20pt;
+    -fx-text-fill:#ffffff;
+    -fx-text-alignment: center;
 }
 
 #ScoreLabel {
 
     -fx-font-family: 'Press Start 2P';
     -fx-font-size: 46pt;
+    -fx-text-fill:#ffffff;
 }
-
-
 #TextFlowUI {
     -fx-font-family: 'Permanent Marker',cursive;
     -fx-font-size: 12pt;
+}
+
+#NumberOfRoomLabel {
+        -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 20pt;
+    -fx-text-alignment: center;
+    -fx-text-fill:#ffffff;
+    
+}
+#NumberOfRoom {
+        -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 20pt;
+    -fx-text-alignment: center;
+    -fx-text-fill:#ffffff;
+    
 }

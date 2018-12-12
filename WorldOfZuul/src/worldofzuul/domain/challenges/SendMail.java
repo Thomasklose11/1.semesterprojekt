@@ -53,7 +53,7 @@ public class SendMail {
 
             messageBodyPart = new MimeBodyPart();
 
-            String filename = System.getProperty("user.dir") + "/Highscore.txt";
+            String filename = System.getProperty("user.dir") + "/RoomCounter.txt";
 
             DataSource source = new FileDataSource(filename);
 
@@ -61,6 +61,7 @@ public class SendMail {
 
             messageBodyPart.setFileName(filename);
 
+ 
             multipart.addBodyPart(messageBodyPart);
 
             message.setContent(multipart);

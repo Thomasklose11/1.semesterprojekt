@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import worldofzuul.domain.challenges.Highscore;
+import worldofzuul.domain.game.FXMLController;
 import worldofzuul.domain.objects.Score;
 import worldofzuul.domain.rooms.Rooms;
 
@@ -20,7 +21,7 @@ public class End {
             new Highscore().read();
         }
         //Writes to the file.    
-        File file = new File("assets/RoomCounter/RoomCounter.txt");
+        File file = new File("RoomCounter.txt");
         try {
             Scanner reader = new Scanner(file);
             ArrayList<String> counter = new ArrayList<>();
@@ -29,7 +30,7 @@ public class End {
             }
             reader.close();
             if (endTrue == true) {
-                counter.add("Antal rum spilleren har været i: " + Rooms.getRoomCounter());
+                counter.add("Antal rum spilleren har været i: " + Rooms.getRoomCounter() + "  Name: " + FXMLController.playerName + "    Score: " + Score.getScore());
             }
 
             PrintWriter writer = new PrintWriter(file);
