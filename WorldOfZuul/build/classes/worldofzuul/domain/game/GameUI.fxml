@@ -77,6 +77,5 @@
             </image>
         </ImageView>
         <TextFlow fx:id="TextFlowUI" layoutX="1000.0" layoutY="530.0" prefHeight="200.0" prefWidth="340" />
-        
     </children>
 </AnchorPane>

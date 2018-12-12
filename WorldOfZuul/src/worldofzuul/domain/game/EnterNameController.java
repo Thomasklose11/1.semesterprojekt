@@ -18,6 +18,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import static worldofzuul.domain.game.FXMLController.playerName;
 import worldofzuul.domain.rooms.Game;
+import worldofzuul.domain.rooms.Rooms;
+import worldofzuul.domain.game.GameUIController;
 
 /**
  * FXML Controller class
@@ -41,11 +43,12 @@ public class EnterNameController implements Initializable {
     @FXML
     private void handlePlayButtonAction(ActionEvent event) throws IOException {
           if (TextField.getLength() > 0) {
+            Game.init();
             Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
             Scene sceneGame = new Scene(rootGame);
             sceneGame.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
             FXMLBoot.primaryStage.setScene(sceneGame);
-            Game.init();
+            
             //Game.play();
             playerName = TextField.getText();
         } else {

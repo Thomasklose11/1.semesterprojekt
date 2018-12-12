@@ -32,7 +32,7 @@
                 <Font name="Adventure" size="70.0" />
             </font>
         </Button>
-        <Label fx:id="titleLabel" text="Temple Raider">
+        <Label fx:id="titleLabel" text="Temple Raider" layoutX="25.0" layoutY="25.0">
             <font>
                 <Font name="Adventure" size="120.0" />
             </font>
