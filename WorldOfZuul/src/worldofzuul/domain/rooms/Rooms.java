@@ -71,7 +71,7 @@ public class Rooms {
         f2_C2 = new Room("", "Rooms/F2_C2.png");
         f2_D2 = new Room("", "Rooms/F2_D2.png");
 
-        f2_A3 = new Room("You’re standing in a dark room.", "Rooms/F2_A3.png");
+        f2_A3 = new Room("You’re standing in a dark room.", "Rooms/F2_A3.png", "Rooms/F2_A3U.png");
         f2_B3 = new Room("", "Rooms/F2_B3.png");
         f2_C3 = new Room("The doors around you are locked, answer this puzzle correct to continue through.", "Rooms/F2_C3.png");
         f2_D3 = new Room("You see a button on the other side of a large gap, it is out of your reach.", "Rooms/F2_D3.png");
@@ -382,7 +382,7 @@ public class Rooms {
 
         endRoom.setExit("south", f3_D7);
 
-        currentRoom = endRoom;
+        currentRoom = startRoom;
 
         // Anbringer et item i et rum
         f1_C1.setKey(new Key("whip", "Inventory/WhipUpscaled.png","whip"));
