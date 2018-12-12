@@ -54,7 +54,7 @@ public class QuestionUIController implements Initializable {
 
         Parent rootPause = FXMLLoader.load(getClass().getResource("../game/GameUI.fxml"));
         Scene scenePause = new Scene(rootPause);
-        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
+        scenePause.getStylesheets().add(getClass().getResource("../game/CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
@@ -79,12 +79,11 @@ public class QuestionUIController implements Initializable {
     }
 
     @FXML
-    private void handleAnswerD(ActionEvent event) throws Exception {
-        Puzzles.answer("d", Rooms.getCurrentRoom().getQuestion());
+    private void handleAnswerD(ActionEvent event) throws Exception {        Puzzles.answer("d", Rooms.getCurrentRoom().getQuestion());
 
         Parent rootPause = FXMLLoader.load(getClass().getResource("../game/GameUI.fxml"));
         Scene scenePause = new Scene(rootPause);
-        scenePause.getStylesheets().add(getClass().getResource("/game/CustomFontApp.css").toExternalForm());
+        scenePause.getStylesheets().add(getClass().getResource("../game/CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
