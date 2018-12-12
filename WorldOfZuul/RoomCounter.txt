@@ -17,3 +17,4 @@ Antal rum spilleren har været i: 2  Name: sdfg    Score: 100
 Antal rum spilleren har været i: 2  Name: kl    Score: 100
 Antal rum spilleren har været i: 2  Name: jksdf    Score: 100
 Antal rum spilleren har været i: 37  Name: erger    Score: 1850
+Antal rum spilleren har været i: 33  Name: bou    Score: 5650
