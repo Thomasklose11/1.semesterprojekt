@@ -75,7 +75,6 @@ public class FXMLController implements Initializable {
         Parent rootMain = FXMLLoader.load(getClass().getResource("../menus/MainMenu.fxml"));
         Scene sceneMain = new Scene(rootMain);
         sceneMain.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
-        new Highscore().read();
         FXMLBoot.primaryStage.setScene(sceneMain);
 
     }
