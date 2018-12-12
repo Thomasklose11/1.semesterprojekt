@@ -12,7 +12,7 @@ public class Question {
     public String answerC;
     public String answerD;
     
-    private String answerCorrect;
+    private final String answerCorrect;
 
     public Question(String prompt,String answerA ,String answerB,String answerC,String answerD, String answerCorrect) {
         this.prompt = prompt;

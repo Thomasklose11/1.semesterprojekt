@@ -1,10 +1,7 @@
 package worldofzuul.domain.game;
 
-import worldofzuul.domain.game.FXMLBoot;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,12 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
-import worldofzuul.domain.rooms.Game;
-import worldofzuul.domain.challenges.Highscore;
 
 public class FXMLController implements Initializable {
 

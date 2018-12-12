@@ -5,8 +5,6 @@
  */
 package worldofzuul.domain.objects;
 
-import worldofzuul.domain.objects.Item;
-
 /**
  *
  * @author Rene_

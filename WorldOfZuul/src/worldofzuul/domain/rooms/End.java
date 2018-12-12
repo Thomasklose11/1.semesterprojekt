@@ -8,7 +8,6 @@ import java.util.Scanner;
 import worldofzuul.domain.challenges.Highscore;
 import worldofzuul.domain.game.FXMLController;
 import worldofzuul.domain.objects.Score;
-import worldofzuul.domain.rooms.Rooms;
 
 public class End {
 

@@ -17,7 +17,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import worldofzuul.domain.game.FXMLBoot;
-import worldofzuul.domain.challenges.Puzzles;
 import worldofzuul.domain.rooms.Rooms;
 
 /**

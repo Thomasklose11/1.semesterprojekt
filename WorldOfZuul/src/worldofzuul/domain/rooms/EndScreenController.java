@@ -11,7 +11,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import worldofzuul.domain.objects.Score;
-import worldofzuul.domain.rooms.Rooms;
 
 /**
  * FXML Controller class

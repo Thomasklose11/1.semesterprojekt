@@ -1,7 +1,5 @@
 package worldofzuul.domain.objects;
 
-import worldofzuul.domain.game.GameUIController;
-
 /**
  *
  * @author Rene_
