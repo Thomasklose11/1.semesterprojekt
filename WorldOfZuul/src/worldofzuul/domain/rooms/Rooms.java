@@ -38,10 +38,10 @@ public class Rooms {
     public static void createRooms() {
 
         //First floor rooms
-        startRoom = new Room("Welcome to Temple Raider! /n  This is an adventure game. /n Type '" + CommandWord.HELP + "' if you need help. /n"
-                + "You’re in the jungle in Belize.\n"
-                + "You, the Archeologist “El Whipper”, has through 16 years of devoted research, looked for ancient Mayan\n"
-                + "treasures. You now stand before the possibly greatest treasure to ever see the light of day. Will you\n"
+        startRoom = new Room("Welcome to Temple Raider! This is an adventure game. /n"
+                + "You’re in the jungle in Belize."
+                + "You, the Archeologist “El Whipper”, has through 16 years of devoted research, looked for ancient Mayan"
+                + "treasures. You now stand before the possibly greatest treasure to ever see the light of day. Will you"
                 + "succeed in finding the treasure or will you succumb to the dangers of the temple. It is up to you!", "Rooms/StartRoom.png");
 
         f1_A1 = new Room("You’re standing in a dark room.", "Rooms/F1_A1.png");
@@ -227,7 +227,7 @@ public class Rooms {
         f2_B5.setExit("west", f2_A5);
 
         f2_C5.setExit("south", f2_C4);
-        f2_C5.setExitWithColor("east", f2_D5,"whip");
+        f2_C5.setExitWithColor("east", f2_D5,"gasmask");
         f2_C5.setExit("west", f2_B5);
 
         f2_D5.setExit("north", f3_E1);
@@ -412,6 +412,13 @@ public class Rooms {
         f2_D5.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
         f3_F2.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
         f3_E6.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
+        
+        //Sætter mørke rum
+        f1_A1.setDarkRoom();
+        f2_C1.setDarkRoom();
+        f2_A3.setDarkRoom();
+        f3_A1.setDarkRoom();
+        f3_A3.setDarkRoom();
 
         //Anbringer spørgsmål i rum og låser døre
         f1_B2.setQuestion(0);
