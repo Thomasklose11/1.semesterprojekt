@@ -1,6 +1,5 @@
 package worldofzuul.domain.rooms;
 
-import worldofzuul.command.CommandWord;
 import worldofzuul.domain.objects.Bonus;
 import worldofzuul.domain.objects.Item;
 import worldofzuul.domain.objects.Key;
@@ -44,7 +43,7 @@ public class Rooms {
                 + "treasures. You now stand before the possibly greatest treasure to ever see the light of day. Will you"
                 + "succeed in finding the treasure or will you succumb to the dangers of the temple. It is up to you!", "Rooms/StartRoom.png");
 
-        f1_A1 = new Room("You’re standing in a dark room.", "Rooms/F1_A1.png");
+        f1_A1 = new Room("You’re standing in a dark room.", "Rooms/F1_A1.png", "Rooms/F1_A1U.png");
         f1_B1 = new Room("The door to the outside is sealed shut.\n"
                 + "A statue is standing in the middle of the room, it’s eyes starts to glow and it utters: “This ancient temple\n"
                 + "contains many secret treasures, but dangers lurk within, many have tried, but none have succeeded in\n"
@@ -63,7 +62,7 @@ public class Rooms {
         //Second floor rooms
         f2_A1 = new Room("", "Rooms/F2_A1.png");
         f2_B1 = new Room("You feel your soul connecting with the gemstones in the floor. The way forward is deeper and darker than before.", "Rooms/F2_B1.png");
-        f2_C1 = new Room("You’re standing in a dark room.", "Rooms/F2_C1.png");
+        f2_C1 = new Room("You’re standing in a dark room.", "Rooms/F2_C1.png", "Rooms/F2_C1U.png");
 
         f2_A2 = new Room("You see a lever high up on the wall, it is out of your reach", "Rooms/F2_A2.png");
         f2_B2 = new Room("There seems to be a dart trap in this room, but another poor soul activated it before you", "Rooms/F2_B2.png");
@@ -72,7 +71,7 @@ public class Rooms {
 
         f2_A3 = new Room("You’re standing in a dark room.", "Rooms/F2_A3.png", "Rooms/F2_A3U.png");
         f2_B3 = new Room("", "Rooms/F2_B3.png");
-        f2_C3 = new Room("The doors around you are locked, answer this puzzle correct to continue through.", "Rooms/F2_C3.png");
+        f2_C3 = new Room("The doors around you are locked, answer this puzzle correct to continue through.", "Rooms/F2_C3.png", "Rooms/F2_C3U.png");
         f2_D3 = new Room("You see a button on the other side of a large gap, it is out of your reach.", "Rooms/F2_D3.png");
 
         f2_A4 = new Room("You see a torch hanging on the wall, do you want to pick it up?", "Rooms/F2_A4.png");
@@ -81,27 +80,27 @@ public class Rooms {
         f2_D4 = new Room("You spot a gas mask on the corpse of a dead Nazi soldier.", "Rooms/F2_D4.png");
 
         f2_A5 = new Room("The only way forward is over the large gap. You see a branch sturdy enough to hold your weight.", "Rooms/F2_A5.png");
-        f2_B5 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.", "Rooms/F2_B5.png");
+        f2_B5 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.", "Rooms/F2_B5.png", "Rooms/F2_B5U.png");
         f2_C5 = new Room("You smell gas coming from the door to the east", "Rooms/F2_C5.png");
         f2_D5 = new Room("The room is full of gas. Fortunately you have your gas mask on, and you find a valuable treasure on the ground", "Rooms/F2_D5.png");
 
         //Third floor rooms
-        f3_A1 = new Room("You stand in a dark room", "Rooms/F3_A1.png");
+        f3_A1 = new Room("You stand in a dark room", "Rooms/F3_A1.png", "Rooms/F3_A1U.png");
         f3_B1 = new Room("You feel your soul connect with the large gemstone once again.", "Rooms/F3_B1.png");
-        f3_C1 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.", "Rooms/F3_C1.png");
-        f3_D1 = new Room("You are presented with a riddle, answer it to move on.", "Rooms/F3_D1.png");
+        f3_C1 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.", "Rooms/F3_C1.png", "Rooms/F3_C1U.png");
+        f3_D1 = new Room("You are presented with a riddle, answer it to move on.", "Rooms/F3_D1.png", "Rooms/F3_D1U.png");
         f3_E1 = new Room("You feel the large gemstone connect with your soul once again., \"Rooms/F3_E1.png\""
                 + "");
         f3_F1 = new Room("", "Rooms/F3_F1.png");
 
         f3_A2 = new Room("", "Rooms/F3_A2.png");
         f3_B2 = new Room("", "Rooms/F3_B2.png");
-        f3_C2 = new Room("You’re stuck in a room, and have to answer this riddle to move on.", "Rooms/F3_C2.png");
+        f3_C2 = new Room("You’re stuck in a room, and have to answer this riddle to move on.", "Rooms/F3_C2.png", "Rooms/F3_C2U.png");
         f3_D2 = new Room("You spot a green key", "Rooms/F3_D2.png");
         f3_E2 = new Room("", "Rooms/F3_E2.png");
         f3_F2 = new Room("", "Rooms/F3_F2.png");
 
-        f3_A3 = new Room("You stand in a dark room", "Rooms/F3_A3.png");
+        f3_A3 = new Room("You stand in a dark room", "Rooms/F3_A3.png", "Rooms/F3_A3U.png");
         f3_B3 = new Room("", "Rooms/F3_B3.png");
         f3_C3 = new Room("", "Rooms/F3_C3.png");
         f3_D3 = new Room("You see a pair of guns lying on the floor.", "Rooms/F3_D3.png");
@@ -120,7 +119,7 @@ public class Rooms {
         f3_C5 = new Room("", "Rooms/F3_C5.png");
         f3_D5 = new Room("", "Rooms/F3_D5.png");
         f3_E5 = new Room("", "Rooms/F3_E5.png");
-        f3_F5 = new Room("You’re stuck in a room, and have to answer this riddle to move on.", "Rooms/F3_F5.png");
+        f3_F5 = new Room("You’re stuck in a room, and have to answer this riddle to move on.", "Rooms/F3_F5.png", "Rooms/F3_F5U.png");
 
         f3_A6 = new Room("", "Rooms/F3_A6.png");
         f3_B6 = new Room("", "Rooms/F3_B6.png");
@@ -426,8 +425,31 @@ public class Rooms {
         //Anbringer spørgsmål i rum og låser døre
         f1_B2.setQuestion(0);
         f1_B2.findDoor("east").lock();
+        
+        f2_C3.setQuestion(1);
+        f2_C3.findDoor("east").lock();
+        f2_C3.findDoor("north").lock();
+        f2_C3.findDoor("west").lock();
+        
+        f2_B5.setQuestion(2);
+        f2_B5.findDoor("west").lock();
+        
+        f3_C1.setQuestion(3);
+        f3_C1.findDoor("north").lock();
+            
+        f3_C2.setQuestion(4);
+        f3_C2.findDoor("north").lock();
+        f3_C2.findDoor("west").lock();
+        
+        f3_D1.setQuestion(5);
+        f3_D1.findDoor("north").lock();
+        
+        f3_F5.setQuestion(6);
+        f3_F5.findDoor("north").lock();
+        f3_F5.findDoor("south").lock();
 
-        //
+        f3_D7.setQuestion(7);
+        f3_D7.findDoor("north").lock();
     }
 
     public static Room getCurrentRoom() {

@@ -38,7 +38,7 @@ public class Puzzles {
     private static final String p5C = "Armageddon";
     private static final String p5D = "The World";
 
-    private static final String p6 = "I'm sometimes full, but I never overflow, I typically show myself when it dark . What Am I?";//ask the question
+    private static final String p6 = "I'm sometimes full, but I never overflow, I typically show myself when it's dark . What Am I?";//ask the question
     private static final String p6A = "The Moon";
     private static final String p6B = "A Man";
     private static final String p6C = "A Glass";
