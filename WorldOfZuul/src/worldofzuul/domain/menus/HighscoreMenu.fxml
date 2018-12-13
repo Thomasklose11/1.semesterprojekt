@@ -4,24 +4,32 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.domain.challenges.HighscoreController">
-   <children>
-      <Label layoutX="141.0" layoutY="41.0" text="Highscore">
-         <font>
-            <Font name="Adventure" size="76.0" />
-         </font>
-      </Label>
-      <TextArea fx:id="List1To5" editable="false" layoutX="50.0" layoutY="165.0" prefHeight="200.0" prefWidth="506.0" text="1.&#10;2.&#10;3.&#10;4.&#10;5.">
-         <font>
-            <Font name="Adventure" size="26.0" />
-         </font>
-      </TextArea>
-      <Button layoutX="185.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleBackToMenuButtonAction" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #FF000000" text="Back">
-         <font>
-            <Font name="Adventure" size="35.0" />
-         </font>
-      </Button>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.domain.challenges.HighscoreController">
+    <children>
+        <ImageView fitHeight="530.0" fitWidth="696.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="UI/PauseMenuUpscaled.png" />
+            </image>
+        </ImageView>
+
+        <Label alignment="CENTER" layoutX="0.0" layoutY="41.0" prefHeight="26.0" prefWidth="696.0" text="Highscore" textFill="WHITE">
+            <font>
+                <Font name="Press Start 2P" size="17.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="List1To5" editable="false" layoutX="95.0" layoutY="165.0" prefHeight="200.0" prefWidth="506.0" text="1.&#10;2.&#10;3.&#10;4.&#10;5.">
+            <font>
+                <Font name="Adventure" size="26.0" />
+            </font>
+        </TextArea>
+        <Button layoutX="248.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleBackToMenuButtonAction" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Back">
+            <font>
+                <Font name="Adventure" size="35.0" />
+            </font>
+        </Button>
+    </children>
 </AnchorPane>

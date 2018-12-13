@@ -51,12 +51,11 @@ public class Rooms {
         f1_C1 = new Room("", "Rooms/F1_C1.png");
 
         f1_A2 = new Room("","Rooms/F1_A2.png");
-        f1_B2 = new Room("Prees the statue to answer the it's question.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
+        f1_B2 = new Room("Prees the statue to answer it's question.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
         f1_C2 = new Room("", "Rooms/F1_C2.png");
 
         f1_A3 = new Room("", "Rooms/F1_A3.png");
-        f1_B3 = new Room("You stand in front of a pit and see a large branch on the other side of it, it is out of your reach, but it looks stable and\n"
-                + "solid.", "Rooms/F1_B3.png");
+        f1_B3 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "Rooms/F1_B3.png");
         f1_C3 = new Room("", "Rooms/F1_C3.png");
 
         //Second floor rooms
@@ -124,18 +123,18 @@ public class Rooms {
         f3_A6 = new Room("", "Rooms/F3_A6.png");
         f3_B6 = new Room("", "Rooms/F3_B6.png");
         f3_C6 = new Room("", "Rooms/F3_C6.png");
-        f3_D6 = new Room("The button to open the door is high up, and you can't reach it with your bare hands");
-        f3_E6 = new Room("");
-        f3_F6 = new Room("");
+        f3_D6 = new Room("The button to open the door is high up, and you can't reach it with your bare hands","Rooms/F3_D6.png");
+        f3_E6 = new Room("","Rooms/F3_E6.png");
+        f3_F6 = new Room("","Rooms/F3_F6.png");
 
         f3_A7 = new Room("The bonus here seems unusally large, and definitely worth collecting", "Rooms/F3_A7.png");
         f3_B7 = new Room("", "Rooms/F3_B7.png");
         f3_C7 = new Room("", "Rooms/F3_C7.png");
-        f3_D7 = new Room("Answer this riddle to continue. You feel the pressure from behind the door, something is behind it.");
-        f3_E7 = new Room("");
-        f3_F7 = new Room("");
+        f3_D7 = new Room("Answer this riddle to continue. You feel the pressure from behind the door, something is behind it.","Rooms/F3_D7.png","Rooms/F3_D7U.png");
+        f3_E7 = new Room("","Rooms/F3_E7.png");
+        f3_F7 = new Room("","Rooms/F3_F7.png");
 
-        endRoom = new Room("The final room! On the pedestal in the middle of the room, you spot the long sought after Jade Statue");
+        endRoom = new Room("The final room! You spot the long sought after Jade Statue","Rooms/EndRoom.png");
 
         //First floor exits
         startRoom.setExit("north", f1_B1);

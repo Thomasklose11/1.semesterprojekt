@@ -4,21 +4,28 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="353.0" style="-fx-background-color: #302f29;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.domain.game.EnterNameController">
-   <children>
-      <TextField fx:id="TextField" alignment="CENTER" layoutX="107.0" layoutY="120.0" prefWidth="139.0" />
-      <Label alignment="CENTER" layoutY="57.0" prefHeight="26.0" prefWidth="353.0" text="Enter your name" textFill="WHITE">
-         <font>
-            <Font name="Press Start 2P" size="17.0" />
-         </font>
-      </Label>
-      <Button alignment="CENTER" defaultButton="true" layoutX="129.0" layoutY="192.0" mnemonicParsing="false" onAction="#handlePlayButtonAction" prefHeight="34.0" prefWidth="94.0" text="Play" textAlignment="CENTER" />
-      <Label fx:id="LabelName" alignment="CENTER" layoutX="-1.0" layoutY="101.0" prefHeight="18.0" prefWidth="353.0" textFill="RED">
-         <font>
-            <Font name="Press Start 2P" size="12.0" />
-         </font>
-      </Label>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="460.0" style="-fx-background-color: #302f29;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.domain.game.EnterNameController">
+    <children>
+        <ImageView fitHeight="350.0" fitWidth="460.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="UI/PauseMenuUpscaled.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="TextField" alignment="CENTER" layoutX="155.0" layoutY="120.0" prefWidth="150.0" />
+        <Label alignment="CENTER" layoutX="0.0" layoutY="57.0" prefHeight="26.0" prefWidth="460.0" text="Enter your name" textFill="WHITE">
+            <font>
+                <Font name="Press Start 2P" size="17.0" />
+            </font>
+        </Label>
+        <Button alignment="CENTER" defaultButton="true" layoutX="132.0" layoutY="180.0" mnemonicParsing="false" onAction="#handlePlayButtonAction" prefHeight="60.0" prefWidth="200.0" text="Play" textAlignment="CENTER" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);"/>
+        <Label fx:id="LabelName" alignment="CENTER" layoutX="0.0" layoutY="101.0" prefHeight="18.0" prefWidth="460.0" textFill="RED">
+            <font>
+                <Font name="Press Start 2P" size="12.0" />
+            </font>
+        </Label>
+    </children>
 </AnchorPane>

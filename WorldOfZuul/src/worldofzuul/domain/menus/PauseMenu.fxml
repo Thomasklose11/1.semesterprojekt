@@ -16,7 +16,7 @@
             <Rectangle2D height="350.0" width="460.0" />
          </viewport>
          <image>
-            <Image url="@../Pause%20MenuUpscaled.png" />
+            <Image url="UI/PauseMenuUpscaled.png" />
          </image>
       </ImageView>
       <Button fx:id="buttonResume" onAction="#handleResumeButtonAction" layoutX="130.0" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="RESUME" textFill="#431606">
