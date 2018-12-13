@@ -39,9 +39,9 @@ public class HighscoreController implements Initializable {
 
     @FXML
     private void handleBackToMenuButtonAction(ActionEvent event) throws IOException {
-        Parent rootMain = FXMLLoader.load(getClass().getResource("../menus/MainMenu.fxml"));
+        Parent rootMain = FXMLLoader.load(getClass().getResource("/worldofzuul/domain/game/MainMenu.fxml"));
         Scene sceneMain = new Scene(rootMain);
-        sceneMain.getStylesheets().add(getClass().getResource("../game/CustomFontApp.css").toExternalForm());
+        sceneMain.getStylesheets().add(getClass().getResource("/worldofzuul/domain/game/CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneMain);
     }
 

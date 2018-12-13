@@ -1,5 +1,6 @@
 package worldofzuul.domain.challenges;
 
+import java.io.File;
 import javax.mail.*;
 import javax.mail.internet.*;
 import java.util.Properties;
@@ -45,10 +46,10 @@ public class SendMail {
 
             messageBodyPart = new MimeBodyPart();
 
-            String filename = System.getProperty("user.dir") + "/RoomCounter.txt";
-
+            //VIRKER IKKE. ROOMCOUNTER.txt bliver muligvis ikke sendt til DataSource, men ved ikke nok om den datatype til at gennemskue fejlen
+            String filename =  "RoomCounter.txt";
             DataSource source = new FileDataSource(filename);
-
+            
             messageBodyPart.setDataHandler(new DataHandler(source));
 
             messageBodyPart.setFileName(filename);

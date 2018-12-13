@@ -12,7 +12,7 @@
     <children>
         <ImageView fitHeight="350.0" fitWidth="460.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="UI/PauseMenuUpscaled.png" />
+                <Image url="worldofzuul/resources/UI/PauseMenuUpscaled.png" />
             </image>
         </ImageView>
         <TextField fx:id="TextField" alignment="CENTER" layoutX="155.0" layoutY="120.0" prefWidth="150.0" />
@@ -21,7 +21,7 @@
                 <Font name="Press Start 2P" size="17.0" />
             </font>
         </Label>
-        <Button alignment="CENTER" defaultButton="true" layoutX="132.0" layoutY="180.0" mnemonicParsing="false" onAction="#handlePlayButtonAction" prefHeight="60.0" prefWidth="200.0" text="Play" textAlignment="CENTER" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);"/>
+        <Button alignment="CENTER" defaultButton="true" layoutX="132.0" layoutY="180.0" mnemonicParsing="false" onAction="#handlePlayButtonAction" prefHeight="60.0" prefWidth="200.0" text="Play" textAlignment="CENTER" style="-fx-background-color: #FF000000; -fx-background-image: url(worldofzuul/resources/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);"/>
         <Label fx:id="LabelName" alignment="CENTER" layoutX="0.0" layoutY="101.0" prefHeight="18.0" prefWidth="460.0" textFill="RED">
             <font>
                 <Font name="Press Start 2P" size="12.0" />

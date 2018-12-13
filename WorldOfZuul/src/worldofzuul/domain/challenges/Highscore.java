@@ -1,4 +1,3 @@
-
 package worldofzuul.domain.challenges;
 
 import worldofzuul.domain.objects.Score;
@@ -99,7 +98,8 @@ public class Highscore {
     public List<String> readHighscore() {
         List<String> data = new ArrayList<>();
         try {
-            Scanner scanner = new Scanner(new File("assets/Highscore/HighScore.txt"));
+            File highscoretext = new File("HighScore.txt");
+            Scanner scanner = new Scanner(highscoretext);
             while (scanner.hasNext()) {
                 data.add(scanner.nextLine());
             }

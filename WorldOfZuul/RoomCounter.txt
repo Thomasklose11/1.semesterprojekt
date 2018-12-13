@@ -21,3 +21,5 @@ Antal rum spilleren har været i: 33  Name: bou    Score: 5650
 Antal rum spilleren har været i: 31  Name: kpkp    Score: 3550
 Antal rum spilleren har været i: 66  Name: Mathi    Score: 41300
 Antal rum spilleren har været i: 2  Name: het    Score: 100
+Antal rum spilleren har været i: 29  Name: wferfg    Score: 1450
+Antal rum spilleren har været i: 2  Name: gerg    Score: 100

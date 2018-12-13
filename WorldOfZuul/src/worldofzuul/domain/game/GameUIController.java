@@ -129,7 +129,7 @@ public class GameUIController implements Initializable {
 
     @FXML
     private void handleMenuWindowButton(ActionEvent event) throws Exception {
-        Parent rootPause = FXMLLoader.load(getClass().getResource("../menus/PauseMenu.fxml"));
+        Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
         Scene scenePause = new Scene(rootPause);
         scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
@@ -215,7 +215,7 @@ public class GameUIController implements Initializable {
     @FXML
     private void handleGoToQuestion(ActionEvent event) throws Exception {
         if (Rooms.getCurrentRoom().hasQuestion() == true) {
-            Parent rootPause = FXMLLoader.load(getClass().getResource("../challenges/QuestionUI.fxml"));
+            Parent rootPause = FXMLLoader.load(getClass().getResource("/worldofzuul/domain/challenges/QuestionUI.fxml"));
             Scene scenePause = new Scene(rootPause);
             scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
             FXMLBoot.primaryStage.setScene(scenePause);
@@ -274,7 +274,7 @@ public class GameUIController implements Initializable {
     }
 
     public void bootEndScreen() throws IOException {
-        Parent rootPause = FXMLLoader.load(getClass().getResource("../rooms/EndScreen.fxml"));
+        Parent rootPause = FXMLLoader.load(getClass().getResource("/worldofzuul/domain/rooms/EndScreen.fxml"));
         Scene scenePause = new Scene(rootPause);
         scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);

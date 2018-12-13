@@ -12,7 +12,7 @@
     <children>
         <ImageView fitHeight="530.0" fitWidth="696.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="UI/PauseMenuUpscaled.png" />
+                <Image url="worldofzuul/resources/UI/PauseMenuUpscaled.png" />
             </image>
         </ImageView>
 
@@ -26,7 +26,7 @@
                 <Font name="Adventure" size="26.0" />
             </font>
         </TextArea>
-        <Button layoutX="248.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleBackToMenuButtonAction" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Back">
+        <Button layoutX="248.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleBackToMenuButtonAction" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(worldofzuul/resources/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Back">
             <font>
                 <Font name="Adventure" size="35.0" />
             </font>

@@ -41,99 +41,99 @@ public class Rooms {
                 + " You’re in the jungle in Belize."
                 + " You, the Archeologist “El Whipper”, has through 16 years of devoted research, looked for ancient Mayan "
                 + "treasures. You now stand before the possibly greatest treasure to ever see the light of day. Will you"
-                + " succeed in finding the treasure or will you succumb to the dangers of the temple? It is up to you!", "Rooms/StartRoom.png");
+                + " succeed in finding the treasure or will you succumb to the dangers of the temple? It is up to you!", "worldofzuul/resources/Rooms/StartRoom.png");
 
-        f1_A1 = new Room("You’re standing in a dark room.", "Rooms/F1_A1.png", "Rooms/F1_A1U.png");
+        f1_A1 = new Room("You’re standing in a dark room.", "worldofzuul/resources/Rooms/F1_A1.png", "worldofzuul/resources/Rooms/F1_A1U.png");
         f1_B1 = new Room("The door to the outside is sealed shut.\n"
                 + "A statue is standing in the middle of the room, it’s eyes starts to glow and it utters: “This ancient temple\n"
                 + "contains many secret treasures, but dangers lurk within, many have tried, but none have succeeded in\n"
-                + "obtaining the legendary jade statue”", "Rooms/F1_B1.png");
-        f1_C1 = new Room("", "Rooms/F1_C1.png");
+                + "obtaining the legendary jade statue”", "worldofzuul/resources/Rooms/F1_B1.png");
+        f1_C1 = new Room("", "worldofzuul/resources/Rooms/F1_C1.png");
 
-        f1_A2 = new Room("", "Rooms/F1_A2.png");
-        f1_B2 = new Room("Press the statue to answer its question.", "Rooms/F1_B2.png", "Rooms/F1_B2U.png");
-        f1_C2 = new Room("", "Rooms/F1_C2.png");
+        f1_A2 = new Room("", "worldofzuul/resources/Rooms/F1_A2.png");
+        f1_B2 = new Room("Press the statue to answer its question.", "worldofzuul/resources/Rooms/F1_B2.png", "worldofzuul/resources/Rooms/F1_B2U.png");
+        f1_C2 = new Room("", "worldofzuul/resources/Rooms/F1_C2.png");
 
-        f1_A3 = new Room("", "Rooms/F1_A3.png");
-        f1_B3 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "Rooms/F1_B3.png");
-        f1_C3 = new Room("", "Rooms/F1_C3.png");
+        f1_A3 = new Room("", "worldofzuul/resources/Rooms/F1_A3.png");
+        f1_B3 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "worldofzuul/resources/Rooms/F1_B3.png");
+        f1_C3 = new Room("", "worldofzuul/resources/Rooms/F1_C3.png");
 
         //Second floor rooms
-        f2_A1 = new Room("", "Rooms/F2_A1.png");
-        f2_B1 = new Room("You feel your soul connecting with the gemstones in the floor. The way forward is deeper and darker than before.", "Rooms/F2_B1.png");
-        f2_C1 = new Room("You’re standing in a dark room.", "Rooms/F2_C1.png", "Rooms/F2_C1U.png");
+        f2_A1 = new Room("", "worldofzuul/resources/Rooms/F2_A1.png");
+        f2_B1 = new Room("You feel your soul connecting with the gemstones in the floor. The way forward is deeper and darker than before.", "worldofzuul/resources/Rooms/F2_B1.png");
+        f2_C1 = new Room("You’re standing in a dark room.", "worldofzuul/resources/Rooms/F2_C1.png", "worldofzuul/resources/Rooms/F2_C1U.png");
 
-        f2_A2 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "Rooms/F2_A2.png");
-        f2_B2 = new Room("There seems to be a dart trap in this room, but another poor soul activated it before you", "Rooms/F2_B2.png");
-        f2_C2 = new Room("", "Rooms/F2_C2.png");
-        f2_D2 = new Room("", "Rooms/F2_D2.png");
+        f2_A2 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "worldofzuul/resources/Rooms/F2_A2.png");
+        f2_B2 = new Room("There seems to be a dart trap in this room, but another poor soul activated it before you", "worldofzuul/resources/Rooms/F2_B2.png");
+        f2_C2 = new Room("", "worldofzuul/resources/Rooms/F2_C2.png");
+        f2_D2 = new Room("", "worldofzuul/resources/Rooms/F2_D2.png");
 
-        f2_A3 = new Room("You’re standing in a dark room.", "Rooms/F2_A3.png", "Rooms/F2_A3U.png");
-        f2_B3 = new Room("", "Rooms/F2_B3.png");
-        f2_C3 = new Room("The doors around you are locked, answer this puzzle correct to continue through.", "Rooms/F2_C3.png", "Rooms/F2_C3U.png");
-        f2_D3 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "Rooms/F2_D3.png");
+        f2_A3 = new Room("You’re standing in a dark room.", "worldofzuul/resources/Rooms/F2_A3.png", "worldofzuul/resources/Rooms/F2_A3U.png");
+        f2_B3 = new Room("", "worldofzuul/resources/Rooms/F2_B3.png");
+        f2_C3 = new Room("The doors around you are locked, answer this puzzle correct to continue through.", "worldofzuul/resources/Rooms/F2_C3.png", "worldofzuul/resources/Rooms/F2_C3U.png");
+        f2_D3 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "worldofzuul/resources/Rooms/F2_D3.png");
 
-        f2_A4 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "Rooms/F2_A4.png");
-        f2_B4 = new Room("", "Rooms/F2_B4.png");
-        f2_C4 = new Room("A bejeweled sarcophage sits in the middle of the room.", "Rooms/F2_C4.png");
-        f2_D4 = new Room("", "Rooms/F2_D4.png");
+        f2_A4 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "worldofzuul/resources/Rooms/F2_A4.png");
+        f2_B4 = new Room("", "worldofzuul/resources/Rooms/F2_B4.png");
+        f2_C4 = new Room("A bejeweled sarcophage sits in the middle of the room.", "worldofzuul/resources/Rooms/F2_C4.png");
+        f2_D4 = new Room("", "worldofzuul/resources/Rooms/F2_D4.png");
 
-        f2_A5 = new Room("The only way forward is over the large gap. You see a branch sturdy enough to hold your weight.", "Rooms/F2_A5.png");
-        f2_B5 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.", "Rooms/F2_B5.png", "Rooms/F2_B5U.png");
-        f2_C5 = new Room("You smell gas coming from the door to the east", "Rooms/F2_C5.png");
-        f2_D5 = new Room("The room is full of gas. Fortunately you have your gas mask on.", "Rooms/F2_D5.png");
+        f2_A5 = new Room("The only way forward is over the large gap. You see a branch sturdy enough to hold your weight.", "worldofzuul/resources/Rooms/F2_A5.png");
+        f2_B5 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.", "worldofzuul/resources/Rooms/F2_B5.png", "worldofzuul/resources/Rooms/F2_B5U.png");
+        f2_C5 = new Room("You smell gas coming from the door to the east", "worldofzuul/resources/Rooms/F2_C5.png");
+        f2_D5 = new Room("The room is full of gas. Fortunately you have your gas mask on.", "worldofzuul/resources/Rooms/F2_D5.png");
 
         //Third floor rooms
-        f3_A1 = new Room("You stand in a dark room", "Rooms/F3_A1.png", "Rooms/F3_A1U.png");
-        f3_B1 = new Room("You feel your soul connect with the large gemstone once again.", "Rooms/F3_B1.png");
-        f3_C1 = new Room("The door in front of you is locked, answer this puzzle correctly to continue through.", "Rooms/F3_C1.png", "Rooms/F3_C1U.png");
-        f3_D1 = new Room("You are presented with a riddle, answer it to move on.", "Rooms/F3_D1.png", "Rooms/F3_D1U.png");
-        f3_E1 = new Room("You feel the large gemstone connect with your soul once again.", "Rooms/F3_E1.png");
-        f3_F1 = new Room("", "Rooms/F3_F1.png");
+        f3_A1 = new Room("You stand in a dark room", "worldofzuul/resources/Rooms/F3_A1.png", "worldofzuul/resources/Rooms/F3_A1U.png");
+        f3_B1 = new Room("You feel your soul connect with the large gemstone once again.", "worldofzuul/resources/Rooms/F3_B1.png");
+        f3_C1 = new Room("The door in front of you is locked, answer this puzzle correctly to continue through.", "worldofzuul/resources/Rooms/F3_C1.png", "worldofzuul/resources/Rooms/F3_C1U.png");
+        f3_D1 = new Room("You are presented with a riddle, answer it to move on.", "worldofzuul/resources/Rooms/F3_D1.png", "worldofzuul/resources/Rooms/F3_D1U.png");
+        f3_E1 = new Room("You feel the large gemstone connect with your soul once again.", "worldofzuul/resources/Rooms/F3_E1.png");
+        f3_F1 = new Room("", "worldofzuul/resources/Rooms/F3_F1.png");
 
-        f3_A2 = new Room("", "Rooms/F3_A2.png");
-        f3_B2 = new Room("", "Rooms/F3_B2.png");
-        f3_C2 = new Room("You’re stuck in a room, and have to answer this riddle to move on.", "Rooms/F3_C2.png", "Rooms/F3_C2U.png");
-        f3_D2 = new Room("", "Rooms/F3_D2.png");
-        f3_E2 = new Room("", "Rooms/F3_E2.png");
-        f3_F2 = new Room("", "Rooms/F3_F2.png");
+        f3_A2 = new Room("", "worldofzuul/resources/Rooms/F3_A2.png");
+        f3_B2 = new Room("", "worldofzuul/resources/Rooms/F3_B2.png");
+        f3_C2 = new Room("You’re stuck in a room, and have to answer this riddle to move on.", "worldofzuul/resources/Rooms/F3_C2.png", "worldofzuul/resources/Rooms/F3_C2U.png");
+        f3_D2 = new Room("", "worldofzuul/resources/Rooms/F3_D2.png");
+        f3_E2 = new Room("", "worldofzuul/resources/Rooms/F3_E2.png");
+        f3_F2 = new Room("", "worldofzuul/resources/Rooms/F3_F2.png");
 
-        f3_A3 = new Room("You stand in a dark room", "Rooms/F3_A3.png", "Rooms/F3_A3U.png");
-        f3_B3 = new Room("", "Rooms/F3_B3.png");
-        f3_C3 = new Room("", "Rooms/F3_C3.png");
-        f3_D3 = new Room("", "Rooms/F3_D3.png");
-        f3_E3 = new Room("", "Rooms/F3_E3.png");
-        f3_F3 = new Room("", "Rooms/F3_F3.png");
+        f3_A3 = new Room("You stand in a dark room", "worldofzuul/resources/Rooms/F3_A3.png", "worldofzuul/resources/Rooms/F3_A3U.png");
+        f3_B3 = new Room("", "worldofzuul/resources/Rooms/F3_B3.png");
+        f3_C3 = new Room("", "worldofzuul/resources/Rooms/F3_C3.png");
+        f3_D3 = new Room("", "worldofzuul/resources/Rooms/F3_D3.png");
+        f3_E3 = new Room("", "worldofzuul/resources/Rooms/F3_E3.png");
+        f3_F3 = new Room("", "worldofzuul/resources/Rooms/F3_F3.png");
 
-        f3_A4 = new Room("The door to the north seems to need a special item to unlock.", "Rooms/F3_A4.png");
-        f3_B4 = new Room("", "Rooms/F3_B4.png");
-        f3_C4 = new Room("", "Rooms/F3_C4.png");
-        f3_D4 = new Room("", "Rooms/F3_D4.png");
-        f3_E4 = new Room("", "Rooms/F3_E4.png");
-        f3_F4 = new Room("You spot a somewhat familiar hat on the ground", "Rooms/F3_F4.png");
+        f3_A4 = new Room("The door to the north seems to need a special item to unlock.", "worldofzuul/resources/Rooms/F3_A4.png");
+        f3_B4 = new Room("", "worldofzuul/resources/Rooms/F3_B4.png");
+        f3_C4 = new Room("", "worldofzuul/resources/Rooms/F3_C4.png");
+        f3_D4 = new Room("", "worldofzuul/resources/Rooms/F3_D4.png");
+        f3_E4 = new Room("", "worldofzuul/resources/Rooms/F3_E4.png");
+        f3_F4 = new Room("You spot a somewhat familiar hat on the ground", "worldofzuul/resources/Rooms/F3_F4.png");
 
-        f3_A5 = new Room("", "Rooms/F3_A5.png");
-        f3_B5 = new Room("", "Rooms/F3_B5.png");
-        f3_C5 = new Room("", "Rooms/F3_C5.png");
-        f3_D5 = new Room("", "Rooms/F3_D5.png");
-        f3_E5 = new Room("", "Rooms/F3_E5.png");
-        f3_F5 = new Room("You’re stuck in a room, and have to answer this riddle to move on.", "Rooms/F3_F5.png", "Rooms/F3_F5U.png");
+        f3_A5 = new Room("", "worldofzuul/resources/Rooms/F3_A5.png");
+        f3_B5 = new Room("", "worldofzuul/resources/Rooms/F3_B5.png");
+        f3_C5 = new Room("", "worldofzuul/resources/Rooms/F3_C5.png");
+        f3_D5 = new Room("", "worldofzuul/resources/Rooms/F3_D5.png");
+        f3_E5 = new Room("", "worldofzuul/resources/Rooms/F3_E5.png");
+        f3_F5 = new Room("You’re stuck in a room, and have to answer this riddle to move on.", "worldofzuul/resources/Rooms/F3_F5.png", "worldofzuul/resources/Rooms/F3_F5U.png");
 
-        f3_A6 = new Room("", "Rooms/F3_A6.png");
-        f3_B6 = new Room("", "Rooms/F3_B6.png");
-        f3_C6 = new Room("", "Rooms/F3_C6.png");
-        f3_D6 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "Rooms/F3_D6.png");
-        f3_E6 = new Room("", "Rooms/F3_E6.png");
-        f3_F6 = new Room("", "Rooms/F3_F6.png");
+        f3_A6 = new Room("", "worldofzuul/resources/Rooms/F3_A6.png");
+        f3_B6 = new Room("", "worldofzuul/resources/Rooms/F3_B6.png");
+        f3_C6 = new Room("", "worldofzuul/resources/Rooms/F3_C6.png");
+        f3_D6 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "worldofzuul/resources/Rooms/F3_D6.png");
+        f3_E6 = new Room("", "worldofzuul/resources/Rooms/F3_E6.png");
+        f3_F6 = new Room("", "worldofzuul/resources/Rooms/F3_F6.png");
 
-        f3_A7 = new Room("", "Rooms/F3_A7.png");
-        f3_B7 = new Room("", "Rooms/F3_B7.png");
-        f3_C7 = new Room("", "Rooms/F3_C7.png");
-        f3_D7 = new Room("Answer this riddle to continue. You feel the pressure from behind the door, something is behind it.", "Rooms/F3_D7.png", "Rooms/F3_D7U.png");
-        f3_E7 = new Room("", "Rooms/F3_E7.png");
-        f3_F7 = new Room("", "Rooms/F3_F7.png");
+        f3_A7 = new Room("", "worldofzuul/resources/Rooms/F3_A7.png");
+        f3_B7 = new Room("", "worldofzuul/resources/Rooms/F3_B7.png");
+        f3_C7 = new Room("", "worldofzuul/resources/Rooms/F3_C7.png");
+        f3_D7 = new Room("Answer this riddle to continue. You feel the pressure from behind the door, something is behind it.", "worldofzuul/resources/Rooms/F3_D7.png", "worldofzuul/resources/Rooms/F3_D7U.png");
+        f3_E7 = new Room("", "worldofzuul/resources/Rooms/F3_E7.png");
+        f3_F7 = new Room("", "worldofzuul/resources/Rooms/F3_F7.png");
 
-        endRoom = new Room("The final room! You spot the long sought after Jade Statue", "Rooms/EndRoom.png");
+        endRoom = new Room("The final room! You spot the long sought after Jade Statue", "worldofzuul/resources/Rooms/EndRoom.png");
 
         //First floor exits
         startRoom.setExit("north", f1_B1);
@@ -378,39 +378,38 @@ public class Rooms {
 
         endRoom.setExit("south", f3_D7);
 
-        currentRoom = startRoom;
+        currentRoom = endRoom;
 
         // Anbringer et item i et rum
-        f1_C1.setKey(new Key("whip", "Inventory/WhipUpscaled.png", "whip"));
-        f2_D4.setKey(new Key("gasmask", "Inventory/GasMaskUpscaled.png", "gasmask"));
-        f2_A4.setItem(new Item("torch", "Inventory/TorchUpscaled.png"));
-        f3_D3.setItem(new Item("pistol", "Inventory/GunUpscaled.png"));
-        f3_F4.setItem(new Item("hat", "Inventory/HatUpscaled.png"));
-        //f3_A7.setItem(new Item("MythicalTreasure","Inventory/MythicalTreasureUpscaled.png",))
-        endRoom.setItem(new Item("statue", "Inventory/statueUpscaled.png"));
+        f1_C1.setKey(new Key("whip", "worldofzuul/resources/Inventory/WhipUpscaled.png", "whip"));
+        f2_D4.setKey(new Key("gasmask", "worldofzuul/resources/Inventory/GasMaskUpscaled.png", "gasmask"));
+        f2_A4.setItem(new Item("torch", "worldofzuul/resources/Inventory/TorchUpscaled.png"));
+        f3_D3.setItem(new Item("pistol", "worldofzuul/resources/Inventory/GunUpscaled.png"));
+        f3_F4.setItem(new Item("hat", "worldofzuul/resources/Inventory/HatUpscaled.png"));
+        endRoom.setItem(new Item("statue", "worldofzuul/resources/Inventory/statueUpscaled.png"));
 
         // Anbringer en key i et rum
-        f3_D2.setKey(new Key("red_key", "Inventory/RedKeyUpscaled.png", "red"));
-        f3_A5.setKey(new Key("blue_key", "Inventory/BlueKeyUpscaled.png", "blue"));
-        f3_F7.setKey(new Key("green_key", "Inventory/GreenKeyUpscaled.png", "green"));
+        f3_D2.setKey(new Key("red_key", "worldofzuul/resources/Inventory/RedKeyUpscaled.png", "red"));
+        f3_A5.setKey(new Key("blue_key", "worldofzuul/resources/Inventory/BlueKeyUpscaled.png", "blue"));
+        f3_F7.setKey(new Key("green_key", "worldofzuul/resources/Inventory/GreenKeyUpscaled.png", "green"));
 
         // Anbringer alm bonusser i rum
-        f1_A2.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
-        f2_D2.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
-        f3_A2.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
-        f3_C4.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
-        f3_A6.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
-        f3_C7.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
-        f3_E3.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
+        f1_A2.setItem(new Bonus("bonus1", "worldofzuul/resources/Bonus/CoinsUpscaled.png", 1));
+        f2_D2.setItem(new Bonus("bonus1", "worldofzuul/resources/Bonus/CoinsUpscaled.png", 1));
+        f3_A2.setItem(new Bonus("bonus1", "worldofzuul/resources/Bonus/CoinsUpscaled.png", 1));
+        f3_C4.setItem(new Bonus("bonus1", "worldofzuul/resources/Bonus/CoinsUpscaled.png", 1));
+        f3_A6.setItem(new Bonus("bonus1", "worldofzuul/resources/Bonus/CoinsUpscaled.png", 1));
+        f3_C7.setItem(new Bonus("bonus1", "worldofzuul/resources/Bonus/CoinsUpscaled.png", 1));
+        f3_E3.setItem(new Bonus("bonus1", "worldofzuul/resources/Bonus/CoinsUpscaled.png", 1));
 
         //Anbringer store bonusser i rum
-        f1_A3.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
-        f2_D5.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
-        f3_F2.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
-        f3_E6.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
+        f1_A3.setItem(new Bonus("bonus2", "worldofzuul/resources/Bonus/AmuletUpscaled.png", 2));
+        f2_D5.setItem(new Bonus("bonus2", "worldofzuul/resources/Bonus/AmuletUpscaled.png", 2));
+        f3_F2.setItem(new Bonus("bonus2", "worldofzuul/resources/Bonus/AmuletUpscaled.png", 2));
+        f3_E6.setItem(new Bonus("bonus2", "worldofzuul/resources/Bonus/AmuletUpscaled.png", 2));
 
         //Anbringer store bonusser i rum
-        f3_A7.setItem(new Bonus("bonus3", "Bonus/MythicalTreasure.png", 3));
+        f3_A7.setItem(new Bonus("bonus3", "worldofzuul/resources/Bonus/MythicalTreasure.png", 3));
 
         //Sætter mørke rum
         f1_A1.setDarkRoom();

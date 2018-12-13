@@ -17,20 +17,9 @@ import javafx.scene.image.ImageView;
 public class FXMLController implements Initializable {
 
     @FXML
-    private ImageView mainMenuArt;
-    @FXML
-    private Button startButton;
-    @FXML
-    private Button pauseButton;
-    @FXML
-    private Button quitButton;
-    @FXML
-    private Label titleLabel;
-
-    @FXML
     private void handleStartButtonAction(ActionEvent event) throws Exception {
-        System.out.println(getClass().getResource("../menus/EnterNamePrompt.fxml"));
-        Parent rootNameEnterPrompt = FXMLLoader.load(getClass().getResource("../menus/EnterNamePrompt.fxml"));
+        System.out.println(getClass().getResource("EnterNamePrompt.fxml"));
+        Parent rootNameEnterPrompt = FXMLLoader.load(getClass().getResource("EnterNamePrompt.fxml"));
         Scene sceneNameEnterPrompt = new Scene(rootNameEnterPrompt);
         sceneNameEnterPrompt.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneNameEnterPrompt);
@@ -49,17 +38,19 @@ public class FXMLController implements Initializable {
         System.exit(0);
     }
 
+    @FXML
     private void handlePauseButtonAction(ActionEvent event) throws Exception {
-        Parent rootPause = FXMLLoader.load(getClass().getResource("../menus/PauseMenu.fxml"));
+        Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
         Scene scenePause = new Scene(rootPause);
         scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
 
     }
 
+    @FXML
     private void handleQuitBtPauseMenuAction(ActionEvent event) throws Exception {
 
-        Parent rootMain = FXMLLoader.load(getClass().getResource("../menus/MainMenu.fxml"));
+        Parent rootMain = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene sceneMain = new Scene(rootMain);
         sceneMain.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneMain);
@@ -69,37 +60,41 @@ public class FXMLController implements Initializable {
     @FXML
     private void handleHighscoreButtonAction(ActionEvent event) throws Exception {
 
-        Parent rootHigh = FXMLLoader.load(getClass().getResource("../menus/HighscoreMenu.fxml"));
+        Parent rootHigh = FXMLLoader.load(getClass().getResource("/worldofzuul/domain/challenges/HighscoreMenu.fxml"));
         Scene sceneHigh = new Scene(rootHigh);
         sceneHigh.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneHigh);
     }
 
+    @FXML
     private void handleBackToMenuButtonAction(ActionEvent event) throws Exception {
-        Parent rootMain = FXMLLoader.load(getClass().getResource("../menus/MainMenu.fxml"));
+        Parent rootMain = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene sceneMain = new Scene(rootMain);
         sceneMain.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneMain);
 
     }
 
+    @FXML
     private void handleResumeButtonAction(ActionEvent event) throws Exception {
-        Parent rootGame = FXMLLoader.load(getClass().getResource("../game/GameUI.fxml"));
+        Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
         Scene sceneGame = new Scene(rootGame);
         sceneGame.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneGame);
     }
-
+    
+    @FXML
     private void handleHelpButtonAction(ActionEvent event) throws Exception {
-        Parent rootHelp = FXMLLoader.load(getClass().getResource("../menus/HelpWindow.fxml"));
+        Parent rootHelp = FXMLLoader.load(getClass().getResource("HelpWindow.fxml"));
         Scene sceneHelp = new Scene(rootHelp);
         sceneHelp.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneHelp);
 
     }
 
+    @FXML
     private void handleBackButtonAction(ActionEvent event) throws Exception {
-        Parent rootPause = FXMLLoader.load(getClass().getResource("../menus/PauseMenu.fxml"));
+        Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
         Scene scenePause = new Scene(rootPause);
         scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(scenePause);
@@ -109,8 +104,7 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        Image image = new Image(getClass().getResourceAsStream("/worldofzuul/resources/UI/MainMenuImg.png"));
-        mainMenuArt.setImage(image);
+
     }
 
 }
