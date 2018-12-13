@@ -79,7 +79,8 @@ public class QuestionUIController implements Initializable {
     }
 
     @FXML
-    private void handleAnswerD(ActionEvent event) throws Exception {        Puzzles.answer("d", Rooms.getCurrentRoom().getQuestion());
+    private void handleAnswerD(ActionEvent event) throws Exception {
+        Puzzles.answer("d", Rooms.getCurrentRoom().getQuestion());
 
         Parent rootPause = FXMLLoader.load(getClass().getResource("../game/GameUI.fxml"));
         Scene scenePause = new Scene(rootPause);
@@ -94,5 +95,4 @@ public class QuestionUIController implements Initializable {
         AnswerC.setText("" + Rooms.getCurrentRoom().getQuestion().getAnswerC());
         AnswerD.setText("" + Rooms.getCurrentRoom().getQuestion().getAnswerD());
     }
-
 }

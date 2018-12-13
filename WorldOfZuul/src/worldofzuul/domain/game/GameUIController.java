@@ -25,6 +25,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import worldofzuul.domain.challenges.Highscore;
+import worldofzuul.domain.challenges.Puzzles;
 import worldofzuul.domain.objects.Inventory;
 import worldofzuul.domain.objects.Item;
 import worldofzuul.domain.rooms.Room;
@@ -113,6 +114,15 @@ public class GameUIController implements Initializable {
             RoomDisplayImage.setImage(Rooms.getCurrentRoom().getImage());
             displayInventory();
             setScore();
+            if (Puzzles.getAnswerType() == 1) {
+                Text text = new Text("The answer is correct. The doors are unlocked.");
+                TextFlowUI.getChildren().add(text);
+                TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
+            } else if (Puzzles.getAnswerType() == 2) {
+                Text text = new Text("The answer is incorrect. Try again!");
+                TextFlowUI.getChildren().add(text);
+                TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
+            }
         }
         revisit = true;
     }
