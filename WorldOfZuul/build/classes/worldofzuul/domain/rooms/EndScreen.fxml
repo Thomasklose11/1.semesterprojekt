@@ -4,10 +4,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1370.0" style="-fx-background-color: #2d2e30;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldofzuul.domain.rooms.EndScreenController">
    <children>
-      <ImageView fitHeight="768.0" fitWidth="1370.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="endScreenArt" fitHeight="770.0" fitWidth="1370.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url = "UI/EndScreen.png"/> 
+        </image>
+        </ImageView>
       <Label fx:id="TYforPlaying" alignment="CENTER" layoutX="-1.0" layoutY="112.0" prefHeight="18.0" prefWidth="1370.0" text="Thanks for playing!">
          <font>
             <Font size="42.0" />
