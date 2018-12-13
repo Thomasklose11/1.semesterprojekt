@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package worldofzuul.domain.challenges;
 
 import java.io.IOException;
@@ -19,12 +15,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import worldofzuul.domain.game.FXMLBoot;
 
-/**
- * FXML Controller class
- *
- * @author Rene_
- */
 public class HighscoreController implements Initializable {
+
     @FXML
     private TextArea List1To5;
 
@@ -43,7 +35,7 @@ public class HighscoreController implements Initializable {
             i++;
         }
         List1To5.setText(listToString);
-    }    
+    }
 
     @FXML
     private void handleBackToMenuButtonAction(ActionEvent event) throws IOException {
@@ -52,5 +44,5 @@ public class HighscoreController implements Initializable {
         sceneMain.getStylesheets().add(getClass().getResource("../game/CustomFontApp.css").toExternalForm());
         FXMLBoot.primaryStage.setScene(sceneMain);
     }
-    
+
 }

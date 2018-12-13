@@ -27,22 +27,6 @@ public class FXMLController implements Initializable {
     private Label LabelName;
 
     @FXML
-    private void handlePlayButtonAction(ActionEvent event) throws Exception {
-//        if (TextField.getLength() > 0) {
-//            Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
-//            Scene sceneGame = new Scene(rootGame);
-//            sceneGame.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
-//            FXMLBoot.primaryStage.setScene(sceneGame);
-//            Game.init();
-//            //Game.play();
-//            playerName = TextField.getText();
-//        } else {
-//            LabelName.setText("Please enter a name");
-//        }
-
-    }
-
-    @FXML
     public void playButtonOnEnter(ActionEvent ae) {
         System.out.println("test");
     }

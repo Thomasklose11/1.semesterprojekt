@@ -1,13 +1,9 @@
 package worldofzuul.domain.challenges;
 
-/**
- *
- * @author thomas
- */
 import worldofzuul.domain.rooms.Rooms;
 
 public class Puzzles {
-    
+
     private static int answerType = 0;
 
     private static final String p1 = "Young I am tall, old I am short. I love to glow. Breath is my foe?";//ask the question
@@ -69,27 +65,27 @@ public class Puzzles {
         new Question(p8, p8A, p8B, p8C, p8D, "d")
     };
 
-    public static void answer(String answer, Question question){
+    public static void answer(String answer, Question question) {
         if (answer.equals(question.getCorrectAnswer())) {
             System.out.println("The answer is correct. The doors are unlocked.");
-            
+
             Rooms.getCurrentRoom().unlockAll();
             Rooms.getCurrentRoom().setQuestionFalse();
             answerType = 1;
-            
+
         } else {
             System.out.println("The answer is incorrect. Try again!");
             System.out.println(Rooms.getCurrentRoom().getQuestion().getPrompt());
             answerType = 2;
         }
     }
-    
-    public static int getAnswerType () {
+
+    public static int getAnswerType() {
         return answerType;
     }
-    public static void setAnswerType (int type){
+
+    public static void setAnswerType(int type) {
         answerType = type;
     }
-    
-    
+
 }

@@ -1,8 +1,3 @@
-///*
-// * To change this license header, choose License Headers in Project Properties.
-// * To change this template file, choose Tools | Templates
-// * and open the template in the editor.
-// */
 package worldofzuul.domain.challenges;
 
 import javax.mail.*;
@@ -10,10 +5,7 @@ import javax.mail.internet.*;
 import java.util.Properties;
 import javax.activation.*;
 
-/**
- *
- * @author s_b_k
- */
+
 public class SendMail {
 
     public static void mail() {
@@ -28,10 +20,10 @@ public class SendMail {
 
         Session session = Session.getInstance(props,
                 new javax.mail.Authenticator() {
-            protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(username, password);
-            }
-        });
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(username, password);
+                    }
+                });
 
         try {
 
@@ -61,7 +53,6 @@ public class SendMail {
 
             messageBodyPart.setFileName(filename);
 
- 
             multipart.addBodyPart(messageBodyPart);
 
             message.setContent(multipart);

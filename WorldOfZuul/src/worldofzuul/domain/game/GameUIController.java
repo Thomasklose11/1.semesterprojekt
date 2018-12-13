@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package worldofzuul.domain.game;
 
-import worldofzuul.domain.game.FXMLBoot;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -16,17 +10,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import worldofzuul.domain.challenges.Highscore;
 import worldofzuul.domain.challenges.Puzzles;
-import worldofzuul.domain.objects.Inventory;
 import worldofzuul.domain.objects.Item;
 import worldofzuul.domain.rooms.Room;
 import worldofzuul.domain.rooms.Rooms;
@@ -34,25 +23,10 @@ import worldofzuul.domain.objects.Bonus;
 import worldofzuul.domain.objects.Score;
 import worldofzuul.domain.challenges.SendMail;
 import worldofzuul.domain.objects.Inventory;
-import static worldofzuul.domain.rooms.Rooms.getCurrentRoom;
 import worldofzuul.domain.rooms.End;
 
-//import worldofzuul.domain.SendMail;
-/**
- * FXML Controller class
- *
- * @author morte
- */
 public class GameUIController implements Initializable {
 
-    @FXML
-    private Button NorthButton;
-    @FXML
-    private Button SouthButton;
-    @FXML
-    private Button WestButton;
-    @FXML
-    private Button EastButton;
     @FXML
     private TextFlow TextFlowUI;
     @FXML
@@ -60,10 +34,7 @@ public class GameUIController implements Initializable {
     @FXML
     public Label HighscoreLabel;
     @FXML
-    private Button MenuWindowButton;
-    @FXML
     private GridPane InventoryGrid;
-
     @FXML
     private ImageView itemImage;
 
@@ -92,7 +63,6 @@ public class GameUIController implements Initializable {
 
     ArrayList<ImageView> inventorySpots = new ArrayList<>();
 
-    //ImageView[] inventorySpots = {Inventory1, Inventory2, Inventory3, Inventory4, Inventory5, Inventory6, Inventory7, Inventory8, Inventory9};
     private static int counter = 0;
 
     @Override
@@ -137,7 +107,6 @@ public class GameUIController implements Initializable {
     private void handleGoNorth(ActionEvent event) {
         String direction = "north";
         moveUI(direction);
-        //      new Highscore().read();
     }
 
     @FXML

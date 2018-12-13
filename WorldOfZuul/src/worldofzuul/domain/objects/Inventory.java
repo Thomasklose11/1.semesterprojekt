@@ -1,12 +1,7 @@
 package worldofzuul.domain.objects;
 
-import worldofzuul.domain.objects.Item;
 import java.util.ArrayList;
 
-/**
- *
- * @author Rene_
- */
 public class Inventory {
 
     // Inventory list
@@ -25,14 +20,14 @@ public class Inventory {
     public static boolean checkInventoryForKey(String color) {
         for (int i = 0; i < inventory.size(); i++) {
             if (inventory.get(i) instanceof Key) {
-                if (((Key)inventory.get(i)).getColor().equals(color)) {
+                if (((Key) inventory.get(i)).getColor().equals(color)) {
                     return true;
                 }
             }
         }
         return false;
     }
-    
+
     public static boolean checkInventoryForItem(String item) {
         for (int i = 0; i < inventory.size(); i++) {
             if (inventory.get(i).getDescription().equals(item)) {
@@ -41,12 +36,12 @@ public class Inventory {
         }
         return false;
     }
-    
-    public static Item getItem(int i){
+
+    public static Item getItem(int i) {
         return inventory.get(i);
     }
-    
-    public static int getInvSize () {
+
+    public static int getInvSize() {
         return inventory.size();
     }
 }

@@ -1,7 +1,6 @@
 package worldofzuul.domain.rooms;
 
 import java.util.ArrayList;
-import java.util.Set;
 import java.util.HashMap;
 import javafx.scene.image.Image;
 import worldofzuul.domain.game.GameUIController;
@@ -12,9 +11,6 @@ import worldofzuul.domain.challenges.Question;
 
 public class Room {
 
-//    public static Room isVisited(boolean b) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
     private final String description;
     private final HashMap<String, Room> exits;
     ArrayList<Item> items = new ArrayList<>();
@@ -158,15 +154,6 @@ public class Room {
         }
         return null;
     }
-//    
-//    public String findDoorColor(String direction){
-//        for (int i = 0; i < doors.size(); i++) {
-//            if (doors.get(i).getDirection().equals(direction)) {
-//                return doors.get(i).getColor();
-//            }
-//        }
-//        return "none";
-//    }
 
     public void setQuestion(int i) {
         roomQuestion = Puzzles.questions[i];
@@ -195,23 +182,6 @@ public class Room {
 
     }
 
-    //checker om en nøgle i spillerens inventory passer til en dør i det nuværende rum
-//    public void unlockDoor(String direction) {
-//        if (findDoor(direction) != null) {
-//            if (findDoor(direction).getColor() != null) {
-//                String checkColor = findDoor(direction).getColor();
-//                if (Inventory.checkInventoryForKey(checkColor) != null) {
-//                    findDoor(direction).unlock();
-//                } else {
-//                    System.out.println("You don't have a key for this door");
-//                }
-//            } else {
-//                System.out.println("There is no door that needs a key there");
-//            }
-//        } else {
-//            System.out.println("There is no door there");
-//        }
-//    }
     public Image getImage() {
         return roomImage;
     }

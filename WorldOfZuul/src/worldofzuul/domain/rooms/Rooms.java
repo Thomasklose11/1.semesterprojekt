@@ -9,9 +9,9 @@ import worldofzuul.domain.objects.Key;
  * @author Rene_
  */
 public class Rooms {
-    
+
     private static int roomCounter = 0;
-    
+
     private static Room currentRoom;
 
     //First floor
@@ -50,8 +50,8 @@ public class Rooms {
                 + "obtaining the legendary jade statue”", "Rooms/F1_B1.png");
         f1_C1 = new Room("", "Rooms/F1_C1.png");
 
-        f1_A2 = new Room("","Rooms/F1_A2.png");
-        f1_B2 = new Room("Press the statue to answer its question.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
+        f1_A2 = new Room("", "Rooms/F1_A2.png");
+        f1_B2 = new Room("Press the statue to answer its question.", "Rooms/F1_B2.png", "Rooms/F1_B2U.png");
         f1_C2 = new Room("", "Rooms/F1_C2.png");
 
         f1_A3 = new Room("", "Rooms/F1_A3.png");
@@ -122,18 +122,18 @@ public class Rooms {
         f3_A6 = new Room("", "Rooms/F3_A6.png");
         f3_B6 = new Room("", "Rooms/F3_B6.png");
         f3_C6 = new Room("", "Rooms/F3_C6.png");
-        f3_D6 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.","Rooms/F3_D6.png");
-        f3_E6 = new Room("","Rooms/F3_E6.png");
-        f3_F6 = new Room("","Rooms/F3_F6.png");
+        f3_D6 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "Rooms/F3_D6.png");
+        f3_E6 = new Room("", "Rooms/F3_E6.png");
+        f3_F6 = new Room("", "Rooms/F3_F6.png");
 
         f3_A7 = new Room("", "Rooms/F3_A7.png");
         f3_B7 = new Room("", "Rooms/F3_B7.png");
         f3_C7 = new Room("", "Rooms/F3_C7.png");
-        f3_D7 = new Room("Answer this riddle to continue. You feel the pressure from behind the door, something is behind it.","Rooms/F3_D7.png","Rooms/F3_D7U.png");
-        f3_E7 = new Room("","Rooms/F3_E7.png");
-        f3_F7 = new Room("","Rooms/F3_F7.png");
+        f3_D7 = new Room("Answer this riddle to continue. You feel the pressure from behind the door, something is behind it.", "Rooms/F3_D7.png", "Rooms/F3_D7U.png");
+        f3_E7 = new Room("", "Rooms/F3_E7.png");
+        f3_F7 = new Room("", "Rooms/F3_F7.png");
 
-        endRoom = new Room("The final room! You spot the long sought after Jade Statue","Rooms/EndRoom.png");
+        endRoom = new Room("The final room! You spot the long sought after Jade Statue", "Rooms/EndRoom.png");
 
         //First floor exits
         startRoom.setExit("north", f1_B1);
@@ -158,7 +158,7 @@ public class Rooms {
         f1_A3.setExit("east", f1_B3);
 
         f1_B3.setExit("west", f1_A3);
-        f1_B3.setExitWithColor("north", f2_B1,"whip");
+        f1_B3.setExitWithColor("north", f2_B1, "whip");
         f1_B3.setExit("east", f1_C3);
 
         f1_C3.setExit("west", f1_B3);
@@ -176,7 +176,7 @@ public class Rooms {
         f2_C1.setExit("north", f2_C2);
         f2_C1.setExit("west", f2_B1);
 
-        f2_A2.setExitWithColor("north", f2_A3,"whip");
+        f2_A2.setExitWithColor("north", f2_A3, "whip");
         f2_A2.setExit("south", f2_A1);
 
         f2_B2.setExit("north", f2_B3);
@@ -191,7 +191,7 @@ public class Rooms {
 
         f2_A3.setExit("north", f2_A4);
         f2_A3.setExit("east", f2_B3);
-        f2_A3.setExitWithColor("south", f2_A2,"whip");
+        f2_A3.setExitWithColor("south", f2_A2, "whip");
 
         f2_B3.setExit("west", f2_A3);
         f2_B3.setExit("south", f2_B2);
@@ -199,10 +199,10 @@ public class Rooms {
 
         f2_C3.setExit("north", f2_C4);
         f2_C3.setExit("south", f2_C2);
-        f2_C3.setExitWithColor("east", f2_D3,"whip");
+        f2_C3.setExitWithColor("east", f2_D3, "whip");
         f2_C3.setExit("west", f2_B3);
 
-        f2_D3.setExitWithColor("west", f2_C3,"whip");
+        f2_D3.setExitWithColor("west", f2_C3, "whip");
         f2_D3.setExit("south", f2_D2);
 
         f2_A4.setExit("south", f2_A3);
@@ -216,14 +216,14 @@ public class Rooms {
 
         f2_D4.setExit("west", f2_C4);
 
-        f2_A5.setExitWithColor("north", f3_B1,"whip");
+        f2_A5.setExitWithColor("north", f3_B1, "whip");
         f2_A5.setExit("east", f2_B5);
 
         f2_B5.setExit("east", f2_C5);
         f2_B5.setExit("west", f2_A5);
 
         f2_C5.setExit("south", f2_C4);
-        f2_C5.setExitWithColor("east", f2_D5,"gasmask");
+        f2_C5.setExitWithColor("east", f2_D5, "gasmask");
         f2_C5.setExit("west", f2_B5);
 
         f2_D5.setExit("north", f3_E1);
@@ -237,7 +237,7 @@ public class Rooms {
         f3_B1.setExit("east", f3_C1);
         f3_B1.setExit("north", f3_B2);
         f3_B1.setExit("west", f3_A1);
-        f3_B1.setExitWithColor("south", f2_A5,"whip");
+        f3_B1.setExitWithColor("south", f2_A5, "whip");
 
         f3_C1.setExit("west", f3_B1);
         f3_C1.setExit("north", f3_C2);
@@ -310,7 +310,7 @@ public class Rooms {
 
         f3_E4.setExit("north", f3_E5);
         f3_E4.setExit("west", f3_D4);
-        f3_E4.setExitWithColor("south", f3_E3,"gasmask");
+        f3_E4.setExitWithColor("south", f3_E3, "gasmask");
 
         f3_F4.setExit("north", f3_F5);
 
@@ -366,7 +366,7 @@ public class Rooms {
         f3_C7.setExit("east", f3_D7);
 
         f3_D7.setExit("west", f3_C7);
-        f3_D7.setExitWithColor("south", f3_D6,"whip");
+        f3_D7.setExitWithColor("south", f3_D6, "whip");
         f3_D7.setExit("north", endRoom);
         f3_D7.setExit("east", f3_E7);
 
@@ -380,10 +380,9 @@ public class Rooms {
 
         currentRoom = startRoom;
 
-
         // Anbringer et item i et rum
-        f1_C1.setKey(new Key("whip", "Inventory/WhipUpscaled.png","whip"));
-        f2_D4.setKey(new Key("gasmask", "Inventory/GasMaskUpscaled.png","gasmask"));
+        f1_C1.setKey(new Key("whip", "Inventory/WhipUpscaled.png", "whip"));
+        f2_D4.setKey(new Key("gasmask", "Inventory/GasMaskUpscaled.png", "gasmask"));
         f2_A4.setItem(new Item("torch", "Inventory/TorchUpscaled.png"));
         f3_D3.setItem(new Item("pistol", "Inventory/GunUpscaled.png"));
         f3_F4.setItem(new Item("hat", "Inventory/HatUpscaled.png"));
@@ -391,9 +390,9 @@ public class Rooms {
         endRoom.setItem(new Item("statue", "Inventory/statueUpscaled.png"));
 
         // Anbringer en key i et rum
-        f3_D2.setKey(new Key("red_key", "Inventory/RedKeyUpscaled.png","red"));
-        f3_A5.setKey(new Key("blue_key", "Inventory/BlueKeyUpscaled.png","blue"));
-        f3_F7.setKey(new Key("green_key", "Inventory/GreenKeyUpscaled.png","green"));
+        f3_D2.setKey(new Key("red_key", "Inventory/RedKeyUpscaled.png", "red"));
+        f3_A5.setKey(new Key("blue_key", "Inventory/BlueKeyUpscaled.png", "blue"));
+        f3_F7.setKey(new Key("green_key", "Inventory/GreenKeyUpscaled.png", "green"));
 
         // Anbringer alm bonusser i rum
         f1_A2.setItem(new Bonus("bonus1", "Bonus/CoinsUpscaled.png", 1));
@@ -411,7 +410,7 @@ public class Rooms {
         f3_E6.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
 
         //Anbringer store bonusser i rum
-        f3_A7.setItem(new Bonus("bonus3", "Bonus/Kidney.png",3));
+        f3_A7.setItem(new Bonus("bonus3", "Bonus/Kidney.png", 3));
 
         //Sætter mørke rum
         f1_A1.setDarkRoom();
@@ -423,25 +422,25 @@ public class Rooms {
         //Anbringer spørgsmål i rum og låser døre
         f1_B2.setQuestion(0);
         f1_B2.findDoor("east").lock();
-        
+
         f2_C3.setQuestion(1);
         f2_C3.findDoor("east").lock();
         f2_C3.findDoor("north").lock();
         f2_C3.findDoor("west").lock();
-        
+
         f2_B5.setQuestion(2);
         f2_B5.findDoor("west").lock();
-        
+
         f3_C1.setQuestion(3);
         f3_C1.findDoor("north").lock();
-            
+
         f3_C2.setQuestion(4);
         f3_C2.findDoor("north").lock();
         f3_C2.findDoor("west").lock();
-        
+
         f3_D1.setQuestion(5);
         f3_D1.findDoor("north").lock();
-        
+
         f3_F5.setQuestion(6);
         f3_F5.findDoor("north").lock();
         f3_F5.findDoor("south").lock();
@@ -461,21 +460,20 @@ public class Rooms {
     public static Room getEndRoom() {
         return endRoom;
     }
-    
-    
-    public static void incrementRoomCounter ()  {
+
+    public static void incrementRoomCounter() {
         roomCounter += 1;
     }
-    
-    public static int getRoomCounter () {
+
+    public static int getRoomCounter() {
         return roomCounter;
     }
-    
-    public static String findDoorColor(String direction){
+
+    public static String findDoorColor(String direction) {
         for (int i = 0; i < getCurrentRoom().doors.size(); i++) {
             if (getCurrentRoom().doors.get(i).getDirection().equals(direction)) {
-                if (getCurrentRoom().doors.get(i).getColor()!=null){
-                    return getCurrentRoom().doors.get(i).getColor(); 
+                if (getCurrentRoom().doors.get(i).getColor() != null) {
+                    return getCurrentRoom().doors.get(i).getColor();
                 } else {
                     return "none";
                 }

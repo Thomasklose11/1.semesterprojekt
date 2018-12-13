@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package worldofzuul.domain.game;
 
 import java.io.IOException;
@@ -17,16 +12,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import static worldofzuul.domain.game.FXMLController.playerName;
-import worldofzuul.domain.rooms.Game;
 import worldofzuul.domain.rooms.Rooms;
-import worldofzuul.domain.game.GameUIController;
 
-/**
- * FXML Controller class
- *
- * @author Rene_
- */
 public class EnterNameController implements Initializable {
+
     @FXML
     private TextField TextField;
     @FXML
@@ -37,24 +26,23 @@ public class EnterNameController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+
+    }
 
     @FXML
     private void handlePlayButtonAction(ActionEvent event) throws IOException {
-          if (TextField.getLength() > 0) {
-            Game.init();
+        if (TextField.getLength() > 0) {
+            Rooms.createRooms();
             Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
             Scene sceneGame = new Scene(rootGame);
             sceneGame.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
             FXMLBoot.primaryStage.setScene(sceneGame);
-            
-            //Game.play();
+
             playerName = TextField.getText();
         } else {
             LabelName.setText("Please enter a name");
         }
 
     }
-    
+
 }

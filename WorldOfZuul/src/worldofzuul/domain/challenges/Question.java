@@ -1,9 +1,5 @@
 package worldofzuul.domain.challenges;
 
-/**
- *
- * @author thomas
- */
 public class Question {
 
     public String prompt;
@@ -11,10 +7,10 @@ public class Question {
     public String answerB;
     public String answerC;
     public String answerD;
-    
+
     private final String answerCorrect;
 
-    public Question(String prompt,String answerA ,String answerB,String answerC,String answerD, String answerCorrect) {
+    public Question(String prompt, String answerA, String answerB, String answerC, String answerD, String answerCorrect) {
         this.prompt = prompt;
         this.answerA = answerA;
         this.answerB = answerB;
@@ -22,8 +18,8 @@ public class Question {
         this.answerD = answerD;
         this.answerCorrect = answerCorrect;
     }
-    
-    public String getCorrectAnswer(){
+
+    public String getCorrectAnswer() {
         return answerCorrect;
     }
 
@@ -42,9 +38,8 @@ public class Question {
     public String getAnswerD() {
         return answerD;
     }
-    
-    
-    public String getPrompt(){
+
+    public String getPrompt() {
         return prompt;
     }
 

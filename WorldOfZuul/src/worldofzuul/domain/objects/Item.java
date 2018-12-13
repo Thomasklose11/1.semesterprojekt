@@ -2,10 +2,6 @@ package worldofzuul.domain.objects;
 
 import javafx.scene.image.Image;
 
-/**
- *
- * @author Rene_
- */
 public class Item {
 
     private Image icon;

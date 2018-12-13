@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package worldofzuul.domain.challenges;
 
 import java.net.URL;
@@ -15,19 +10,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import worldofzuul.domain.game.FXMLBoot;
 import worldofzuul.domain.rooms.Rooms;
 
-/**
- * FXML Controller class
- *
- * @author morte
- */
+
 public class QuestionUIController implements Initializable {
 
-    @FXML
-    private ImageView StatueImage;
     @FXML
     private Button AnswerA;
     @FXML
