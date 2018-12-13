@@ -410,7 +410,7 @@ public class Rooms {
         f3_E6.setItem(new Bonus("bonus2", "Bonus/AmuletUpscaled.png", 2));
 
         //Anbringer store bonusser i rum
-        f3_A7.setItem(new Bonus("bonus3", "Bonus/Kidney.png", 3));
+        f3_A7.setItem(new Bonus("bonus3", "Bonus/MythicalTreasure.png", 3));
 
         //Sætter mørke rum
         f1_A1.setDarkRoom();
