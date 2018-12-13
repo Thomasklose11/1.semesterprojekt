@@ -17,7 +17,7 @@
             <Image url = "UI/MainMenuImg.png"/> 
         </image>
         </ImageView>
-        <Button fx:id="startButton" layoutX="900.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleStartButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FF000000; -fx-background-image: url(UI/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Start" textFill="#4d682a">
+        <Button fx:id="startButton" layoutX="900.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleStartButtonAction" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: #FF000000; -fx-background-image: url(UI/ButtonUpscaled.png); -fx-background-size: 400px 150px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Start" textFill="#ffcc00">
             <font>
                 <Font name="Adventure" size="70.0" />
             </font>
@@ -37,7 +37,7 @@
                 <Font name="Adventure" size="120.0" />
             </font>
             <textFill>
-                <LinearGradient endX="0.004761904761904762" endY="1.0">
+                <LinearGradient endX="0.0" endY="1.0">
                     <stops>
                         <Stop color="#479701" />
                         <Stop color="#479701" offset="0.210727969348659" />

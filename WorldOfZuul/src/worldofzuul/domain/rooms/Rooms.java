@@ -300,7 +300,7 @@ public class Rooms {
 
         f3_B4.setExit("west", f3_A4);
         f3_B4.setExit("north", f3_B5);
-        f3_B4.setExit("east", f3_C4);
+        f3_B4.setExit("south", f3_B3);
 
         f3_C4.setExit("south", f3_C3);
         f3_C4.setExit("east", f3_D4);
