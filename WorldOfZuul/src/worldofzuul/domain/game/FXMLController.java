@@ -8,10 +8,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class FXMLController implements Initializable {
+
+    @FXML
+    private ImageView mainMenuArt;
+    @FXML
+    private Button startButton;
+    @FXML
+    private Button pauseButton;
+    @FXML
+    private Button quitButton;
+    @FXML
+    private Label titleLabel;
 
     @FXML
     private void handleStartButtonAction(ActionEvent event) throws Exception {
@@ -26,7 +40,6 @@ public class FXMLController implements Initializable {
     private TextField TextField;
     private Label LabelName;
 
-    @FXML
     public void playButtonOnEnter(ActionEvent ae) {
         System.out.println("test");
     }
@@ -36,7 +49,6 @@ public class FXMLController implements Initializable {
         System.exit(0);
     }
 
-    @FXML
     private void handlePauseButtonAction(ActionEvent event) throws Exception {
         Parent rootPause = FXMLLoader.load(getClass().getResource("../menus/PauseMenu.fxml"));
         Scene scenePause = new Scene(rootPause);
@@ -45,7 +57,6 @@ public class FXMLController implements Initializable {
 
     }
 
-    @FXML
     private void handleQuitBtPauseMenuAction(ActionEvent event) throws Exception {
 
         Parent rootMain = FXMLLoader.load(getClass().getResource("../menus/MainMenu.fxml"));
@@ -64,7 +75,6 @@ public class FXMLController implements Initializable {
         FXMLBoot.primaryStage.setScene(sceneHigh);
     }
 
-    @FXML
     private void handleBackToMenuButtonAction(ActionEvent event) throws Exception {
         Parent rootMain = FXMLLoader.load(getClass().getResource("../menus/MainMenu.fxml"));
         Scene sceneMain = new Scene(rootMain);
@@ -73,7 +83,6 @@ public class FXMLController implements Initializable {
 
     }
 
-    @FXML
     private void handleResumeButtonAction(ActionEvent event) throws Exception {
         Parent rootGame = FXMLLoader.load(getClass().getResource("../game/GameUI.fxml"));
         Scene sceneGame = new Scene(rootGame);
@@ -81,7 +90,6 @@ public class FXMLController implements Initializable {
         FXMLBoot.primaryStage.setScene(sceneGame);
     }
 
-    @FXML
     private void handleHelpButtonAction(ActionEvent event) throws Exception {
         Parent rootHelp = FXMLLoader.load(getClass().getResource("../menus/HelpWindow.fxml"));
         Scene sceneHelp = new Scene(rootHelp);
@@ -90,7 +98,6 @@ public class FXMLController implements Initializable {
 
     }
 
-    @FXML
     private void handleBackButtonAction(ActionEvent event) throws Exception {
         Parent rootPause = FXMLLoader.load(getClass().getResource("../menus/PauseMenu.fxml"));
         Scene scenePause = new Scene(rootPause);
@@ -102,6 +109,8 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        Image image = new Image(getClass().getResourceAsStream("/worldofzuul/resources/UI/MainMenuImg.png"));
+        mainMenuArt.setImage(image);
     }
 
 }

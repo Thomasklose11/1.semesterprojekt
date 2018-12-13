@@ -14,12 +14,12 @@ public class FXMLBoot extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../menus/MainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
 
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
         primaryStage = stage;
-        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/UI/Icon.png")));
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/worldofzuul/resources/UI/Icon.png")));
         primaryStage.setScene(scene);
         primaryStage.show();
 
