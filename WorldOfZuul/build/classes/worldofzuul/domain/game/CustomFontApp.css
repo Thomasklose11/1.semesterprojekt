@@ -7,16 +7,17 @@ and open the template in the editor.
     Created on : Nov 29, 2018, 1:30:21 PM
     Author     : mathi
 */
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
 
 @font-face {
     font-family: 'Press Start 2P';
-    src: url('PressStart2P-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Permanent Marker',cursive;
-    src: url('PermanentMarker-Regular.ttf');
+    //src: url('PermanentMarker-Regular.ttf');
 }
 
 .text {
