@@ -32,13 +32,13 @@ public class Puzzles {
     private static final String p4C = "A Tree";
     private static final String p4D = "A Dog";
 
-    private static final String p5 = "I have cities, but no houses. I have mountains, but no trees. I have water, but no fish.\n What am I?";//ask the question
+    private static final String p5 = "I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I?";//ask the question
     private static final String p5A = "Paradise";
     private static final String p5B = "A Map";
     private static final String p5C = "Armageddon";
     private static final String p5D = "The World";
 
-    private static final String p6 = "I'm sometimes full, but I never overflow, I typically show myself when it's dark.\n What Am I?";//ask the question
+    private static final String p6 = "I'm sometimes full, but I never overflow, I typically show myself when it's dark . What Am I?";//ask the question
     private static final String p6A = "The Moon";
     private static final String p6B = "A Man";
     private static final String p6C = "A Glass";
