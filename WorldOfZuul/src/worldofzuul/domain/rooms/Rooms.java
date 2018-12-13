@@ -37,11 +37,11 @@ public class Rooms {
     public static void createRooms() {
 
         //First floor rooms
-        startRoom = new Room("Welcome to Temple Raider! This is an adventure game. /n"
-                + "You’re in the jungle in Belize."
-                + "You, the Archeologist “El Whipper”, has through 16 years of devoted research, looked for ancient Mayan"
+        startRoom = new Room("Welcome to Temple Raider! This is an adventure game."
+                + " You’re in the jungle in Belize."
+                + " You, the Archeologist “El Whipper”, has through 16 years of devoted research, looked for ancient Mayan "
                 + "treasures. You now stand before the possibly greatest treasure to ever see the light of day. Will you"
-                + "succeed in finding the treasure or will you succumb to the dangers of the temple. It is up to you!", "Rooms/StartRoom.png");
+                + " succeed in finding the treasure or will you succumb to the dangers of the temple? It is up to you!", "Rooms/StartRoom.png");
 
         f1_A1 = new Room("You’re standing in a dark room.", "Rooms/F1_A1.png", "Rooms/F1_A1U.png");
         f1_B1 = new Room("The door to the outside is sealed shut.\n"
@@ -51,7 +51,7 @@ public class Rooms {
         f1_C1 = new Room("", "Rooms/F1_C1.png");
 
         f1_A2 = new Room("","Rooms/F1_A2.png");
-        f1_B2 = new Room("Prees the statue to answer it's question.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
+        f1_B2 = new Room("Press the statue to answer its question.","Rooms/F1_B2.png", "Rooms/F1_B2U.png");
         f1_C2 = new Room("", "Rooms/F1_C2.png");
 
         f1_A3 = new Room("", "Rooms/F1_A3.png");
@@ -63,7 +63,7 @@ public class Rooms {
         f2_B1 = new Room("You feel your soul connecting with the gemstones in the floor. The way forward is deeper and darker than before.", "Rooms/F2_B1.png");
         f2_C1 = new Room("You’re standing in a dark room.", "Rooms/F2_C1.png", "Rooms/F2_C1U.png");
 
-        f2_A2 = new Room("You see a lever high up on the wall, it is out of your reach", "Rooms/F2_A2.png");
+        f2_A2 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "Rooms/F2_A2.png");
         f2_B2 = new Room("There seems to be a dart trap in this room, but another poor soul activated it before you", "Rooms/F2_B2.png");
         f2_C2 = new Room("", "Rooms/F2_C2.png");
         f2_D2 = new Room("", "Rooms/F2_D2.png");
@@ -71,49 +71,48 @@ public class Rooms {
         f2_A3 = new Room("You’re standing in a dark room.", "Rooms/F2_A3.png", "Rooms/F2_A3U.png");
         f2_B3 = new Room("", "Rooms/F2_B3.png");
         f2_C3 = new Room("The doors around you are locked, answer this puzzle correct to continue through.", "Rooms/F2_C3.png", "Rooms/F2_C3U.png");
-        f2_D3 = new Room("You see a button on the other side of a large gap, it is out of your reach.", "Rooms/F2_D3.png");
+        f2_D3 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "Rooms/F2_D3.png");
 
-        f2_A4 = new Room("You see a torch hanging on the wall, do you want to pick it up?", "Rooms/F2_A4.png");
+        f2_A4 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.", "Rooms/F2_A4.png");
         f2_B4 = new Room("", "Rooms/F2_B4.png");
         f2_C4 = new Room("A bejeweled sarcophage sits in the middle of the room.", "Rooms/F2_C4.png");
-        f2_D4 = new Room("You spot a gas mask on the corpse of a dead Nazi soldier.", "Rooms/F2_D4.png");
+        f2_D4 = new Room("", "Rooms/F2_D4.png");
 
         f2_A5 = new Room("The only way forward is over the large gap. You see a branch sturdy enough to hold your weight.", "Rooms/F2_A5.png");
         f2_B5 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.", "Rooms/F2_B5.png", "Rooms/F2_B5U.png");
         f2_C5 = new Room("You smell gas coming from the door to the east", "Rooms/F2_C5.png");
-        f2_D5 = new Room("The room is full of gas. Fortunately you have your gas mask on, and you find a valuable treasure on the ground", "Rooms/F2_D5.png");
+        f2_D5 = new Room("The room is full of gas. Fortunately you have your gas mask on.", "Rooms/F2_D5.png");
 
         //Third floor rooms
         f3_A1 = new Room("You stand in a dark room", "Rooms/F3_A1.png", "Rooms/F3_A1U.png");
         f3_B1 = new Room("You feel your soul connect with the large gemstone once again.", "Rooms/F3_B1.png");
-        f3_C1 = new Room("The door in front of you is locked, answer this puzzle correct to continue through.", "Rooms/F3_C1.png", "Rooms/F3_C1U.png");
+        f3_C1 = new Room("The door in front of you is locked, answer this puzzle correctly to continue through.", "Rooms/F3_C1.png", "Rooms/F3_C1U.png");
         f3_D1 = new Room("You are presented with a riddle, answer it to move on.", "Rooms/F3_D1.png", "Rooms/F3_D1U.png");
-        f3_E1 = new Room("You feel the large gemstone connect with your soul once again., \"Rooms/F3_E1.png\""
-                + "");
+        f3_E1 = new Room("You feel the large gemstone connect with your soul once again.", "Rooms/F3_E1.png");
         f3_F1 = new Room("", "Rooms/F3_F1.png");
 
         f3_A2 = new Room("", "Rooms/F3_A2.png");
         f3_B2 = new Room("", "Rooms/F3_B2.png");
         f3_C2 = new Room("You’re stuck in a room, and have to answer this riddle to move on.", "Rooms/F3_C2.png", "Rooms/F3_C2U.png");
-        f3_D2 = new Room("You spot a green key", "Rooms/F3_D2.png");
+        f3_D2 = new Room("", "Rooms/F3_D2.png");
         f3_E2 = new Room("", "Rooms/F3_E2.png");
         f3_F2 = new Room("", "Rooms/F3_F2.png");
 
         f3_A3 = new Room("You stand in a dark room", "Rooms/F3_A3.png", "Rooms/F3_A3U.png");
         f3_B3 = new Room("", "Rooms/F3_B3.png");
         f3_C3 = new Room("", "Rooms/F3_C3.png");
-        f3_D3 = new Room("You see a pair of guns lying on the floor.", "Rooms/F3_D3.png");
+        f3_D3 = new Room("", "Rooms/F3_D3.png");
         f3_E3 = new Room("", "Rooms/F3_E3.png");
-        f3_F3 = new Room("A large lever is in the room, pulling it may open the shut door to the west", "Rooms/F3_F3.png");
+        f3_F3 = new Room("", "Rooms/F3_F3.png");
 
         f3_A4 = new Room("The door to the north seems to need a special item to unlock.", "Rooms/F3_A4.png");
         f3_B4 = new Room("", "Rooms/F3_B4.png");
         f3_C4 = new Room("", "Rooms/F3_C4.png");
         f3_D4 = new Room("", "Rooms/F3_D4.png");
         f3_E4 = new Room("", "Rooms/F3_E4.png");
-        f3_F4 = new Room("You spot a somewhat familiar hat near the dead person", "Rooms/F3_F4.png");
+        f3_F4 = new Room("You spot a somewhat familiar hat on the ground", "Rooms/F3_F4.png");
 
-        f3_A5 = new Room("You find a blue key", "Rooms/F3_A5.png");
+        f3_A5 = new Room("", "Rooms/F3_A5.png");
         f3_B5 = new Room("", "Rooms/F3_B5.png");
         f3_C5 = new Room("", "Rooms/F3_C5.png");
         f3_D5 = new Room("", "Rooms/F3_D5.png");
@@ -123,11 +122,11 @@ public class Rooms {
         f3_A6 = new Room("", "Rooms/F3_A6.png");
         f3_B6 = new Room("", "Rooms/F3_B6.png");
         f3_C6 = new Room("", "Rooms/F3_C6.png");
-        f3_D6 = new Room("The button to open the door is high up, and you can't reach it with your bare hands","Rooms/F3_D6.png");
+        f3_D6 = new Room("You stand in front of a pit and see a large branch on the other side of it. It is out of your reach, but it looks stable and solid.","Rooms/F3_D6.png");
         f3_E6 = new Room("","Rooms/F3_E6.png");
         f3_F6 = new Room("","Rooms/F3_F6.png");
 
-        f3_A7 = new Room("The bonus here seems unusally large, and definitely worth collecting", "Rooms/F3_A7.png");
+        f3_A7 = new Room("", "Rooms/F3_A7.png");
         f3_B7 = new Room("", "Rooms/F3_B7.png");
         f3_C7 = new Room("", "Rooms/F3_C7.png");
         f3_D7 = new Room("Answer this riddle to continue. You feel the pressure from behind the door, something is behind it.","Rooms/F3_D7.png","Rooms/F3_D7U.png");
