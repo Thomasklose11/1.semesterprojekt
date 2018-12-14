@@ -12,9 +12,10 @@ public class SendMail {
     //When the user have completed the game it send a mail to us with the useres name, highscore and room count.  
 
     public static void mail() {
-        final String username = "gruppeprojektzuul@gmail.com";//The addres the mail is sent to
+        final String username = "gruppeprojektzuul@gmail.com";//The address the mail is sent to
         final String password = "worldofzuul2018";//Passwordword to the mail
 
+        //Information needed to connect to gmail
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
@@ -37,7 +38,7 @@ public class SendMail {
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("gruppeprojektzuul@gmail.com"));
 
-            message.setSubject("Testing Subject");
+            message.setSubject("Testing Subject");// The name of the mail vi recieve
 
             message.setText("Player : " + FXMLController.playerName + "   |   Score: " + Score.getScore() + "   |   Rooms visited: " + Rooms.getRoomCounter());
             //Get the user name, score and room count
