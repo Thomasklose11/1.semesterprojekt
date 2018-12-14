@@ -9,9 +9,9 @@ import worldofzuul.domain.objects.Score;
 
 public class EndScreenController implements Initializable {
 
-    @FXML
+    @FXML//Display the users final score
     private Label ScoreLabel;
-    @FXML
+    @FXML//Display the users room count
     private Label NumberOfRoom;
 
     /**
@@ -20,8 +20,8 @@ public class EndScreenController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        ScoreLabel.setText("" + Score.getScore());
-        NumberOfRoom.setText("" + Rooms.getRoomCounter() + " out of 71 rooms");
+        ScoreLabel.setText("" + Score.getScore());//Prints out the users score
+        NumberOfRoom.setText("" + Rooms.getRoomCounter() + " out of 71 rooms");//Prints out the users room count 
     }
 
 }

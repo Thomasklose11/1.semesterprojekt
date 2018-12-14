@@ -24,6 +24,8 @@ public class HighscoreController implements Initializable {
      * Initializes the controller class.
      */
     @Override
+    //Uses Highscore() to get player name and readHighscore() to get score 
+    //Uses @ to switch between string and int when printing to highscore
     public void initialize(URL url, ResourceBundle rb) {
         List<String> scoreList = new Highscore().readHighscore();
         String listToString = "";
