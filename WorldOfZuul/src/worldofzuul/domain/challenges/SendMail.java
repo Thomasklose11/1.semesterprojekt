@@ -38,7 +38,7 @@ public class SendMail {
 
             message.setSubject("Testing Subject");
 
-            message.setText("Player : " + FXMLController.playerName + "Score: " + Score.getScore() + "Rooms visited: " + Rooms.getRoomCounter());
+            message.setText("Player : " + FXMLController.playerName + "   |   Score: " + Score.getScore() + "   |   Rooms visited: " + Rooms.getRoomCounter());
 //
 //            Multipart multipart = new MimeMultipart();
 //
