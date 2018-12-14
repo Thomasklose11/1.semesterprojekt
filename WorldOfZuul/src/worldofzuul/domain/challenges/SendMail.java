@@ -1,10 +1,10 @@
 package worldofzuul.domain.challenges;
 
-import java.io.File;
 import javax.mail.*;
 import javax.mail.internet.*;
 import java.util.Properties;
-import javax.activation.*;
+import worldofzuul.domain.game.FXMLController;
+import worldofzuul.domain.objects.Score;
 import worldofzuul.domain.rooms.Rooms;
 
 
@@ -38,7 +38,7 @@ public class SendMail {
 
             message.setSubject("Testing Subject");
 
-            message.setText("Rooms visited: " + Rooms.getRoomCounter());
+            message.setText("Player : " + FXMLController.playerName + "Score: " + Score.getScore() + "Rooms visited: " + Rooms.getRoomCounter());
 //
 //            Multipart multipart = new MimeMultipart();
 //
