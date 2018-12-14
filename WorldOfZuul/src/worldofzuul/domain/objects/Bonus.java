@@ -4,10 +4,9 @@ public class Bonus extends Item {
 
     private int bonus;
 
-    public Bonus(String newDescription) {
-        super(newDescription);
-    }
-
+    // This constructor contains 3 objects, a String description, a String imageURL and a int bonus.
+    // The imageURL adds a image to the item    
+    // The bonus is used to incraease the score
     public Bonus(String description, String imageURL, int bonus) {
         super(description, imageURL);
         this.bonus = bonus;

@@ -15,6 +15,7 @@ import worldofzuul.domain.rooms.Rooms;
 
 
 public class QuestionUIController implements Initializable {
+    //Bottoms for the different answer opportunities 
 
     @FXML
     private Button AnswerA;
@@ -36,7 +37,7 @@ public class QuestionUIController implements Initializable {
         // TODO
     }
 
-    @FXML
+    @FXML//Bottum for answer a
     private void handleAnswerA(ActionEvent event) throws Exception {
         Puzzles.answer("a", Rooms.getCurrentRoom().getQuestion());
 
@@ -46,7 +47,7 @@ public class QuestionUIController implements Initializable {
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
-    @FXML
+    @FXML//Bottum for answer b
     private void handleAnswerB(ActionEvent event) throws Exception {
         Puzzles.answer("b", Rooms.getCurrentRoom().getQuestion());
 
@@ -56,7 +57,7 @@ public class QuestionUIController implements Initializable {
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
-    @FXML
+    @FXML//Bottum for answer c
     private void handleAnswerC(ActionEvent event) throws Exception {
         Puzzles.answer("c", Rooms.getCurrentRoom().getQuestion());
 
@@ -66,7 +67,7 @@ public class QuestionUIController implements Initializable {
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
-    @FXML
+    @FXML//Bottum for answer d
     private void handleAnswerD(ActionEvent event) throws Exception {
         Puzzles.answer("d", Rooms.getCurrentRoom().getQuestion());
 

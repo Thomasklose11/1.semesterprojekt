@@ -20,7 +20,7 @@ public class Highscore {
         File file = new File("HighScore.txt");
         try {
             Scanner scanner = new Scanner(file);
-            while (scanner.hasNext()) {
+            while (scanner.hasNext()) {//places the highscore below the previous
                 data.add(scanner.nextLine());
             }
             scanner.close();
@@ -36,16 +36,16 @@ public class Highscore {
         //This players entry to the list. A combination of the name, delimeter and thier score.
         String currentScoreString = FXMLController.playerName + "@" + Score.getScore();
 
-        //Add this players entr to the list from file.
+        //Add this players entry to the list from file.
         data.add(currentScoreString);
 
         //Go through all the lines in the file and scan them. For each line the name
         // and the score is seperated(@) into two list (name,score)
         for (String line : data) {
             Scanner scanner = new Scanner(line);
-            scanner.useDelimiter("@");
+            scanner.useDelimiter("@");//switches from string to int
             names.add(scanner.next());
-            if (scanner.hasNextInt()) {
+            if (scanner.hasNextInt()) {//places the highscore below the previous
                 scores.add(scanner.nextInt());
             } else {
                 scores.add(0);

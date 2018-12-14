@@ -1,7 +1,7 @@
 package worldofzuul.domain.rooms;
 
 public class Door {
-
+//Creates doors and add the ability to lock and unlock them and to add color
     private boolean locked = false;
     private final String direction;
 

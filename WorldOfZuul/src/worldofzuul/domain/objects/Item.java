@@ -7,11 +7,8 @@ public class Item {
     private Image icon;
     private String description;
 
-    //constructor
-    public Item(String newDescription) {
-        description = newDescription;
-    }
-
+    // This constructor contains two objects, a String description and a String imageURL.
+    // The imageURL adds a image to the item 
     public Item(String description, String imageURL) {
         this.description = description;
         icon = new Image(imageURL, true);

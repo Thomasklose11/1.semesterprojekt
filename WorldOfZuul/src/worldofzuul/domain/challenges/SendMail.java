@@ -9,11 +9,13 @@ import worldofzuul.domain.rooms.Rooms;
 
 
 public class SendMail {
+    //When the user have completed the game it send a mail to us with the useres name, highscore and room count.  
 
     public static void mail() {
-        final String username = "gruppeprojektzuul@gmail.com";
-        final String password = "worldofzuul2018";
+        final String username = "gruppeprojektzuul@gmail.com";//The address the mail is sent to
+        final String password = "worldofzuul2018";//Passwordword to the mail
 
+        //Information needed to connect to gmail
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
@@ -36,33 +38,16 @@ public class SendMail {
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse("gruppeprojektzuul@gmail.com"));
 
-            message.setSubject("Testing Subject");
+            message.setSubject("Testing Subject");// The name of the mail vi recieve
 
             message.setText("Player : " + FXMLController.playerName + "   |   Score: " + Score.getScore() + "   |   Rooms visited: " + Rooms.getRoomCounter());
-//
-//            Multipart multipart = new MimeMultipart();
-//
-//            BodyPart messageBodyPart = new MimeBodyPart();
-//
-//            messageBodyPart = new MimeBodyPart();
-//
-//            //VIRKER IKKE. ROOMCOUNTER.txt bliver muligvis ikke sendt til DataSource, men ved ikke nok om den datatype til at gennemskue fejlen
-//            String filename =  "RoomCounter.txt";
-//            DataSource source = new FileDataSource(filename);
-//            
-//            messageBodyPart.setDataHandler(new DataHandler(source));
-//
-//            messageBodyPart.setFileName(filename);
-//
-//            multipart.addBodyPart(messageBodyPart);
-//
-//            message.setContent(multipart);
+            //Get the user name, score and room count
 
             System.out.println("Sending");
 
             Transport.send(message);
 
-            System.out.println("Done");
+            System.out.println("Done");//The mail have been sent
 
         } catch (MessagingException e) {
             throw new RuntimeException(e);

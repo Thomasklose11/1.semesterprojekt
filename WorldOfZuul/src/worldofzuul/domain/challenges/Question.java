@@ -9,6 +9,7 @@ public class Question {
     public String answerD;
 
     private final String answerCorrect;
+    //Get all the different awswer opportunities
 
     public Question(String prompt, String answerA, String answerB, String answerC, String answerD, String answerCorrect) {
         this.prompt = prompt;
