@@ -42,24 +42,6 @@ public class SendMail {
 
             message.setText("Player : " + FXMLController.playerName + "   |   Score: " + Score.getScore() + "   |   Rooms visited: " + Rooms.getRoomCounter());
             //Get the user name, score and room count
-//
-//            Multipart multipart = new MimeMultipart();
-//
-//            BodyPart messageBodyPart = new MimeBodyPart();
-//
-//            messageBodyPart = new MimeBodyPart();
-//
-//            //VIRKER IKKE. ROOMCOUNTER.txt bliver muligvis ikke sendt til DataSource, men ved ikke nok om den datatype til at gennemskue fejlen
-//            String filename =  "RoomCounter.txt";
-//            DataSource source = new FileDataSource(filename);
-//            
-//            messageBodyPart.setDataHandler(new DataHandler(source));
-//
-//            messageBodyPart.setFileName(filename);
-//
-//            multipart.addBodyPart(messageBodyPart);
-//
-//            message.setContent(multipart);
 
             System.out.println("Sending");
 
