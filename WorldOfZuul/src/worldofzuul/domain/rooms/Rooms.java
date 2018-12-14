@@ -294,7 +294,7 @@ public class Rooms {
         f3_F3.setExit("south", f3_F2);
 
         // Lag 4
-        f3_A4.setExitWithColor("north", f3_A5, "green");
+        f3_A4.setExitWithColor("north", f3_A5, "green key");
         f3_A4.setExit("south", f3_A3);
         f3_A4.setExit("east", f3_B4);
 
@@ -328,7 +328,7 @@ public class Rooms {
         f3_D5.setExit("north", f3_D6);
         f3_D5.setExit("east", f3_E5);
 
-        f3_E5.setExitWithColor("north", f3_E6, "red");
+        f3_E5.setExitWithColor("north", f3_E6, "red key");
         f3_E5.setExit("south", f3_E4);
         f3_E5.setExit("west", f3_D5);
         f3_E5.setExit("east", f3_F5);
@@ -338,7 +338,7 @@ public class Rooms {
         f3_F5.setExit("south", f3_F4);
 
         // Lag 6
-        f3_A6.setExitWithColor("north", f3_A7, "blue");
+        f3_A6.setExitWithColor("north", f3_A7, "blue key");
         f3_A6.setExit("east", f3_B6);
 
         f3_B6.setExit("west", f3_A6);
@@ -389,9 +389,9 @@ public class Rooms {
         endRoom.setItem(new Item("statue", "worldofzuul/resources/Inventory/statueUpscaled.png"));
 
         // Anbringer en key i et rum
-        f3_D2.setKey(new Key("red_key", "worldofzuul/resources/Inventory/RedKeyUpscaled.png", "red"));
-        f3_A5.setKey(new Key("blue_key", "worldofzuul/resources/Inventory/BlueKeyUpscaled.png", "blue"));
-        f3_F7.setKey(new Key("green_key", "worldofzuul/resources/Inventory/GreenKeyUpscaled.png", "green"));
+        f3_D2.setKey(new Key("red_key", "worldofzuul/resources/Inventory/RedKeyUpscaled.png", "red key"));
+        f3_A5.setKey(new Key("blue_key", "worldofzuul/resources/Inventory/BlueKeyUpscaled.png", "blue key"));
+        f3_F7.setKey(new Key("green_key", "worldofzuul/resources/Inventory/GreenKeyUpscaled.png", "green key"));
 
         // Anbringer alm bonusser i rum
         f1_A2.setItem(new Bonus("bonus1", "worldofzuul/resources/Bonus/CoinsUpscaled.png", 1));
