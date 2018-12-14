@@ -29,6 +29,7 @@ public class Room {
 
     private String secondRoomImage;
 
+    
     public Room(String description, HashMap<String, Room> exits) {
         this.description = description;
         this.exits = exits;
@@ -52,53 +53,36 @@ public class Room {
         secondRoomImage = secondImageURL;
     }
 
-    //Setter exit for et rum
+    //Sets exit for a room
     public void setExit(String direction, Room neighbor) {
         exits.put(direction, neighbor);
         doors.add(new Door(direction));
     }
 
-    //Setter exit for et rum, og giver døren en tilsvarende farve
+    //Sets exit for a door, and color codes the specific door.
     public void setExitWithColor(String direction, Room neighbor, String color) {
         exits.put(direction, neighbor);
         doors.add(new Door(direction, color));
     }
-
-    public String getShortDescription() {
-        return description;
-    }
-
+    
+    
     public String getLongDescription() {
         return "" + description;
     }
 
+    //Gets an exit in a specific direction
     public Room getExit(String direction) {
         return exits.get(direction);
     }
 
-    /*
-     *Get item from the room
-     */
+    
+    //Get item from the room
     public Item getItem(int index) {
         return items.get(index);
     }
 
-    /*
-     *Get item from the room
-     */
-    public Item getItem(String itemName) {
-        for (int i = 0; i < items.size(); i++) {
-            if (items.get(i).getDescription().equals(itemName)) {
-                new GameUIController().setItem(items.get(i));
-                return items.get(i);
-            }
-        }
-        return null;
-    }
-
-    /*
-     Remove items from the room
-     */
+    
+    //Remove items from the room with a specific description
     public void removeItem(String itemName) {
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).getDescription().equals(itemName)) {
@@ -110,6 +94,7 @@ public class Room {
         }
     }
 
+    //Remove items from the room with a specific index
     public void removeItem(int index) {
 
         items.remove(index);
@@ -120,22 +105,21 @@ public class Room {
     }
 
 
-    /*
-     *Set a particular item in the room
-     */
+    
+    //Sets a particular item in the room
     public void setItem(Item newItem) {
         items.add(newItem);
         hasItems = true;
     }
-
+    
+    //Sets a key in the room
     public void setKey(Key newKey) {
         items.add(newKey);
         hasItems = true;
     }
 
-    /*
-     * Get a description of the item in a room
-     */
+    
+    //Get a description of the item in a room
     public String getRoomItems() {
 
         String output = "";
@@ -146,6 +130,7 @@ public class Room {
 
     }
 
+    //Finds a door in the room with a specific direction
     public Door findDoor(String direction) {
         for (int i = 0; i < doors.size(); i++) {
             if (doors.get(i).getDirection().equals(direction)) {
@@ -155,23 +140,28 @@ public class Room {
         return null;
     }
 
+    //Specifies a question that the room must contain
     public void setQuestion(int i) {
         roomQuestion = Puzzles.questions[i];
         this.question = true;
     }
 
+    //Specifies that the room doesnt contain a question
     public void setQuestionFalse() {
         question = false;
     }
 
+    //Checks if the room has a question
     public boolean hasQuestion() {
         return question;
     }
 
+    //Gets the roooms question
     public Question getQuestion() {
         return roomQuestion;
     }
 
+    //Unlocks all the doors in a room and updates the image
     public void unlockAll() {
         for (int i = 0; i < doors.size(); i++) {
             if (doors.get(i).getLocked() == true) {
@@ -182,26 +172,32 @@ public class Room {
 
     }
 
+    
     public Image getImage() {
         return roomImage;
     }
-
+    
+    //Marks the rooms as visited
     public void setVisited() {
         visited = true;
     }
 
+    //Checks whether or not the room has been visited
     public boolean getVisited() {
         return visited;
     }
-
+    
+    //Marks the room as the type dark room
     public void setDarkRoom() {
         darkRoom = true;
     }
-
+    
+    //Checks if the room is a dark room
     public boolean getDarkRoom() {
         return darkRoom;
     }
 
+    //Updates the room image
     public void setSecondImage() {
         roomImage = new Image(secondRoomImage, true);
     }

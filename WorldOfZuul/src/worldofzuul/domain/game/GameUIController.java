@@ -79,7 +79,8 @@ public class GameUIController implements Initializable {
         inventorySpots.add(Inventory9);
 
         print2TextFlow();
-
+        
+// This part of initialize is run to make sure that all the functions that need to be called when the GameUI is initialized, by not running them the first time GameUI is initialized.
         if (revisit != false) {
             RoomDisplayImage.setImage(Rooms.getCurrentRoom().getImage());
             displayInventory();
@@ -97,36 +98,35 @@ public class GameUIController implements Initializable {
         revisit = true;
     }
 
-    public void setItem(Item item) {
-        ImageView tile = (ImageView) InventoryGrid.getChildren().get(counter);
-        tile.setImage(item.getIcon());
-        counter++;
-    }
-
+// Button event for movement north
     @FXML
     private void handleGoNorth(ActionEvent event) {
         String direction = "north";
-        moveUI(direction);
+        moveCheck(direction);
     }
 
+// Button event for movement south
     @FXML
     private void handleGoSouth(ActionEvent event) {
         String direction = "south";
-        moveUI(direction);
+        moveCheck(direction);
     }
 
+// Button event for movement west
     @FXML
     private void handleGoWest(ActionEvent event) {
         String direction = "west";
-        moveUI(direction);
+        moveCheck(direction);
     }
 
+// Button event for movement east
     @FXML
     private void handleGoEast(ActionEvent event) {
         String direction = "east";
-        moveUI(direction);
+        moveCheck(direction);
     }
 
+// Initializes the pause menu
     @FXML
     private void handleMenuWindowButton(ActionEvent event) throws Exception {
         Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
@@ -135,11 +135,16 @@ public class GameUIController implements Initializable {
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
-    private void moveUI(String direction) {
+// Performs a large variation of checks on the doors of the current room before allowing movement
+    private void moveCheck(String direction) {
 
+        //Runs a for loop to check all doors in the current room
         for (int i = 0; i < Rooms.getCurrentRoom().doors.size(); i++) {
+            // Checks if a door is present in the direction the player wants to move
             if (Rooms.getCurrentRoom().doors.get(i).getDirection().equals(direction)) {
+                // If a door with the correct direction is found, checks if it is locked
                 if (Rooms.getCurrentRoom().doors.get(i).getLocked() == true) {
+                    // Checks if the door is colorless, and therefore is not unlockable with a key
                     if (Rooms.findDoorColor(direction).equals("none")) {
                         Text text = new Text("The door is locked");
                         TextFlowUI.getChildren().add(text);
@@ -147,6 +152,7 @@ public class GameUIController implements Initializable {
                         System.out.println("The door is locked");
                         break;
                     } else {
+                        // Checks the inventory for an appropiate key and lets the player move through the locked door if one is found.
                         String checkColor = Rooms.findDoorColor(direction);
                         if (Inventory.checkInventoryForKey(checkColor) == true) {
                             go(direction);
@@ -160,13 +166,52 @@ public class GameUIController implements Initializable {
                         }
                     }
                 } else {
+                    // If the door is not locked the player is allowed to move
                     go(direction);
                     break;
                 }
             }
         }
     }
+    
+// Gets the room the player wishes to move to, and calls methods which update the GUI and the properties of the program.
+    
+    private void go(String direction) {
+        Room nextRoom = Rooms.getCurrentRoom().getExit(direction);
 
+        if (nextRoom == null) {
+            System.out.println("There is no door!");
+        }
+        
+        // Checks if the next room is of the type darkRoom and if the player has the torch item, and sets the image to display accordingly
+        if (nextRoom.getDarkRoom() == true && Inventory.checkInventoryForItem("torch")) {
+            nextRoom.setSecondImage();
+        }
+
+        // Updates the currentRoom property
+        Rooms.setCurrentRoom(nextRoom);
+
+        // Updates the room counter depending on wether the room has been visited before.
+        if (Rooms.getCurrentRoom().getVisited() == false) {
+            Rooms.incrementRoomCounter();
+            System.out.println("Room counter: " + Rooms.getRoomCounter());
+        }
+        Rooms.getCurrentRoom().setVisited();
+        
+        // Shows the rooms image in the GUI and the image of the item it contains.
+        RoomDisplayImage.setImage(nextRoom.getImage());
+        if (Rooms.getCurrentRoom().hasItems == true) {
+            itemImage.setImage(Rooms.getCurrentRoom().getItem(0).getIcon());
+
+        } else {
+            itemImage.setImage(null);
+        }
+
+        //Updates the textflow
+        print2TextFlow();
+    }
+
+// Checks wether the type of item interacted with is a bonus or an item, and either adds an amount to the players score or the item to the inventory respectively.
     @FXML
     private void handlePickUp(ActionEvent event) throws IOException {
         if (Rooms.getCurrentRoom().getItem(0) != null) {
@@ -204,14 +249,16 @@ public class GameUIController implements Initializable {
             TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
             System.out.println("There is no item in this room");
         }
+        
+        // Checks if the last item has been picked up and the game has to end
         End.end();
         if (End.endTrue == true) {
             bootEndScreen();
-
             SendMail.mail();
         }
     }
-
+    
+// Initializes the question window
     @FXML
     private void handleGoToQuestion(ActionEvent event) throws Exception {
         if (Rooms.getCurrentRoom().hasQuestion() == true) {
@@ -222,6 +269,7 @@ public class GameUIController implements Initializable {
         }
     }
 
+// Updates the inventory sprites to match the inventory arrayList
     private void displayInventory() {
         for (int i = 0; i < Inventory.getInvSize(); i++) {
             if (Inventory.getItem(i) != null) {
@@ -230,10 +278,12 @@ public class GameUIController implements Initializable {
         }
     }
 
+// Updates the score label to match the players current score
     public void setScore() {
         HighscoreLabel.setText(String.valueOf(Score.getScore()));
     }
-
+    
+// Updates the textflow to show the current rooms description
     @FXML
     public void print2TextFlow() {
         //Deletes current TextFlow so it doesn't break through the flowbox when more text is added.
@@ -245,34 +295,7 @@ public class GameUIController implements Initializable {
         TextFlowUI.getChildren().add(new Text(System.lineSeparator()));
     }
 
-    private void go(String direction) {
-        Room nextRoom = Rooms.getCurrentRoom().getExit(direction);
-
-        if (nextRoom == null) {
-            System.out.println("There is no door!");
-        }
-        if (nextRoom.getDarkRoom() == true && Inventory.checkInventoryForItem("torch")) {
-            nextRoom.setSecondImage();
-        }
-
-        Rooms.setCurrentRoom(nextRoom);
-
-        if (Rooms.getCurrentRoom().getVisited() == false) {
-            Rooms.incrementRoomCounter();
-            System.out.println("Room counter: " + Rooms.getRoomCounter());
-        }
-        Rooms.getCurrentRoom().setVisited();
-        RoomDisplayImage.setImage(nextRoom.getImage());
-        if (Rooms.getCurrentRoom().hasItems == true) {
-            itemImage.setImage(Rooms.getCurrentRoom().getItem(0).getIcon());
-
-        } else {
-            itemImage.setImage(null);
-        }
-
-        print2TextFlow();
-    }
-
+// Initializes the end screen
     public void bootEndScreen() throws IOException {
         Parent rootPause = FXMLLoader.load(getClass().getResource("/worldofzuul/domain/rooms/EndScreen.fxml"));
         Scene scenePause = new Scene(rootPause);

@@ -14,12 +14,15 @@ public class End {
 
     public static boolean endTrue = false;
 
+// Checks if the conditions for the game to end has been fulfilled and adds the final bonusses to the score depending on the players actions during the game.
     public static void end() {
         if (Rooms.getCurrentRoom() == Rooms.getEndRoom() && Rooms.getEndRoom().hasItems == false) {
             endTrue = true;
+            // The hat item multiplies all other bonus items with 2
             if (Inventory.checkInventoryForItem("hat") == true) {
                 Score.multiplyScore(2);
             }
+            // The player gets 50 points for every room visited during the playthrough
             Score.incrementScore(Rooms.getRoomCounter() * 50);
             new Highscore().read();
 

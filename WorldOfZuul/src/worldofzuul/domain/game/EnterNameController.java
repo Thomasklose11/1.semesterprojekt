@@ -29,6 +29,7 @@ public class EnterNameController implements Initializable {
 
     }
 
+// Checks if the player has entered a name and boots game.
     @FXML
     private void handlePlayButtonAction(ActionEvent event) throws IOException {
         if (TextField.getLength() > 0) {

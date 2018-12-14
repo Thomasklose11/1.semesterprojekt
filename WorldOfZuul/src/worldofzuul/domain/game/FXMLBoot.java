@@ -12,6 +12,7 @@ public class FXMLBoot extends Application {
 
     public static Stage primaryStage;
 
+//Launches the Main menu fxml
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
