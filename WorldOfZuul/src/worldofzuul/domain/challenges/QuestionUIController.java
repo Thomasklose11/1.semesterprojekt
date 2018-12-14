@@ -15,7 +15,7 @@ import worldofzuul.domain.rooms.Rooms;
 
 
 public class QuestionUIController implements Initializable {
-    //Bottoms for the different answer opportunities 
+    //Buttons for the different answer opportunities 
 
     @FXML
     private Button AnswerA;
@@ -34,10 +34,10 @@ public class QuestionUIController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         loadQuestion();
-        // TODO
+
     }
 
-    @FXML//Bottum for answer a
+    @FXML//Button for answer a
     private void handleAnswerA(ActionEvent event) throws Exception {
         Puzzles.answer("a", Rooms.getCurrentRoom().getQuestion());
 
@@ -47,7 +47,7 @@ public class QuestionUIController implements Initializable {
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
-    @FXML//Bottum for answer b
+    @FXML//Button for answer b
     private void handleAnswerB(ActionEvent event) throws Exception {
         Puzzles.answer("b", Rooms.getCurrentRoom().getQuestion());
 
@@ -57,7 +57,7 @@ public class QuestionUIController implements Initializable {
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
-    @FXML//Bottum for answer c
+    @FXML//Button for answer c
     private void handleAnswerC(ActionEvent event) throws Exception {
         Puzzles.answer("c", Rooms.getCurrentRoom().getQuestion());
 
@@ -67,7 +67,7 @@ public class QuestionUIController implements Initializable {
         FXMLBoot.primaryStage.setScene(scenePause);
     }
 
-    @FXML//Bottum for answer d
+    @FXML//Button for answer d
     private void handleAnswerD(ActionEvent event) throws Exception {
         Puzzles.answer("d", Rooms.getCurrentRoom().getQuestion());
 
