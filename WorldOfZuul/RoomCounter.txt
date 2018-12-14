@@ -23,3 +23,4 @@ Antal rum spilleren har været i: 66  Name: Mathi    Score: 41300
 Antal rum spilleren har været i: 2  Name: het    Score: 100
 Antal rum spilleren har været i: 29  Name: wferfg    Score: 1450
 Antal rum spilleren har været i: 2  Name: gerg    Score: 100
+Antal rum spilleren har været i: 4  Name: dcgfs    Score: 1200

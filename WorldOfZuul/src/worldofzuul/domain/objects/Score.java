@@ -17,8 +17,4 @@ public class Score {
         return score;
     }
 
-    @Override
-    public String toString() {
-        return "score" + score;
-    }
 }
