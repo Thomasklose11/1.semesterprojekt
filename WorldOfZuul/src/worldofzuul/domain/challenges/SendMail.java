@@ -9,10 +9,11 @@ import worldofzuul.domain.rooms.Rooms;
 
 
 public class SendMail {
+    //When the user have completed the game it send a mail to us with the useres name, highscore and room count.  
 
     public static void mail() {
-        final String username = "gruppeprojektzuul@gmail.com";
-        final String password = "worldofzuul2018";
+        final String username = "gruppeprojektzuul@gmail.com";//The addres the mail is sent to
+        final String password = "worldofzuul2018";//Passwordword to the mail
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -39,6 +40,7 @@ public class SendMail {
             message.setSubject("Testing Subject");
 
             message.setText("Player : " + FXMLController.playerName + "   |   Score: " + Score.getScore() + "   |   Rooms visited: " + Rooms.getRoomCounter());
+            //Get the user name, score and room count
 //
 //            Multipart multipart = new MimeMultipart();
 //
@@ -62,7 +64,7 @@ public class SendMail {
 
             Transport.send(message);
 
-            System.out.println("Done");
+            System.out.println("Done");//The mail have been sent
 
         } catch (MessagingException e) {
             throw new RuntimeException(e);
