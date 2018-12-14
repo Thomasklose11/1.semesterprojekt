@@ -17,7 +17,7 @@ public class Highscore {
 
     public void read() {
         List<String> data = new ArrayList<>();
-        File file = new File("assets/Highscore/HighScore.txt");
+        File file = new File("HighScore.txt");
         try {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNext()) {

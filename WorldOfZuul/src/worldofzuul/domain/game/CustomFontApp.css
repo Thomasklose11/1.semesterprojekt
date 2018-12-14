@@ -96,3 +96,41 @@
     -fx-text-fill:#ffffff;
     
 }
+
+#List1To5 {
+     -fx-font-family: 'Press Start 2P';
+     -fx-font-size: 12pt;
+}
+#HighscoreTitle {
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 28pt;
+}
+
+#BackbuttonHighscore {
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 18pt;
+}
+
+#PlayButtonEnterNamePrompt {
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 16pt;
+}
+#TitleEnterNamePrompt {
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 18pt;
+}
+#buttonResume {
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 14pt;
+}
+#buttonHelp {
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 14pt;
+}
+#buttonQuit {
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 14pt;
+}
+#List1To5 {
+    -fx-background-color:#ad9659;
+}

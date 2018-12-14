@@ -28,10 +28,11 @@ public class HighscoreController implements Initializable {
         List<String> scoreList = new Highscore().readHighscore();
         String listToString = "";
         int i = 1;
+        
         for (String line : scoreList) {
             Scanner scanner = new Scanner(line);
             scanner.useDelimiter("@");
-            listToString += String.format("%-2s. %-20s %20s", i, scanner.next(), scanner.nextInt()) + "\n";
+            listToString += String.format("%-2s. %-15s %8s", i, scanner.next(), scanner.nextInt()) + "\n";
             i++;
         }
         List1To5.setText(listToString);

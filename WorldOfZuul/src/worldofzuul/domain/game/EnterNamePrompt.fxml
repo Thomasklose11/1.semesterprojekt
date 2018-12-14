@@ -16,16 +16,12 @@
             </image>
         </ImageView>
         <TextField fx:id="TextField" alignment="CENTER" layoutX="155.0" layoutY="120.0" prefWidth="150.0" />
-        <Label alignment="CENTER" layoutX="0.0" layoutY="57.0" prefHeight="26.0" prefWidth="460.0" text="Enter your name" textFill="WHITE">
-            <font>
-                <Font name="Press Start 2P" size="17.0" />
-            </font>
+        <Label fx:id="TitleEnterNamePrompt" alignment="CENTER" layoutX="0.0" layoutY="57.0" prefHeight="26.0" prefWidth="460.0" text="Enter your name" textFill="WHITE">
+
         </Label>
-        <Button alignment="CENTER" defaultButton="true" layoutX="132.0" layoutY="180.0" mnemonicParsing="false" onAction="#handlePlayButtonAction" prefHeight="60.0" prefWidth="200.0" text="Play" textAlignment="CENTER" style="-fx-background-color: #FF000000; -fx-background-image: url(worldofzuul/resources/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);"/>
+        <Button fx:id="PlayButtonEnterNamePrompt" alignment="CENTER" defaultButton="true" layoutX="132.0" layoutY="180.0" mnemonicParsing="false" onAction="#handlePlayButtonAction" prefHeight="60.0" prefWidth="200.0" text="Play" textAlignment="CENTER" style="-fx-background-color: #FF000000; -fx-background-image: url(worldofzuul/resources/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);"/>
         <Label fx:id="LabelName" alignment="CENTER" layoutX="0.0" layoutY="101.0" prefHeight="18.0" prefWidth="460.0" textFill="RED">
-            <font>
-                <Font name="Press Start 2P" size="12.0" />
-            </font>
+
         </Label>
     </children>
 </AnchorPane>

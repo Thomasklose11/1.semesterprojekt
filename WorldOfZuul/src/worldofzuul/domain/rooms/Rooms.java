@@ -378,7 +378,7 @@ public class Rooms {
 
         endRoom.setExit("south", f3_D7);
 
-        currentRoom = endRoom;
+        currentRoom = startRoom;
 
         // Anbringer et item i et rum
         f1_C1.setKey(new Key("whip", "worldofzuul/resources/Inventory/WhipUpscaled.png", "whip"));

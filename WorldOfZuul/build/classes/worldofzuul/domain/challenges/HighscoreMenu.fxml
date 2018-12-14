@@ -16,20 +16,14 @@
             </image>
         </ImageView>
 
-        <Label alignment="CENTER" layoutX="0.0" layoutY="41.0" prefHeight="26.0" prefWidth="696.0" text="Highscore" textFill="WHITE">
-            <font>
-                <Font name="Press Start 2P" size="17.0" />
-            </font>
+        <Label fx:id="HighscoreTitle" alignment="CENTER" layoutX="0.0" layoutY="41.0" prefHeight="26.0" prefWidth="696.0" text="Highscore" textFill="WHITE">
+
         </Label>
-        <TextArea fx:id="List1To5" editable="false" layoutX="95.0" layoutY="165.0" prefHeight="200.0" prefWidth="506.0" text="1.&#10;2.&#10;3.&#10;4.&#10;5.">
-            <font>
-                <Font name="Adventure" size="26.0" />
-            </font>
+        <TextArea fx:id="List1To5" editable="false" layoutX="95.0" layoutY="165.0" prefHeight="200.0" prefWidth="506.0">
+
         </TextArea>
-        <Button layoutX="248.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleBackToMenuButtonAction" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(worldofzuul/resources/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Back">
-            <font>
-                <Font name="Adventure" size="35.0" />
-            </font>
+        <Button fx:id="BackbuttonHighscore" layoutX="248.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleBackToMenuButtonAction" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #FF000000; -fx-background-image: url(worldofzuul/resources/UI/PauseMenuButtonUpscaled.png); -fx-background-size: 200px 60px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8),10,0,0,0);" text="Back">
+
         </Button>
     </children>
 </AnchorPane>
