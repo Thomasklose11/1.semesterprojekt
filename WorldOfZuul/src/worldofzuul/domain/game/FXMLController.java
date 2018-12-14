@@ -16,6 +16,11 @@ import javafx.scene.image.ImageView;
 
 public class FXMLController implements Initializable {
 
+    public static String playerName;
+    private TextField TextField;
+    private Label LabelName;
+    
+// Initializes the enter name prompt fxml
     @FXML
     private void handleStartButtonAction(ActionEvent event) throws Exception {
         System.out.println(getClass().getResource("EnterNamePrompt.fxml"));
@@ -25,28 +30,14 @@ public class FXMLController implements Initializable {
         FXMLBoot.primaryStage.setScene(sceneNameEnterPrompt);
 
     }
-    public static String playerName;
-    private TextField TextField;
-    private Label LabelName;
 
-    public void playButtonOnEnter(ActionEvent ae) {
-        System.out.println("test");
-    }
-
+// Exits the game
     @FXML
     private void handleQuitButtonAction(ActionEvent event) {
         System.exit(0);
     }
 
-    @FXML
-    private void handlePauseButtonAction(ActionEvent event) throws Exception {
-        Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
-        Scene scenePause = new Scene(rootPause);
-        scenePause.getStylesheets().add(getClass().getResource("CustomFontApp.css").toExternalForm());
-        FXMLBoot.primaryStage.setScene(scenePause);
-
-    }
-
+// Initializes the main menu
     @FXML
     private void handleQuitBtPauseMenuAction(ActionEvent event) throws Exception {
 
@@ -57,6 +48,7 @@ public class FXMLController implements Initializable {
 
     }
 
+// Intializes the highscore menu
     @FXML
     private void handleHighscoreButtonAction(ActionEvent event) throws Exception {
 
@@ -66,6 +58,7 @@ public class FXMLController implements Initializable {
         FXMLBoot.primaryStage.setScene(sceneHigh);
     }
 
+// Initializes the main menu
     @FXML
     private void handleBackToMenuButtonAction(ActionEvent event) throws Exception {
         Parent rootMain = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
@@ -75,6 +68,7 @@ public class FXMLController implements Initializable {
 
     }
 
+// Initializes the game ui
     @FXML
     private void handleResumeButtonAction(ActionEvent event) throws Exception {
         Parent rootGame = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
@@ -83,6 +77,7 @@ public class FXMLController implements Initializable {
         FXMLBoot.primaryStage.setScene(sceneGame);
     }
     
+// Initializes the help menu
     @FXML
     private void handleHelpButtonAction(ActionEvent event) throws Exception {
         Parent rootHelp = FXMLLoader.load(getClass().getResource("HelpWindow.fxml"));
@@ -92,6 +87,7 @@ public class FXMLController implements Initializable {
 
     }
 
+// Initializes the pause menu
     @FXML
     private void handleBackButtonAction(ActionEvent event) throws Exception {
         Parent rootPause = FXMLLoader.load(getClass().getResource("PauseMenu.fxml"));
